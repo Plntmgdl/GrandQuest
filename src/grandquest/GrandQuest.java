@@ -19,7 +19,7 @@ public class GrandQuest {
     public static void main(String[] args) {
        Player playerOne = new Player();
        
-       playerOne.setName("Bob");
+       playerOne.setName("Me");
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
