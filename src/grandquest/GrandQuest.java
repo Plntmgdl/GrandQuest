@@ -7,6 +7,11 @@ package grandquest;
 
 import byui.cit260.grandQuest.model.Player;
 
+import byui.cit260.grandQuest.model.Road;
+
+import byui.cit260.grandQuest.model.Forest;
+
+import byui.cit260.grandQuest.model.Bridge;
 /**
  *
  * @author Jassen
@@ -23,6 +28,29 @@ public class GrandQuest {
        
        String playerInfo = playerOne.toString();
        System.out.println(playerInfo);
+    
+       Road description = new Road ();
+       
+       description.setDescription("long and winding");
+       
+       String roadInfo = description.toString();
+       System.out.println(roadInfo);
+       
+       Forest environment = new Forest ();
+       
+       environment.setEnvironment("lots of trees");
+       
+       String forestInfo;
+        forestInfo = environment.toString();
+       System.out.println(forestInfo);
+       
+       Bridge appearance = new Bridge ();
+       
+       appearance.setAppearance("washed out");
+       
+       String bridgeInfo;
+        bridgeInfo = appearance.toString();
+       System.out.println(bridgeInfo);
     }
     
 }
