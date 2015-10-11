@@ -38,10 +38,10 @@ public class GrandQuest {
             
             //Jassen
     
-       Road description = new Road ();
+       Road description = new Road();
        
             description.setDescription("long and winding");
-       
+            
             String roadInfo = description.toString();
             System.out.println(roadInfo);
             
