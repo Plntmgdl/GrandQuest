@@ -12,8 +12,11 @@ import byui.cit260.grandQuest.model.Road;
 import byui.cit260.grandQuest.model.Forest;
 
 import byui.cit260.grandQuest.model.Bridge;
+import byui.cit260.grandQuest.model.Creatures;
+import byui.cit260.grandQuest.model.EncounterResults;
 
 import byui.cit260.grandQuest.model.Encounters;
+import byui.cit260.grandQuest.model.PlayerReaction;
 /**
  *
  * @author Jassen
@@ -54,13 +57,37 @@ public class GrandQuest {
             bridgeInfo = appearance.toString();
             System.out.println(bridgeInfo);
             
-       Encounters monster = new Encounters ();
+       Encounters random = new Encounters ();
        
-       monster.setMonster("You encounter");
+            random.setRandom("You encounter");
        
-       String encountersInfo;
-        encountersInfo = monster.toString();
-       System.out.println(encountersInfo);     
+            String encountersInfo;
+            encountersInfo = random.toString();
+            System.out.println(encountersInfo); 
+            
+       Creatures monsters = new Creatures ();
+       
+            monsters.setMonsters("this monster is ugly");
+       
+            String creaturesInfo;
+            creaturesInfo = monsters.toString();
+            System.out.println(creaturesInfo);
+       
+        EncounterResults eulogy = new EncounterResults ();
+       
+            eulogy.setEulogy("You have died");
+       
+            String encounterResultsInfo;
+            encounterResultsInfo = eulogy.toString();
+            System.out.println(encounterResultsInfo);
+            
+       PlayerReaction decision = new PlayerReaction();
+       
+            decision.setDecision("Are you sure?");
+            
+            String playerReactionInfo;
+            playerReactionInfo = decision.toString();
+            System.out.println(playerReactionInfo);
     }
     
 }

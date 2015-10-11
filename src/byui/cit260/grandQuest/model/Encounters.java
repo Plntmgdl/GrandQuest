@@ -13,81 +13,71 @@ import java.util.Objects;
  */
 public class Encounters implements Serializable{
     
-    private String monster;
-    private double robbers;
-    private double mushrooms;
-    private double wildBoar;
-    private double giantSpider;
-    private double dragon;
+        private String random;
+        private double monsterType;
+        private double playerReaction;
+        private double monsterReaction;
+        private double encounterResults;
 
     public Encounters() {
     }
-    
-    
+        
+        
 
-    public String getMonster() {
-        return monster;
+    public String getRandom() {
+        return random;
     }
 
-    public void setMonster(String monster) {
-        this.monster = monster;
+    public void setRandom(String random) {
+        this.random = random;
     }
 
-    public double getRobbers() {
-        return robbers;
+    public double getMonsterType() {
+        return monsterType;
     }
 
-    public void setRobbers(double robbers) {
-        this.robbers = robbers;
+    public void setMonsterType(double monsterType) {
+        this.monsterType = monsterType;
     }
 
-    public double getMushrooms() {
-        return mushrooms;
+    public double getPlayerReaction() {
+        return playerReaction;
     }
 
-    public void setMushrooms(double mushrooms) {
-        this.mushrooms = mushrooms;
+    public void setPlayerReaction(double playerReaction) {
+        this.playerReaction = playerReaction;
     }
 
-    public double getWildBoar() {
-        return wildBoar;
+    public double getMonsterReaction() {
+        return monsterReaction;
     }
 
-    public void setWildBoar(double wildBoar) {
-        this.wildBoar = wildBoar;
+    public void setMonsterReaction(double monsterReaction) {
+        this.monsterReaction = monsterReaction;
     }
 
-    public double getGiantSpider() {
-        return giantSpider;
+    public double getEncounterResults() {
+        return encounterResults;
     }
 
-    public void setGiantSpider(double giantSpider) {
-        this.giantSpider = giantSpider;
-    }
-
-    public double getDragon() {
-        return dragon;
-    }
-
-    public void setDragon(double dragon) {
-        this.dragon = dragon;
+    public void setEncounterResults(double encounterResults) {
+        this.encounterResults = encounterResults;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 37 * hash + Objects.hashCode(this.monster);
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.robbers) ^ (Double.doubleToLongBits(this.robbers) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.mushrooms) ^ (Double.doubleToLongBits(this.mushrooms) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.wildBoar) ^ (Double.doubleToLongBits(this.wildBoar) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.giantSpider) ^ (Double.doubleToLongBits(this.giantSpider) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.dragon) ^ (Double.doubleToLongBits(this.dragon) >>> 32));
+        int hash = 3;
+        hash = 41 * hash + Objects.hashCode(this.random);
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.monsterType) ^ (Double.doubleToLongBits(this.monsterType) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.playerReaction) ^ (Double.doubleToLongBits(this.playerReaction) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.monsterReaction) ^ (Double.doubleToLongBits(this.monsterReaction) >>> 32));
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.encounterResults) ^ (Double.doubleToLongBits(this.encounterResults) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Encounters{" + "monster=" + monster + ", robbers=" + robbers + ", mushrooms=" + mushrooms + ", wildBoar=" + wildBoar + ", giantSpider=" + giantSpider + ", dragon=" + dragon + '}';
+        return "Encounters{" + "random=" + random + ", monsterType=" + monsterType + ", playerReaction=" + playerReaction + ", monsterReaction=" + monsterReaction + ", encounterResults=" + encounterResults + '}';
     }
 
     @Override
@@ -99,26 +89,24 @@ public class Encounters implements Serializable{
             return false;
         }
         final Encounters other = (Encounters) obj;
-        if (!Objects.equals(this.monster, other.monster)) {
+        if (!Objects.equals(this.random, other.random)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.robbers) != Double.doubleToLongBits(other.robbers)) {
+        if (Double.doubleToLongBits(this.monsterType) != Double.doubleToLongBits(other.monsterType)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.mushrooms) != Double.doubleToLongBits(other.mushrooms)) {
+        if (Double.doubleToLongBits(this.playerReaction) != Double.doubleToLongBits(other.playerReaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.wildBoar) != Double.doubleToLongBits(other.wildBoar)) {
+        if (Double.doubleToLongBits(this.monsterReaction) != Double.doubleToLongBits(other.monsterReaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.giantSpider) != Double.doubleToLongBits(other.giantSpider)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.dragon) != Double.doubleToLongBits(other.dragon)) {
+        if (Double.doubleToLongBits(this.encounterResults) != Double.doubleToLongBits(other.encounterResults)) {
             return false;
         }
         return true;
     }
-
-   
+        
+        
+    
 }
