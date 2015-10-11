@@ -14,11 +14,11 @@ import java.util.Objects;
 public class MonsterReaction implements Serializable{
     
     private String Reaction;
-    private double robber;
-    private double spider;
-    private double mushroom;
-    private double boar;
-    private double dragn;
+    private String robber;
+    private String spider;
+    private String mushroom;
+    private String boar;
+    private String dragn;
 
     public MonsterReaction() {
     }
@@ -33,55 +33,55 @@ public class MonsterReaction implements Serializable{
         this.Reaction = Reaction;
     }
 
-    public double getRobber() {
+    public String getRobber() {
         return robber;
     }
 
-    public void setRobber(double robber) {
+    public void setRobber(String robber) {
         this.robber = robber;
     }
 
-    public double getSpider() {
+    public String getSpider() {
         return spider;
     }
 
-    public void setSpider(double spider) {
+    public void setSpider(String spider) {
         this.spider = spider;
     }
 
-    public double getMushroom() {
+    public String getMushroom() {
         return mushroom;
     }
 
-    public void setMushroom(double mushroom) {
+    public void setMushroom(String mushroom) {
         this.mushroom = mushroom;
     }
 
-    public double getBoar() {
+    public String getBoar() {
         return boar;
     }
 
-    public void setBoar(double boar) {
+    public void setBoar(String boar) {
         this.boar = boar;
     }
 
-    public double getDragn() {
+    public String getDragn() {
         return dragn;
     }
 
-    public void setDragn(double dragn) {
+    public void setDragn(String dragn) {
         this.dragn = dragn;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 67 * hash + Objects.hashCode(this.Reaction);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.robber) ^ (Double.doubleToLongBits(this.robber) >>> 32));
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.spider) ^ (Double.doubleToLongBits(this.spider) >>> 32));
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.mushroom) ^ (Double.doubleToLongBits(this.mushroom) >>> 32));
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.boar) ^ (Double.doubleToLongBits(this.boar) >>> 32));
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.dragn) ^ (Double.doubleToLongBits(this.dragn) >>> 32));
+        hash = 97 * hash + Objects.hashCode(this.Reaction);
+        hash = 97 * hash + Objects.hashCode(this.robber);
+        hash = 97 * hash + Objects.hashCode(this.spider);
+        hash = 97 * hash + Objects.hashCode(this.mushroom);
+        hash = 97 * hash + Objects.hashCode(this.boar);
+        hash = 97 * hash + Objects.hashCode(this.dragn);
         return hash;
     }
 
@@ -102,19 +102,19 @@ public class MonsterReaction implements Serializable{
         if (!Objects.equals(this.Reaction, other.Reaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.robber) != Double.doubleToLongBits(other.robber)) {
+        if (!Objects.equals(this.robber, other.robber)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.spider) != Double.doubleToLongBits(other.spider)) {
+        if (!Objects.equals(this.spider, other.spider)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.mushroom) != Double.doubleToLongBits(other.mushroom)) {
+        if (!Objects.equals(this.mushroom, other.mushroom)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.boar) != Double.doubleToLongBits(other.boar)) {
+        if (!Objects.equals(this.boar, other.boar)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.dragn) != Double.doubleToLongBits(other.dragn)) {
+        if (!Objects.equals(this.dragn, other.dragn)) {
             return false;
         }
         return true;

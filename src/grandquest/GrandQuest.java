@@ -41,6 +41,9 @@ public class GrandQuest {
        Road description = new Road();
        
             description.setDescription("long and winding");
+            description.setPlayerChoice("you chose this direction");
+            description.setEncounterChance("As you continue on your way...");
+            description.setArriveAtCastle("As you turn the corner and the trees clear...");
             
             String roadInfo = description.toString();
             System.out.println(roadInfo);
@@ -110,7 +113,11 @@ public class GrandQuest {
        MonsterReaction reaction = new MonsterReaction();
        
             reaction.setReaction("The monster does this");
-            
+            reaction.setRobber("Give us you goods!");
+            reaction.setBoar("Oink!");
+            reaction.setSpider("Clicking of the mandibles");
+            reaction.setDragn("Time to die!");
+            reaction.setMushroom("Poof! You are enveloped in a cloud of poisonous gas");
             String monsterReactionInfo;
             monsterReactionInfo = reaction.toString();
             System.out.println(monsterReactionInfo);
@@ -120,7 +127,7 @@ public class GrandQuest {
        CastlePrince princeDescription = new CastlePrince();
             
             princeDescription.setPrinceDescription("Dreamy");
-            
+            princeDescription.setPrinceWords("Thank you");
             String castlePrinceInfo;
             castlePrinceInfo = princeDescription.toString();
             System.out.println(castlePrinceInfo);

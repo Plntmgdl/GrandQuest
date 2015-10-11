@@ -14,9 +14,9 @@ import java.util.Objects;
 public class Road implements Serializable{
     
     private String description;
-    private double playerChoice;
-    private double encounterChance;
-    private double arriveAtCastle;
+    private String playerChoice;
+    private String encounterChance;
+    private String arriveAtCastle;
 
     public Road() {
     }
@@ -31,37 +31,37 @@ public class Road implements Serializable{
         this.description = description;
     }
 
-    public double getPlayerChoice() {
+    public String getPlayerChoice() {
         return playerChoice;
     }
 
-    public void setPlayerChoice(double playerChoice) {
+    public void setPlayerChoice(String playerChoice) {
         this.playerChoice = playerChoice;
     }
 
-    public double getEncounterChance() {
+    public String getEncounterChance() {
         return encounterChance;
     }
 
-    public void setEncounterChance(double encounterChance) {
+    public void setEncounterChance(String encounterChance) {
         this.encounterChance = encounterChance;
     }
 
-    public double getArriveAtCastle() {
+    public String getArriveAtCastle() {
         return arriveAtCastle;
     }
 
-    public void setArriveAtCastle(double arriveAtCastle) {
+    public void setArriveAtCastle(String arriveAtCastle) {
         this.arriveAtCastle = arriveAtCastle;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 23 * hash + Objects.hashCode(this.description);
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.playerChoice) ^ (Double.doubleToLongBits(this.playerChoice) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.encounterChance) ^ (Double.doubleToLongBits(this.encounterChance) >>> 32));
-        hash = 23 * hash + (int) (Double.doubleToLongBits(this.arriveAtCastle) ^ (Double.doubleToLongBits(this.arriveAtCastle) >>> 32));
+        int hash = 3;
+        hash = 41 * hash + Objects.hashCode(this.description);
+        hash = 41 * hash + Objects.hashCode(this.playerChoice);
+        hash = 41 * hash + Objects.hashCode(this.encounterChance);
+        hash = 41 * hash + Objects.hashCode(this.arriveAtCastle);
         return hash;
     }
 
@@ -82,20 +82,17 @@ public class Road implements Serializable{
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.playerChoice) != Double.doubleToLongBits(other.playerChoice)) {
+        if (!Objects.equals(this.playerChoice, other.playerChoice)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.encounterChance) != Double.doubleToLongBits(other.encounterChance)) {
+        if (!Objects.equals(this.encounterChance, other.encounterChance)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.arriveAtCastle) != Double.doubleToLongBits(other.arriveAtCastle)) {
+        if (!Objects.equals(this.arriveAtCastle, other.arriveAtCastle)) {
             return false;
         }
         return true;
     }
-    
-    
-    
     
     
 }

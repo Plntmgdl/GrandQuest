@@ -14,7 +14,7 @@ import java.util.Objects;
 public class CastlePrince implements Serializable{
     
     private String princeDescription;
-    private double princeWords;
+    private String princeWords;
 
     public CastlePrince() {
     }
@@ -29,19 +29,19 @@ public class CastlePrince implements Serializable{
         this.princeDescription = princeDescription;
     }
 
-    public double getPrinceWords() {
+    public String getPrinceWords() {
         return princeWords;
     }
 
-    public void setPrinceWords(double princeWords) {
+    public void setPrinceWords(String princeWords) {
         this.princeWords = princeWords;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 67 * hash + Objects.hashCode(this.princeDescription);
-        hash = 67 * hash + (int) (Double.doubleToLongBits(this.princeWords) ^ (Double.doubleToLongBits(this.princeWords) >>> 32));
+        int hash = 5;
+        hash = 83 * hash + Objects.hashCode(this.princeDescription);
+        hash = 83 * hash + Objects.hashCode(this.princeWords);
         return hash;
     }
 
@@ -62,12 +62,11 @@ public class CastlePrince implements Serializable{
         if (!Objects.equals(this.princeDescription, other.princeDescription)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.princeWords) != Double.doubleToLongBits(other.princeWords)) {
+        if (!Objects.equals(this.princeWords, other.princeWords)) {
             return false;
         }
         return true;
     }
-    
     
     
 }
