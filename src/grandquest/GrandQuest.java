@@ -12,10 +12,12 @@ import byui.cit260.grandQuest.model.Road;
 import byui.cit260.grandQuest.model.Forest;
 
 import byui.cit260.grandQuest.model.Bridge;
+import byui.cit260.grandQuest.model.CastlePrince;
 import byui.cit260.grandQuest.model.Creatures;
 import byui.cit260.grandQuest.model.EncounterResults;
 
 import byui.cit260.grandQuest.model.Encounters;
+import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 /**
  *
@@ -33,6 +35,8 @@ public class GrandQuest {
        
             String playerInfo = playerOne.toString();
             System.out.println(playerInfo);
+            
+            //Jassen
     
        Road description = new Road ();
        
@@ -40,6 +44,8 @@ public class GrandQuest {
        
             String roadInfo = description.toString();
             System.out.println(roadInfo);
+            
+            //Jassen
        
        Forest environment = new Forest ();
        
@@ -48,6 +54,8 @@ public class GrandQuest {
             String forestInfo;
             forestInfo = environment.toString();
             System.out.println(forestInfo);
+            
+            //Jassen
        
        Bridge appearance = new Bridge ();
        
@@ -57,6 +65,8 @@ public class GrandQuest {
             bridgeInfo = appearance.toString();
             System.out.println(bridgeInfo);
             
+            //Jassen
+            
        Encounters random = new Encounters ();
        
             random.setRandom("You encounter");
@@ -65,6 +75,8 @@ public class GrandQuest {
             encountersInfo = random.toString();
             System.out.println(encountersInfo); 
             
+            //Jassen
+            
        Creatures monsters = new Creatures ();
        
             monsters.setMonsters("this monster is ugly");
@@ -72,6 +84,7 @@ public class GrandQuest {
             String creaturesInfo;
             creaturesInfo = monsters.toString();
             System.out.println(creaturesInfo);
+            //Jassen
        
         EncounterResults eulogy = new EncounterResults ();
        
@@ -81,6 +94,8 @@ public class GrandQuest {
             encounterResultsInfo = eulogy.toString();
             System.out.println(encounterResultsInfo);
             
+            //Jassen
+            
        PlayerReaction decision = new PlayerReaction();
        
             decision.setDecision("Are you sure?");
@@ -88,6 +103,26 @@ public class GrandQuest {
             String playerReactionInfo;
             playerReactionInfo = decision.toString();
             System.out.println(playerReactionInfo);
+            
+            //Jassen
+            
+       MonsterReaction reaction = new MonsterReaction();
+       
+            reaction.setReaction("The monster does this");
+            
+            String monsterReactionInfo;
+            monsterReactionInfo = reaction.toString();
+            System.out.println(monsterReactionInfo);
+            
+            //Jassen
+            
+       CastlePrince princeDescription = new CastlePrince();
+            
+            princeDescription.setPrinceDescription("Dreamy");
+            
+            String castlePrinceInfo;
+            castlePrinceInfo = princeDescription.toString();
+            System.out.println(castlePrinceInfo);
     }
     
 }
