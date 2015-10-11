@@ -84,6 +84,7 @@ public class GrandQuest {
             String creaturesInfo;
             creaturesInfo = monsters.toString();
             System.out.println(creaturesInfo);
+            
             //Jassen
        
         EncounterResults eulogy = new EncounterResults ();
@@ -123,6 +124,8 @@ public class GrandQuest {
             String castlePrinceInfo;
             castlePrinceInfo = princeDescription.toString();
             System.out.println(castlePrinceInfo);
+            
+            //Jassen done
     }
     
 }
