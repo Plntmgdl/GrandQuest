@@ -14,7 +14,7 @@ import java.util.Objects;
 public class EncounterResults implements Serializable{
     
     private String eulogy;
-    private double nothing;
+    private String nothing;
 
     public EncounterResults() {
     }
@@ -29,19 +29,19 @@ public class EncounterResults implements Serializable{
         this.eulogy = eulogy;
     }
 
-    public double getNothing() {
+    public String getNothing() {
         return nothing;
     }
 
-    public void setNothing(double nothing) {
+    public void setNothing(String nothing) {
         this.nothing = nothing;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.eulogy);
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.nothing) ^ (Double.doubleToLongBits(this.nothing) >>> 32));
+        int hash = 5;
+        hash = 59 * hash + Objects.hashCode(this.eulogy);
+        hash = 59 * hash + Objects.hashCode(this.nothing);
         return hash;
     }
 
@@ -62,17 +62,11 @@ public class EncounterResults implements Serializable{
         if (!Objects.equals(this.eulogy, other.eulogy)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.nothing) != Double.doubleToLongBits(other.nothing)) {
+        if (!Objects.equals(this.nothing, other.nothing)) {
             return false;
         }
         return true;
     }
-
-    public void setEncounterResults(String this_monster_is_ugly) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
     
     
 }

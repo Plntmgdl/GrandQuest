@@ -14,10 +14,10 @@ import java.util.Objects;
 public class Encounters implements Serializable{
     
         private String random;
-        private double monsterType;
-        private double playerReaction;
-        private double monsterReaction;
-        private double encounterResults;
+        private String monsterType;
+        private String playerReaction;
+        private String monsterReaction;
+        private String encounterResults;
 
     public Encounters() {
     }
@@ -32,46 +32,46 @@ public class Encounters implements Serializable{
         this.random = random;
     }
 
-    public double getMonsterType() {
+    public String getMonsterType() {
         return monsterType;
     }
 
-    public void setMonsterType(double monsterType) {
+    public void setMonsterType(String monsterType) {
         this.monsterType = monsterType;
     }
 
-    public double getPlayerReaction() {
+    public String getPlayerReaction() {
         return playerReaction;
     }
 
-    public void setPlayerReaction(double playerReaction) {
+    public void setPlayerReaction(String playerReaction) {
         this.playerReaction = playerReaction;
     }
 
-    public double getMonsterReaction() {
+    public String getMonsterReaction() {
         return monsterReaction;
     }
 
-    public void setMonsterReaction(double monsterReaction) {
+    public void setMonsterReaction(String monsterReaction) {
         this.monsterReaction = monsterReaction;
     }
 
-    public double getEncounterResults() {
+    public String getEncounterResults() {
         return encounterResults;
     }
 
-    public void setEncounterResults(double encounterResults) {
+    public void setEncounterResults(String encounterResults) {
         this.encounterResults = encounterResults;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.random);
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.monsterType) ^ (Double.doubleToLongBits(this.monsterType) >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.playerReaction) ^ (Double.doubleToLongBits(this.playerReaction) >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.monsterReaction) ^ (Double.doubleToLongBits(this.monsterReaction) >>> 32));
-        hash = 41 * hash + (int) (Double.doubleToLongBits(this.encounterResults) ^ (Double.doubleToLongBits(this.encounterResults) >>> 32));
+        int hash = 5;
+        hash = 53 * hash + Objects.hashCode(this.random);
+        hash = 53 * hash + Objects.hashCode(this.monsterType);
+        hash = 53 * hash + Objects.hashCode(this.playerReaction);
+        hash = 53 * hash + Objects.hashCode(this.monsterReaction);
+        hash = 53 * hash + Objects.hashCode(this.encounterResults);
         return hash;
     }
 
@@ -92,21 +92,20 @@ public class Encounters implements Serializable{
         if (!Objects.equals(this.random, other.random)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.monsterType) != Double.doubleToLongBits(other.monsterType)) {
+        if (!Objects.equals(this.monsterType, other.monsterType)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.playerReaction) != Double.doubleToLongBits(other.playerReaction)) {
+        if (!Objects.equals(this.playerReaction, other.playerReaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.monsterReaction) != Double.doubleToLongBits(other.monsterReaction)) {
+        if (!Objects.equals(this.monsterReaction, other.monsterReaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.encounterResults) != Double.doubleToLongBits(other.encounterResults)) {
+        if (!Objects.equals(this.encounterResults, other.encounterResults)) {
             return false;
         }
         return true;
     }
         
         
-    
 }

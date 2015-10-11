@@ -14,8 +14,8 @@ import java.util.Objects;
 public class PlayerReaction implements Serializable{
     
     private String decision;
-    private double playerReaction;
-    private double monsterReaction;
+    private String playerReaction;
+    private String monsterReaction;
 
     public PlayerReaction() {
     }
@@ -30,28 +30,28 @@ public class PlayerReaction implements Serializable{
         this.decision = decision;
     }
 
-    public double getPlayerReaction() {
+    public String getPlayerReaction() {
         return playerReaction;
     }
 
-    public void setPlayerReaction(double playerReaction) {
+    public void setPlayerReaction(String playerReaction) {
         this.playerReaction = playerReaction;
     }
 
-    public double getMonsterReaction() {
+    public String getMonsterReaction() {
         return monsterReaction;
     }
 
-    public void setMonsterReaction(double monsterReaction) {
+    public void setMonsterReaction(String monsterReaction) {
         this.monsterReaction = monsterReaction;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.decision);
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.playerReaction) ^ (Double.doubleToLongBits(this.playerReaction) >>> 32));
-        hash = 29 * hash + (int) (Double.doubleToLongBits(this.monsterReaction) ^ (Double.doubleToLongBits(this.monsterReaction) >>> 32));
+        int hash = 3;
+        hash = 41 * hash + Objects.hashCode(this.decision);
+        hash = 41 * hash + Objects.hashCode(this.playerReaction);
+        hash = 41 * hash + Objects.hashCode(this.monsterReaction);
         return hash;
     }
 
@@ -72,15 +72,14 @@ public class PlayerReaction implements Serializable{
         if (!Objects.equals(this.decision, other.decision)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.playerReaction) != Double.doubleToLongBits(other.playerReaction)) {
+        if (!Objects.equals(this.playerReaction, other.playerReaction)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.monsterReaction) != Double.doubleToLongBits(other.monsterReaction)) {
+        if (!Objects.equals(this.monsterReaction, other.monsterReaction)) {
             return false;
         }
         return true;
     }
-    
     
     
 }

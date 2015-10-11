@@ -53,6 +53,9 @@ public class GrandQuest {
        Forest environment = new Forest ();
        
             environment.setEnvironment("lots of trees");
+            environment.setPlayerChoice("You choose...");
+            environment.setEncounterChance("You run into...");
+            environment.setArriveAtCastle("As you round the corner and the trees thin you see...");
        
             String forestInfo;
             forestInfo = environment.toString();
@@ -63,6 +66,10 @@ public class GrandQuest {
        Bridge appearance = new Bridge ();
        
             appearance.setAppearance("washed out");
+            appearance.setPlayerSolution("You try to calculate...");
+            appearance.setMathEquationB("You calculate the...");
+            appearance.setRopeLength("You figure you need this much rope...");
+            appearance.setRopeStrength("The cart weighs this much...");
        
             String bridgeInfo;
             bridgeInfo = appearance.toString();
@@ -73,6 +80,10 @@ public class GrandQuest {
        Encounters random = new Encounters ();
        
             random.setRandom("You encounter");
+            random.setEncounterResults("As you are walking towards...");
+            random.setPlayerReaction("What do you do?");
+            random.setMonsterType("You see before you...");
+            random.setMonsterReaction("the creature starts...");
        
             String encountersInfo;
             encountersInfo = random.toString();
@@ -83,6 +94,11 @@ public class GrandQuest {
        Creatures monsters = new Creatures ();
        
             monsters.setMonsters("this monster is ugly");
+            monsters.setDragon("You feel fear...");
+            monsters.setRobbers("All dressed in black they come out of the shadows.");
+            monsters.setGiantSpiders("A primitive fear starts to take control...");
+            monsters.setPoisonousMushrooms("You try not to laugh as they...");
+            monsters.setWildBoars("Out of the bushes they come...");
        
             String creaturesInfo;
             creaturesInfo = monsters.toString();
@@ -93,6 +109,7 @@ public class GrandQuest {
         EncounterResults eulogy = new EncounterResults ();
        
             eulogy.setEulogy("You have died");
+            eulogy.setNothing("You continue down the path.");
        
             String encounterResultsInfo;
             encounterResultsInfo = eulogy.toString();
@@ -103,6 +120,8 @@ public class GrandQuest {
        PlayerReaction decision = new PlayerReaction();
        
             decision.setDecision("Are you sure?");
+            decision.setPlayerReaction("You calmly ...");
+            decision.setMonsterReaction("GRRRRRRR!");
             
             String playerReactionInfo;
             playerReactionInfo = decision.toString();

@@ -13,11 +13,11 @@ import java.util.Objects;
  */
 public class Creatures implements Serializable{
     private String monsters;
-    private double robbers;
-    private double giantSpiders;
-    private double wildBoars;
-    private double poisonousMushrooms;
-    private double dragon;
+    private String robbers;
+    private String giantSpiders;
+    private String wildBoars;
+    private String poisonousMushrooms;
+    private String dragon;
 
     public Creatures() {
     }
@@ -32,55 +32,55 @@ public class Creatures implements Serializable{
         this.monsters = monsters;
     }
 
-    public double getRobbers() {
+    public String getRobbers() {
         return robbers;
     }
 
-    public void setRobbers(double robbers) {
+    public void setRobbers(String robbers) {
         this.robbers = robbers;
     }
 
-    public double getGiantSpiders() {
+    public String getGiantSpiders() {
         return giantSpiders;
     }
 
-    public void setGiantSpiders(double giantSpiders) {
+    public void setGiantSpiders(String giantSpiders) {
         this.giantSpiders = giantSpiders;
     }
 
-    public double getWildBoars() {
+    public String getWildBoars() {
         return wildBoars;
     }
 
-    public void setWildBoars(double wildBoars) {
+    public void setWildBoars(String wildBoars) {
         this.wildBoars = wildBoars;
     }
 
-    public double getPoisonousMushrooms() {
+    public String getPoisonousMushrooms() {
         return poisonousMushrooms;
     }
 
-    public void setPoisonousMushrooms(double poisonousMushrooms) {
+    public void setPoisonousMushrooms(String poisonousMushrooms) {
         this.poisonousMushrooms = poisonousMushrooms;
     }
 
-    public double getDragon() {
+    public String getDragon() {
         return dragon;
     }
 
-    public void setDragon(double dragon) {
+    public void setDragon(String dragon) {
         this.dragon = dragon;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 97 * hash + Objects.hashCode(this.monsters);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.robbers) ^ (Double.doubleToLongBits(this.robbers) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.giantSpiders) ^ (Double.doubleToLongBits(this.giantSpiders) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.wildBoars) ^ (Double.doubleToLongBits(this.wildBoars) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.poisonousMushrooms) ^ (Double.doubleToLongBits(this.poisonousMushrooms) >>> 32));
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.dragon) ^ (Double.doubleToLongBits(this.dragon) >>> 32));
+        hash = 37 * hash + Objects.hashCode(this.monsters);
+        hash = 37 * hash + Objects.hashCode(this.robbers);
+        hash = 37 * hash + Objects.hashCode(this.giantSpiders);
+        hash = 37 * hash + Objects.hashCode(this.wildBoars);
+        hash = 37 * hash + Objects.hashCode(this.poisonousMushrooms);
+        hash = 37 * hash + Objects.hashCode(this.dragon);
         return hash;
     }
 
@@ -101,24 +101,23 @@ public class Creatures implements Serializable{
         if (!Objects.equals(this.monsters, other.monsters)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.robbers) != Double.doubleToLongBits(other.robbers)) {
+        if (!Objects.equals(this.robbers, other.robbers)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.giantSpiders) != Double.doubleToLongBits(other.giantSpiders)) {
+        if (!Objects.equals(this.giantSpiders, other.giantSpiders)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.wildBoars) != Double.doubleToLongBits(other.wildBoars)) {
+        if (!Objects.equals(this.wildBoars, other.wildBoars)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.poisonousMushrooms) != Double.doubleToLongBits(other.poisonousMushrooms)) {
+        if (!Objects.equals(this.poisonousMushrooms, other.poisonousMushrooms)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.dragon) != Double.doubleToLongBits(other.dragon)) {
+        if (!Objects.equals(this.dragon, other.dragon)) {
             return false;
         }
         return true;
     }
-    
     
     
 }

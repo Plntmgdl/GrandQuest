@@ -14,13 +14,15 @@ import java.util.Objects;
 public class Bridge implements Serializable{
     
     private String appearance;
-    private double mathEquationB;
-    private double ropeLength;
-    private double ropeStrength;
-    private double playerSolution;
+    private String mathEquationB;
+    private String ropeLength;
+    private String ropeStrength;
+    private String playerSolution;
 
     public Bridge() {
     }
+    
+    
 
     public String getAppearance() {
         return appearance;
@@ -30,46 +32,46 @@ public class Bridge implements Serializable{
         this.appearance = appearance;
     }
 
-    public double getMathEquationB() {
+    public String getMathEquationB() {
         return mathEquationB;
     }
 
-    public void setMathEquationB(double mathEquationB) {
+    public void setMathEquationB(String mathEquationB) {
         this.mathEquationB = mathEquationB;
     }
 
-    public double getRopeLength() {
+    public String getRopeLength() {
         return ropeLength;
     }
 
-    public void setRopeLength(double ropeLength) {
+    public void setRopeLength(String ropeLength) {
         this.ropeLength = ropeLength;
     }
 
-    public double getRopeStrength() {
+    public String getRopeStrength() {
         return ropeStrength;
     }
 
-    public void setRopeStrength(double ropeStrength) {
+    public void setRopeStrength(String ropeStrength) {
         this.ropeStrength = ropeStrength;
     }
 
-    public double getPlayerSolution() {
+    public String getPlayerSolution() {
         return playerSolution;
     }
 
-    public void setPlayerSolution(double playerSolution) {
+    public void setPlayerSolution(String playerSolution) {
         this.playerSolution = playerSolution;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 71 * hash + Objects.hashCode(this.appearance);
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.mathEquationB) ^ (Double.doubleToLongBits(this.mathEquationB) >>> 32));
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.ropeLength) ^ (Double.doubleToLongBits(this.ropeLength) >>> 32));
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.ropeStrength) ^ (Double.doubleToLongBits(this.ropeStrength) >>> 32));
-        hash = 71 * hash + (int) (Double.doubleToLongBits(this.playerSolution) ^ (Double.doubleToLongBits(this.playerSolution) >>> 32));
+        hash = 31 * hash + Objects.hashCode(this.appearance);
+        hash = 31 * hash + Objects.hashCode(this.mathEquationB);
+        hash = 31 * hash + Objects.hashCode(this.ropeLength);
+        hash = 31 * hash + Objects.hashCode(this.ropeStrength);
+        hash = 31 * hash + Objects.hashCode(this.playerSolution);
         return hash;
     }
 
@@ -90,21 +92,20 @@ public class Bridge implements Serializable{
         if (!Objects.equals(this.appearance, other.appearance)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.mathEquationB) != Double.doubleToLongBits(other.mathEquationB)) {
+        if (!Objects.equals(this.mathEquationB, other.mathEquationB)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.ropeLength) != Double.doubleToLongBits(other.ropeLength)) {
+        if (!Objects.equals(this.ropeLength, other.ropeLength)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.ropeStrength) != Double.doubleToLongBits(other.ropeStrength)) {
+        if (!Objects.equals(this.ropeStrength, other.ropeStrength)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.playerSolution) != Double.doubleToLongBits(other.playerSolution)) {
+        if (!Objects.equals(this.playerSolution, other.playerSolution)) {
             return false;
         }
         return true;
     }
-    
     
     
 }
