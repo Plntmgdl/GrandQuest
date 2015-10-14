@@ -24,12 +24,12 @@ public class Road implements Serializable{
     
     
 
-    public String getDescription() {
+    public String getRoadDescription() {
         return roadDescription;
     }
 
-    public void setDescription(String description) {
-        this.roadDescription = description;
+    public void setRoadDescription(String roadDescription) {
+        this.roadDescription = roadDescription;
     }
 
     public String getPlayerChoice() {
@@ -58,17 +58,17 @@ public class Road implements Serializable{
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.roadDescription);
-        hash = 41 * hash + Objects.hashCode(this.playerChoice);
-        hash = 41 * hash + Objects.hashCode(this.encounterChance);
-        hash = 41 * hash + Objects.hashCode(this.arriveAtCastle);
+        int hash = 5;
+        hash = 79 * hash + Objects.hashCode(this.roadDescription);
+        hash = 79 * hash + Objects.hashCode(this.playerChoice);
+        hash = 79 * hash + Objects.hashCode(this.encounterChance);
+        hash = 79 * hash + Objects.hashCode(this.arriveAtCastle);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Road{" + "description=" + roadDescription + ", playerChoice=" + playerChoice + ", encounterChance=" + encounterChance + ", arriveAtCastle=" + arriveAtCastle + '}';
+        return "Road{" + "roadDescription=" + roadDescription + ", playerChoice=" + playerChoice + ", encounterChance=" + encounterChance + ", arriveAtCastle=" + arriveAtCastle + '}';
     }
 
     @Override
@@ -93,10 +93,6 @@ public class Road implements Serializable{
             return false;
         }
         return true;
-    }
-
-    public void setroadDescription(String long_and_winding) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
