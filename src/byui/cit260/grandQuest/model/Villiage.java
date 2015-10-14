@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Villiage implements Serializable {
     
     //class instance variables
-    private String description;
+    private String villageDescription;
     private String startingPoint;
 
     public Villiage() {
@@ -24,11 +24,11 @@ public class Villiage implements Serializable {
     
 
     public String getDescription() {
-        return description;
+        return villageDescription;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.villageDescription = description;
     }
 
     public String getStartingPoint() {
@@ -42,14 +42,14 @@ public class Villiage implements Serializable {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 11 * hash + Objects.hashCode(this.description);
+        hash = 11 * hash + Objects.hashCode(this.villageDescription);
         hash = 11 * hash + Objects.hashCode(this.startingPoint);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Villiage{" + "description=" + description + ", startingPoint=" + startingPoint + '}';
+        return "Villiage{" + "villageDescription=" + villageDescription + ", startingPoint=" + startingPoint + '}';
     }
     
     
@@ -63,7 +63,7 @@ public class Villiage implements Serializable {
             return false;
         }
         final Villiage other = (Villiage) obj;
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.villageDescription, other.villageDescription)) {
             return false;
         }
         if (!Objects.equals(this.startingPoint, other.startingPoint)) {
