@@ -14,7 +14,7 @@ import java.util.Objects;
  */
 public class Road implements Serializable{
     
-    private String description;
+    private String roadDescription;
     private String playerChoice;
     private String encounterChance;
     private String arriveAtCastle;
@@ -25,11 +25,11 @@ public class Road implements Serializable{
     
 
     public String getDescription() {
-        return description;
+        return roadDescription;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.roadDescription = description;
     }
 
     public String getPlayerChoice() {
@@ -59,7 +59,7 @@ public class Road implements Serializable{
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.description);
+        hash = 41 * hash + Objects.hashCode(this.roadDescription);
         hash = 41 * hash + Objects.hashCode(this.playerChoice);
         hash = 41 * hash + Objects.hashCode(this.encounterChance);
         hash = 41 * hash + Objects.hashCode(this.arriveAtCastle);
@@ -68,7 +68,7 @@ public class Road implements Serializable{
 
     @Override
     public String toString() {
-        return "Road{" + "description=" + description + ", playerChoice=" + playerChoice + ", encounterChance=" + encounterChance + ", arriveAtCastle=" + arriveAtCastle + '}';
+        return "Road{" + "description=" + roadDescription + ", playerChoice=" + playerChoice + ", encounterChance=" + encounterChance + ", arriveAtCastle=" + arriveAtCastle + '}';
     }
 
     @Override
@@ -80,7 +80,7 @@ public class Road implements Serializable{
             return false;
         }
         final Road other = (Road) obj;
-        if (!Objects.equals(this.description, other.description)) {
+        if (!Objects.equals(this.roadDescription, other.roadDescription)) {
             return false;
         }
         if (!Objects.equals(this.playerChoice, other.playerChoice)) {
@@ -93,6 +93,10 @@ public class Road implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setroadDescription(String long_and_winding) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
