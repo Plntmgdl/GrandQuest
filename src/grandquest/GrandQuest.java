@@ -40,7 +40,7 @@ public class GrandQuest {
     
        Road description = new Road();
        
-            description.setDescription("long and winding");
+            description.setroadDescription("long and winding");
             description.setPlayerChoice("you chose this direction");
             description.setEncounterChance("As you continue on your way...");
             description.setArriveAtCastle("As you turn the corner and the trees clear...");
