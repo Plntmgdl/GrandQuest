@@ -23,6 +23,8 @@ import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Inn;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.MarketPlace;
+import byui.cit260.grandQuest.model.Menu;
+import byui.cit260.grandQuest.model.Merchant;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 import byui.cit260.grandQuest.model.Prince;
@@ -45,7 +47,6 @@ public class GrandQuest {
             String playerInfo = playerOne.toString();
             System.out.println(playerInfo);
             
-            //Jassen starts here
     
        Road description = new Road();
        
@@ -57,7 +58,6 @@ public class GrandQuest {
             String roadInfo = description.toString();
             System.out.println(roadInfo);
             
-            //Jassen
        
        Forest environment = new Forest ();
        
@@ -70,7 +70,6 @@ public class GrandQuest {
             forestInfo = environment.toString();
             System.out.println(forestInfo);
             
-            //Jassen
        
        Bridge appearance = new Bridge ();
        
@@ -84,7 +83,6 @@ public class GrandQuest {
             bridgeInfo = appearance.toString();
             System.out.println(bridgeInfo);
             
-            //Jassen
             
        Encounters random = new Encounters ();
        
@@ -98,7 +96,6 @@ public class GrandQuest {
             encountersInfo = random.toString();
             System.out.println(encountersInfo); 
             
-            //Jassen
             
        Creatures monsters = new Creatures ();
        
@@ -113,7 +110,6 @@ public class GrandQuest {
             creaturesInfo = monsters.toString();
             System.out.println(creaturesInfo);
             
-            //Jassen
        
         EncounterResults eulogy = new EncounterResults ();
        
@@ -124,7 +120,6 @@ public class GrandQuest {
             encounterResultsInfo = eulogy.toString();
             System.out.println(encounterResultsInfo);
             
-            //Jassen
             
        PlayerReaction decision = new PlayerReaction();
        
@@ -136,7 +131,6 @@ public class GrandQuest {
             playerReactionInfo = decision.toString();
             System.out.println(playerReactionInfo);
             
-            //Jassen
             
        MonsterReaction reaction = new MonsterReaction();
        
@@ -150,8 +144,7 @@ public class GrandQuest {
             monsterReactionInfo = reaction.toString();
             System.out.println(monsterReactionInfo);
             
-            //Jassen
-            
+                        
        CastlePrince princeDescription = new CastlePrince();
             
             princeDescription.setPrinceDescription("Dreamy");
@@ -160,7 +153,6 @@ public class GrandQuest {
             castlePrinceInfo = princeDescription.toString();
             System.out.println(castlePrinceInfo);
             
-            //Jassen
             
        Bathtub bathtubDescription = new Bathtub();
        
@@ -171,8 +163,7 @@ public class GrandQuest {
             bathtubInfo = bathtubDescription.toString();
             System.out.println(bathtubInfo);
             
-            //Jassen
-            
+           
        CastleMerchant castleMerchantDescription = new CastleMerchant();
        
             castleMerchantDescription.setCastleMerchantDescription("A robust individual who smells like spices...");
@@ -225,7 +216,7 @@ public class GrandQuest {
             marketPlaceInfo = marketPlaceDescription.toString();
             System.out.println(marketPlaceDescription);
             
-        Prince tavernPrinceDescription = new Prince();
+       Prince tavernPrinceDescription = new Prince();
             
             tavernPrinceDescription.setTavernPrinceDescription("Dreamy");
             tavernPrinceDescription.setPrinceRequest("Make me a sandwhich");
@@ -242,8 +233,28 @@ public class GrandQuest {
             String tavernInfo;
             tavernInfo = tavernDescription.toString();
             System.out.println(tavernInfo);
+            
+       Menu menuHelp = new Menu();
+       
+            menuHelp.setHelp("map");
+            menuHelp.setMap("Map");
+            menuHelp.setRestart("Restart");
+            menuHelp.setDoOver("Do over");
+            String menuInfo;
+            menuInfo = menuHelp.toString();
+            System.out.println(menuInfo);
+            
+            
+       Merchant merchantDescription = new Merchant();
+       
+            merchantDescription.setMerchantDescription("Big and Jolly");
+            merchantDescription.setMerchantRequest("Assist with wagon");
+            merchantDescription.setPlayerChoice("load wagon");
+            String merchantInfo;
+            merchantInfo = merchantDescription.toString();
+            System.out.println(merchantInfo);
 
-//Jassen done
+
     }
     
 }
