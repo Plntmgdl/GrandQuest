@@ -13,6 +13,7 @@ import byui.cit260.grandQuest.model.Road;
 import byui.cit260.grandQuest.model.Forest;
 
 import byui.cit260.grandQuest.model.Bridge;
+import byui.cit260.grandQuest.model.Castle;
 import byui.cit260.grandQuest.model.CastleMerchant;
 import byui.cit260.grandQuest.model.CastlePrince;
 import byui.cit260.grandQuest.model.Creatures;
@@ -253,6 +254,16 @@ public class GrandQuest {
             String merchantInfo;
             merchantInfo = merchantDescription.toString();
             System.out.println(merchantInfo);
+            
+       Castle castleDescription = new Castle();
+       
+          castleDescription.setCastleDescription("As you round the corner there before you on a...");
+          castleDescription.setMerchantThank("The merchant reveals himself to be...");
+          castleDescription.setPrinceThank("The man reveals himself to be...");
+          castleDescription.setRewardCertificate("Here is your reward");
+          String castleInfo;
+          castleInfo = castleDescription.toString();
+          System.out.println(castleInfo);
 
 
     }
