@@ -215,7 +215,15 @@ public class GrandQuest {
             System.out.println(villageInfo);
             
             
-            //Jassen done
+       MarketPlace marketPlaceDescription = new MarketPlace();
+       
+            marketPlaceDescription.setMarketPlaceDescription("many vendors...");
+            marketPlaceDescription.setItems("food,water,spices,rope");
+            String marketPlaceInfo;
+            marketPlaceInfo = marketPlaceDescription.toString();
+            System.out.println(marketPlaceDescription);
+
+//Jassen done
     }
     
 }
