@@ -15,24 +15,21 @@ import java.util.Objects;
 public class Prince implements Serializable {
     
     //class instance variables
-    private String princeDescription;
+    private String tavernPrinceDescription;
     private String princeRequest;
     private String playerChoice;
 
-    public Prince(String princeDescription, String princeRequest, String playerChoice) {
-        this.princeDescription = princeDescription;
-        this.princeRequest = princeRequest;
-        this.playerChoice = playerChoice;
+    public Prince() {
     }
     
     
 
-    public String getPrinceDescription() {
-        return princeDescription;
+    public String getTavernPrinceDescription() {
+        return tavernPrinceDescription;
     }
 
-    public void setPrinceDescription(String princeDescription) {
-        this.princeDescription = princeDescription;
+    public void setTavernPrinceDescription(String tavernPrinceDescription) {
+        this.tavernPrinceDescription = tavernPrinceDescription;
     }
 
     public String getPrinceRequest() {
@@ -53,19 +50,17 @@ public class Prince implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.princeDescription);
-        hash = 89 * hash + Objects.hashCode(this.princeRequest);
-        hash = 89 * hash + Objects.hashCode(this.playerChoice);
+        int hash = 3;
+        hash = 23 * hash + Objects.hashCode(this.tavernPrinceDescription);
+        hash = 23 * hash + Objects.hashCode(this.princeRequest);
+        hash = 23 * hash + Objects.hashCode(this.playerChoice);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Prince{" + "princeDescription=" + princeDescription + ", princeRequest=" + princeRequest + ", playerChoice=" + playerChoice + '}';
+        return "Prince{" + "tavernPrinceDescription=" + tavernPrinceDescription + ", princeRequest=" + princeRequest + ", playerChoice=" + playerChoice + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -76,7 +71,7 @@ public class Prince implements Serializable {
             return false;
         }
         final Prince other = (Prince) obj;
-        if (!Objects.equals(this.princeDescription, other.princeDescription)) {
+        if (!Objects.equals(this.tavernPrinceDescription, other.tavernPrinceDescription)) {
             return false;
         }
         if (!Objects.equals(this.princeRequest, other.princeRequest)) {
@@ -87,9 +82,6 @@ public class Prince implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
+
+       
 }
