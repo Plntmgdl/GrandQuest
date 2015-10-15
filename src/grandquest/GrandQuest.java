@@ -5,6 +5,7 @@
  */
 package grandquest;
 
+import byui.cit260.grandQuest.model.Bathtub;
 import byui.cit260.grandQuest.model.Player;
 
 import byui.cit260.grandQuest.model.Road;
@@ -150,6 +151,18 @@ public class GrandQuest {
             String castlePrinceInfo;
             castlePrinceInfo = princeDescription.toString();
             System.out.println(castlePrinceInfo);
+            
+            //Jassen
+            
+       Bathtub bathtubDescription = new Bathtub();
+       
+            bathtubDescription.setBathtubDescription("Big wooden tub, looks really relaxing.");
+            bathtubDescription.setMathEquationT("How long do you want to soak...");
+            bathtubDescription.setPlayerSolution("You start to fill the tub");
+            String bathtubInfo;
+            bathtubInfo = bathtubDescription.toString();
+            System.out.println(bathtubInfo);
+            
             
             //Jassen done
     }
