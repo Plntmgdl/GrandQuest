@@ -25,6 +25,7 @@ import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.MarketPlace;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
+import byui.cit260.grandQuest.model.Village;
 /**
  *
  * @author Jassen
@@ -205,7 +206,15 @@ public class GrandQuest {
             mapInfo = mapRowCount.toString();
             System.out.println(mapInfo);
             
-     
+       Village villageDescription = new Village();
+       
+            villageDescription.setVillageDescription("A lovely place");
+            villageDescription.setStartingPoint("Welcome");
+            String villageInfo;
+            villageInfo = villageDescription.toString();
+            System.out.println(villageInfo);
+            
+            
             //Jassen done
     }
     
