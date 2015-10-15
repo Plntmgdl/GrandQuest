@@ -24,6 +24,7 @@ import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Inn;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.MarketPlace;
+import byui.cit260.grandQuest.model.MathEquations;
 import byui.cit260.grandQuest.model.Menu;
 import byui.cit260.grandQuest.model.Merchant;
 import byui.cit260.grandQuest.model.MonsterReaction;
@@ -265,6 +266,15 @@ public class GrandQuest {
           castleInfo = castleDescription.toString();
           System.out.println(castleInfo);
 
+          
+       MathEquations bathTubEquation = new MathEquations();
+       
+            bathTubEquation.setBathTubEquation(7987);
+            bathTubEquation.setBridgeEquation(89798);
+            bathTubEquation.setWagonEquation(78797);
+            String mathEquationsInfo;
+            mathEquationsInfo = bathTubEquation.toString();
+            System.out.println(mathEquationsInfo);
 
     }
     
