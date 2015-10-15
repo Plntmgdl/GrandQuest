@@ -25,6 +25,8 @@ import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.MarketPlace;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
+import byui.cit260.grandQuest.model.Prince;
+import byui.cit260.grandQuest.model.Tavern;
 import byui.cit260.grandQuest.model.Village;
 /**
  *
@@ -222,6 +224,24 @@ public class GrandQuest {
             String marketPlaceInfo;
             marketPlaceInfo = marketPlaceDescription.toString();
             System.out.println(marketPlaceDescription);
+            
+        Prince tavernPrinceDescription = new Prince();
+            
+            tavernPrinceDescription.setTavernPrinceDescription("Dreamy");
+            tavernPrinceDescription.setPrinceRequest("Make me a sandwhich");
+            tavernPrinceDescription.setPlayerChoice("Yes");
+            String princeInfo;
+            princeInfo = tavernPrinceDescription.toString();
+            System.out.println(princeInfo);
+            
+       Tavern tavernDescription = new Tavern();
+            
+            tavernDescription.setTavernDescription("What a dump");
+            tavernDescription.setPrinceRequest("Bring me a drink");
+            tavernDescription.setPlayerChoice("Yes");
+            String tavernInfo;
+            tavernInfo = tavernDescription.toString();
+            System.out.println(tavernInfo);
 
 //Jassen done
     }
