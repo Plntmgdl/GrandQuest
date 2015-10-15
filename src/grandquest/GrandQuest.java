@@ -22,6 +22,7 @@ import byui.cit260.grandQuest.model.Encounters;
 import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Inn;
 import byui.cit260.grandQuest.model.Map;
+import byui.cit260.grandQuest.model.MarketPlace;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 /**
@@ -203,6 +204,8 @@ public class GrandQuest {
             String mapInfo;
             mapInfo = mapRowCount.toString();
             System.out.println(mapInfo);
+            
+     
             //Jassen done
     }
     
