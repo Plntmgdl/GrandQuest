@@ -13,11 +13,14 @@ import byui.cit260.grandQuest.model.Road;
 import byui.cit260.grandQuest.model.Forest;
 
 import byui.cit260.grandQuest.model.Bridge;
+import byui.cit260.grandQuest.model.CastleMerchant;
 import byui.cit260.grandQuest.model.CastlePrince;
 import byui.cit260.grandQuest.model.Creatures;
 import byui.cit260.grandQuest.model.EncounterResults;
 
 import byui.cit260.grandQuest.model.Encounters;
+import byui.cit260.grandQuest.model.Game;
+import byui.cit260.grandQuest.model.Inn;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 /**
@@ -163,7 +166,33 @@ public class GrandQuest {
             bathtubInfo = bathtubDescription.toString();
             System.out.println(bathtubInfo);
             
+            //Jassen
             
+       CastleMerchant castleMerchantDescription = new CastleMerchant();
+       
+            castleMerchantDescription.setCastleMerchantDescription("A robust individual who smells like spices...");
+            castleMerchantDescription.setEndingPointMerc("You start off as a mercenary, protecting...");
+            String castleMerchantInfo;
+            castleMerchantInfo = castleMerchantDescription.toString();
+            System.out.println(castleMerchantInfo);
+            
+            
+       Game gameDescription = new Game();
+       
+            gameDescription.setGameDescription("Welcom to Grand Quest and epic adventure filled with...");
+            gameDescription.setGameType("Choose you path");
+            String gameInfo;
+            gameInfo = gameDescription.toString();
+            System.out.println(gameInfo);
+            
+       Inn innDescription = new Inn();
+       
+            innDescription.setInnDescription("A moderate sized two-story building...");
+            innDescription.setPlayerChoice("Do you want to bath and rest, then continue...");
+            innDescription.setReturnToStart("You chose to...");
+            String innInfo;
+            innInfo = innDescription.toString();
+            System.out.println(innInfo);
             //Jassen done
     }
     
