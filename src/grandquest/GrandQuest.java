@@ -21,6 +21,7 @@ import byui.cit260.grandQuest.model.EncounterResults;
 import byui.cit260.grandQuest.model.Encounters;
 import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Inn;
+import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 /**
@@ -193,6 +194,15 @@ public class GrandQuest {
             String innInfo;
             innInfo = innDescription.toString();
             System.out.println(innInfo);
+            
+       Map mapRowCount = new Map();
+       
+            mapRowCount.setColumnCount("welcome to town");
+            mapRowCount.setDisplayMap("welcome to town");
+            mapRowCount.setRowCount("welcome");
+            String mapInfo;
+            mapInfo = mapRowCount.toString();
+            System.out.println(mapInfo);
             //Jassen done
     }
     
