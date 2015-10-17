@@ -158,7 +158,8 @@ public class GrandQuest {
             
        Bathtub bathtubDescription = new Bathtub();
        
-            bathtubDescription.setBathtubDescription("Big wooden tub, looks really relaxing.");
+            bathtubDescription.setBathtubDescription("Big wooden tub, looks really relaxing. You see that it is about five feet in diameter"
+                    + "and about three feet tall. How many gallons will it take to fill it and how fast do you need to go so that you can enjoy a nice bath");
             bathtubDescription.setMathEquationT("How long do you want to soak...");
             bathtubDescription.setPlayerSolution("You start to fill the tub");
             String bathtubInfo;
