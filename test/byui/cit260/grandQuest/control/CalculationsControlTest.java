@@ -165,4 +165,21 @@ public class CalculationsControlTest {
        
     }
     
+    { System.out.println("calcWagonWeight");
+        
+        /*************************************
+         * test case one
+        *************************************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case seven
+        double wagonWeight = 500;
+        double inventoryWeight = 1000;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 1500;
+        double result = instance.calcWagonWeight( wagonWeight, inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+       
+    }
+    
 }
