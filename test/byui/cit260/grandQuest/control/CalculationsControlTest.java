@@ -260,4 +260,6 @@ public class CalculationsControlTest {
         double result = instance.calcStrengthOfRope(diameter);
         assertEquals(expResult, result, 0.0001);
     } 
+
+
 }
