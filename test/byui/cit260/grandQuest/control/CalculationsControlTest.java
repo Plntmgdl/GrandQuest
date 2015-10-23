@@ -157,29 +157,109 @@ public class CalculationsControlTest {
          @Test
     public void testCalcStrengthOfRope() {
         System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case one
+         *************************************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case one
         double diameter = 3.0;
         CalculationsControl instance = new CalculationsControl();
         double expResult = 0.045;
         double result = instance.calcStrengthOfRope(diameter);
         assertEquals(expResult, result, 0.0001);
-       
     }
     
-    { System.out.println("calcWagonWeight");
+    { System.out.println("calcStrengthOfRope");
         
-        /*************************************
-         * test case one
-        *************************************/
-        System.out.println("\tTest case #1");
+         /*************************************
+         * test case two
+         *************************************/
+        System.out.println("\tTest case #2");
+        
+        //input values for test case two
+        double diameter = -5.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1.0;
+        double result = instance.calcStrengthOfRope(diameter);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case three
+         *************************************/
+        System.out.println("\tTest case #3");
+        
+        //input values for test case three
+        double diameter = 0.01;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1.0;
+        double result = instance.calcStrengthOfRope(diameter);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case four
+         *************************************/
+        System.out.println("\tTest case #4");
+        
+        //input values for test case four
+        double diameter = 0.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 0.0;
+        double result = instance.calcStrengthOfRope(diameter);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case five
+         *************************************/
+        System.out.println("\tTest case #5");
+        
+        //input values for test case five
+        double diameter = 2.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 0.02;
+        double result = instance.calcStrengthOfRope(diameter);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case six
+         *************************************/
+        System.out.println("\tTest case #6");
+        
+        //input values for test case six
+        double diameter = 1.9;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1.0;
+        double result = instance.calcStrengthOfRope(diameter);
+        assertEquals(expResult, result, 0.0001);
+    }
+    
+    { System.out.println("calcStrengthOfRope");
+        
+         /*************************************
+         * test case seven
+         *************************************/
+        System.out.println("\tTest case #7");
         
         //input values for test case seven
-        double wagonWeight = 500;
-        double inventoryWeight = 1000;
+        double diameter = 10.0;
         CalculationsControl instance = new CalculationsControl();
-        double expResult = 1500;
-        double result = instance.calcWagonWeight( wagonWeight, inventoryWeight);
+        double expResult = 0.5;
+        double result = instance.calcStrengthOfRope(diameter);
         assertEquals(expResult, result, 0.0001);
-       
-    }
-    
+    } 
+
+
 }
