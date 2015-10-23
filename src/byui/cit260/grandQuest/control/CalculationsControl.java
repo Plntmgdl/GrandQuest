@@ -61,7 +61,9 @@ public class CalculationsControl {
 	if (inventoryWeight > 1500) {
             return -1;
         }
-       
+        if (wagonWeight < 0){
+            return -1;
+        }
         wagonWeight = 500;
                
         double totalWeight = (wagonWeight + inventoryWeight);
