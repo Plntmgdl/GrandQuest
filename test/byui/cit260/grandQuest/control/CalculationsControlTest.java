@@ -261,5 +261,115 @@ public class CalculationsControlTest {
         assertEquals(expResult, result, 0.0001);
     } 
 
-
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #1
+         *************************************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case #1
+        double wagonWeight = 500.0;
+        double inventoryWeight= 1000.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 1500.0;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #2
+         *************************************/
+        System.out.println("\tTest case #2");
+        
+        //input values for test case #2
+        double wagonWeight = 500.0;
+        double inventoryWeight= -50.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #3
+         *************************************/
+        System.out.println("\tTest case #3");
+        
+        //input values for test case #3
+        double wagonWeight = -500.0;
+        double inventoryWeight= 1000.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #4
+         *************************************/
+        System.out.println("\tTest case #4");
+        
+        //input values for test case #4
+        double wagonWeight = 500.0;
+        double inventoryWeight= 3000.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = -1;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #5
+         *************************************/
+        System.out.println("\tTest case #5");
+        
+        //input values for test case #5
+        double wagonWeight = 500.0;
+        double inventoryWeight= 1.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 501.0;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #6
+         *************************************/
+        System.out.println("\tTest case #6");
+        
+        //input values for test case #6
+        double wagonWeight = 500.0;
+        double inventoryWeight= 1500.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 2000.0;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
+    
+    { System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case #7
+         *************************************/
+        System.out.println("\tTest case #7");
+        
+        //input values for test case #7
+        double wagonWeight = 500.0;
+        double inventoryWeight= 100.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 600.0;
+        double result = instance.calcWagonWeight(wagonWeight,inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    } 
 }
