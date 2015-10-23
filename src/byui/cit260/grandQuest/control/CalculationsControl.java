@@ -53,4 +53,18 @@ public class CalculationsControl {
 
     }
     
+    public double calcWagonWeight(double wagonWeight,double inventoryWeight) {		
+
+	if (inventoryWeight < 0) {
+            return -1;
+        }
+	if (inventoryWeight > 1500) {
+            return -1;
+        }
+       
+        wagonWeight = 500;
+               
+        double totalWeight = (wagonWeight + inventoryWeight);
+        return totalWeight;
+    }
 }
