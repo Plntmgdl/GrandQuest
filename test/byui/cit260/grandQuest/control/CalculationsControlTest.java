@@ -262,4 +262,24 @@ public class CalculationsControlTest {
     } 
 
 
+    
+     /**
+     * Test of calcWagonWeight method, of class CalculationsControl.
+     */
+         @Test
+    public void testCalcWagonWeight() {
+        System.out.println("calcWagonWeight");
+        
+         /*************************************
+         * test case one
+         *************************************/
+        System.out.println("\tTest case #1");
+        
+        //input values for test case one
+        double inventoryWeight = 1000.0;
+        CalculationsControl instance = new CalculationsControl();
+        double expResult = 1500.0;
+        double result = instance.calcWagonWeight(inventoryWeight);
+        assertEquals(expResult, result, 0.0001);
+    }
 }
