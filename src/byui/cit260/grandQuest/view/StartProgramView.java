@@ -53,7 +53,7 @@ public class StartProgramView {
         
     }
 
-    private String getPlayersName() {
+    public String getPlayersName() {
         boolean valid = false; // Indicates if Name has been retreived 
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
