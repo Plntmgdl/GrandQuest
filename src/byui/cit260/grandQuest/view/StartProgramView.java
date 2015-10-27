@@ -5,6 +5,10 @@
  */
 package byui.cit260.grandQuest.view;
 
+import byui.cit260.grandQuest.control.ProgramControl;
+import byui.cit260.grandQuest.model.Player;
+import java.util.Scanner;
+
 /**
  *
  * @author devin_000
@@ -24,9 +28,9 @@ public class StartProgramView {
     String playersName = this.getPlayersName();
     
     //Create and save the player object
-
+    Player player = ProgramControl.createPlayer(playersName);
     //Display personalized welcome message
-
+    this.displayWelcomeMessage(player);
     //Display the main menu
     }
 
@@ -53,7 +57,8 @@ public class StartProgramView {
         
     }
 
-    public String getPlayersName() {
+    private String getPlayersName() {
+           
         boolean valid = false; // Indicates if Name has been retreived 
         String playersName = null;
         Scanner keyboard = new Scanner(System.in); //Keyboard input stream
@@ -77,4 +82,12 @@ public class StartProgramView {
       return playersName; //Return the name
     }
 
+    private void displayWelcomeMessage(Player player) {
+         System.out.println("\n\n==================================================");
+         System.out.println("\tWelcome adventurer" + player.getName());
+         System.out.println("\n\n==================================================");
+         System.out.println("\n\n==================================================");
+    }
+
+   
 }
