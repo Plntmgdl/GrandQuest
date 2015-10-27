@@ -85,8 +85,8 @@ public class StartProgramView {
     private void displayWelcomeMessage(Player player) {
          System.out.println("\n\n==================================================");
          System.out.println("\tWelcome adventurer" + player.getName());
-         System.out.println("\n\n==================================================");
-         System.out.println("\n\n==================================================");
+         System.out.println("\tEnjoy your grand quest");
+         System.out.println("==================================================");
     }
 
    
