@@ -6,6 +6,7 @@
 package byui.cit260.grandQuest.control;
 
 import byui.cit260.grandQuest.model.Player;
+import grandquest.GrandQuest;
 
 /**
  *
@@ -13,9 +14,19 @@ import byui.cit260.grandQuest.model.Player;
  */
 public class ProgramControl {
 
-    public static Player createPlayer(String playersName) {
-        System.out.println("\n**** createPlayer function called ****");
-        return null;
+    public static Player createPlayer(String name) {
+        
+        if (name == null){
+            return null;
+        }
+        
+        Player player = new Player();
+        player.setName(name);
+        
+        GrandQuest.setPlayer(player); // save the player
+        
+        return player;
+     
     }
     
 }

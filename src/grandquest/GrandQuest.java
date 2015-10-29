@@ -6,12 +6,17 @@
 package grandquest;
 
 
+import byui.cit260.grandQuest.model.Game;
+import byui.cit260.grandQuest.model.Player;
 import byui.cit260.grandQuest.view.StartProgramView;
 /**
  *
  * @author Jassen
  */
 public class GrandQuest {
+    
+    private static Game curretGame = null;
+    private static Player player = null;
 
     /**
      * @param args the command line arguments
@@ -22,4 +27,22 @@ public class GrandQuest {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.startProgram();
     }
+
+    public static Game getCurretGame() {
+        return curretGame;
+    }
+
+    public static void setCurretGame(Game curretGame) {
+        GrandQuest.curretGame = curretGame;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        GrandQuest.player = player;
+    }
+    
+    
 }
