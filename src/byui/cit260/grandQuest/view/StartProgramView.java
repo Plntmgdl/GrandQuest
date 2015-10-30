@@ -29,9 +29,14 @@ public class StartProgramView {
     
     //Create and save the player object
     Player player = ProgramControl.createPlayer(playersName);
+   
     //Display personalized welcome message
     this.displayWelcomeMessage(player);
+    
     //Display the main menu
+    MainMenuView mainMenu = new MainMenuView();
+    mainMenu.displayMenu();
+        
     }
 
     private void displayBanner() {
