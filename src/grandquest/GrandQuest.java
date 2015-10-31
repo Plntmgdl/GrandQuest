@@ -43,6 +43,10 @@ public class GrandQuest {
     public static void setPlayer(Player player) {
         GrandQuest.player = player;
     }
+
+    public static Player getplayer() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }
