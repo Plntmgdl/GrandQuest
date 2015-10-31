@@ -5,6 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
+import byui.cit260.grandQuest.control.GameControl;
+import grandquest.GrandQuest;
 import java.util.Scanner;
 
 /**
@@ -17,7 +19,8 @@ public class MainMenuView {
                 + "\n--------------------------------------"
                 + "\n| Main Menu                          |"
                 + "\n--------------------------------------"
-                + "\nG - Start Game"
+                + "\nN - Start New Game"
+                + "\nG - Start Existing Game"
                 + "\nH - Get help on how to play teh game"
                 + "\nS - Save game"
                 + "\nE - Exit"
@@ -81,7 +84,12 @@ public class MainMenuView {
     }
     
     private void startNewGame() {
-        System.out.println("*** startNewGame function is called ***");
+            // create a new game
+        GameControl.createNewGame(GrandQuest.getplayer());
+        
+        // display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
     
     private void startExistingGame() {
