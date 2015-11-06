@@ -5,6 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author devin_000
