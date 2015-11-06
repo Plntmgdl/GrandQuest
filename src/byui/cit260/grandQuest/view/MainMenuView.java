@@ -85,7 +85,7 @@ public class MainMenuView {
     
     private void startNewGame() {
             // create a new game
-        GameControl.createNewGame(GrandQuest.getplayer());
+        //(Put in temporary notes to display message when selecting new game) GameControl.createNewGame(GrandQuest.getplayer());
         
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
