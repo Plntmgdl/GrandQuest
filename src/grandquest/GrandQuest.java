@@ -15,7 +15,7 @@ import byui.cit260.grandQuest.view.StartProgramView;
  */
 public class GrandQuest {
     
-    private static Game curretGame = null;
+    private static Game currentGame = null;
     private static Player player = null;
 
     /**
@@ -29,11 +29,11 @@ public class GrandQuest {
     }
 
     public static Game getCurretGame() {
-        return curretGame;
+        return currentGame;
     }
 
     public static void setCurretGame(Game curretGame) {
-        GrandQuest.curretGame = curretGame;
+        GrandQuest.currentGame = curretGame;
     }
 
     public static Player getPlayer() {
@@ -47,6 +47,5 @@ public class GrandQuest {
     public static Player getplayer() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }
