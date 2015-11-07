@@ -5,13 +5,20 @@
  */
 package byui.cit260.grandQuest.view;
 
+import byui.cit260.grandQuest.model.Player;
+
 /**
  *
  * @author devin_000
  */
 public class GameMenuView {
     
-    void displayMenu(){
+        private Player currentPlayer;
+        
+    void displayMenu(Player player){
+        
+        currentPlayer = player;
+        
         System.out.println("\n*** displayMenu stub function called ***");
     }
     

@@ -59,7 +59,7 @@ public class EncounterMenuView {
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'R': // Player runs away and screen displays monster resction
+            case 'R': // Player runs away and screen displays previous screen
                 this.displayMonsterReaction();
                 break;
             case 'S': // player stands ground and screen displays monster reaction

@@ -6,6 +6,7 @@
 package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.GameControl;
+import byui.cit260.grandQuest.model.Player;
 import grandquest.GrandQuest;
 import java.util.Scanner;
 
@@ -14,6 +15,8 @@ import java.util.Scanner;
  * @author devin_000
  */
 public class MainMenuView {
+    
+        private Player currentPlayer;
     
         private final String MENU = "\n"
                 + "\n--------------------------------------"
@@ -26,7 +29,9 @@ public class MainMenuView {
                 + "\nE - Exit"
                 + "\n--------------------------------------";
 
-        public void displayMenu() {
+        public void displayMenu(Player player) {
+            
+            currentPlayer = player;
             
             char selection = ' ';
             do{
@@ -89,7 +94,7 @@ public class MainMenuView {
         
         // display the game menu
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayMenu(currentPlayer);
     }
     
     private void startExistingGame() {

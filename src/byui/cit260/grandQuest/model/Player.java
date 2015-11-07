@@ -15,8 +15,19 @@ import java.util.Objects;
 public class Player implements Serializable {
     //class instant variables
     private String name;
+    private Integer currentLocation;
+
+    public Integer getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Integer currentLocation) {
+        this.currentLocation = currentLocation;
+    }
 
     public Player() {
+        name = "";
+        currentLocation = 0;
     }
   
     public String getName() {
