@@ -15,11 +15,11 @@ public class MovementMenuView {
     
     private final String MENU = "\n"
                 + "\n--------------------------------------"
-                + "\n|         Choose your Path           |"
+                + "\n|         Choose a Region           |"
                 + "\n--------------------------------------"
-                + "\nL - Go Left"
-                + "\nS - Go Straight"
-                + "\nR - Go Right"
+                + "\nV - Go to Village"
+                + "\nR - Go to Road"
+                + "\nF - Go to Forest"
                 + "\nE - Save and End Game"
                 + "\n--------------------------------------";
 
@@ -60,14 +60,14 @@ public class MovementMenuView {
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'L': // Move to the Left
-                this.displayMoveLeft();
+            case 'V': // Go to the Village Region
+                this.displayRegionVillage();
                 break;
-            case 'S': // Move Straight
-                this.displayMoveStraight();
+            case 'R': // Go to the Road Region
+                this.displayRegionRoad();
                 break;
-            case 'R': // Move to the Right
-                this.displayMoveRight();
+            case 'F': // Go to the Forest Region
+                this.displayRegionForest();
                 break;
             case 'E': // save game and return to main menu
                 return;
@@ -77,29 +77,23 @@ public class MovementMenuView {
         }
     }
     
-    private void displayMoveLeft() {
-       System.out.println ("\n---------------------------------------"
-                   + "\n | You turned left and continued on your Quest |"
-                   + "\n-------------------------------------------"
-                   + "\n Choose your path"
-                   + "\n Left, Right, Straight");
+    private void displayRegionVillage() {
+       // display the game menu
+        VillageRegionView villageRegion = new VillageRegionView();
+        villageRegion.displayMenu();
     }
     
-    private void displayMoveStraight() {
+    private void displayRegionRoad() {
        System.out.println ("\n---------------------------------------"
-                   + "\n | You went sraight and continued on your Quest |"
-                   + "\n-------------------------------------------"
-                   + "\n Choose your path"
-                   + "\n Left, Right, Straight");
+                   + "\n | Launch RegionRoad menu |"
+                   + "\n-------------------------------------------");
      
     }
     
-    private void displayMoveRight(){
+    private void displayRegionForest(){
         System.out.println ("\n---------------------------------------"
-                   + "\n | You turned right and continued on your Quest |"
-                   + "\n-------------------------------------------"
-                   + "\n Choose your path"
-                   + "\n Left, Right, Straight");
+                   + "\n | Launch RegionForest menu |"
+                   + "\n-------------------------------------------");
      
     }
     
