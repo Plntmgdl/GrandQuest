@@ -7,7 +7,7 @@ package byui.cit260.grandQuest.control;
 
 /**
  *
- * @author Jassen
+ * 
  */
 public class CalculationsControl {
     
