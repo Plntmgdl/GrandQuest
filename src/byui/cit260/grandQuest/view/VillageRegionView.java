@@ -11,16 +11,17 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class MovementMenuView {
-    
+public class VillageRegionView {
+
     private final String MENU = "\n"
                 + "\n--------------------------------------"
                 + "\n|         Choose a Region           |"
                 + "\n--------------------------------------"
-                + "\nV - Go to Village"
-                + "\nR - Go to Road"
-                + "\nF - Go to Forest"
-                + "\nE - Save and End Game"
+                + "\nC - Go to Castle"
+                + "\nI - Go to Inn"
+                + "\nM - Go to Market Place"
+                + "\nT - Go to Tavern"
+                + "\nR - Return to Region Map"
                 + "\n--------------------------------------";
 
         public void displayMenu() {
@@ -35,7 +36,7 @@ public class MovementMenuView {
                 
                 this.doAction(selection); // do action based on selection
                 
-            } while (selection != 'E'); // a selection is not "Save and End Game"
+            } while (selection != 'R'); // a selection is not "Save and End Game"
     }
         
          private String getInput() {
@@ -60,14 +61,17 @@ public class MovementMenuView {
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'V': // Go to the Village Region
-                this.displayRegionVillage();
+            case 'C': // Go to Castle
+                this.displayCastleView();
                 break;
-            case 'R': // Go to the Road Region
-                this.displayRegionRoad();
+            case 'I': // Go to Inn
+                this.displayInnView();
                 break;
-            case 'F': // Go to the Forest Region
-                this.displayRegionForest();
+            case 'M': // Go to Marketplace
+                this.displayMarketPlaceView();
+                break;
+            case 'T': // Go to Tavern
+                this.displayTavernView();
                 break;
             case 'E': // save game and return to main menu
                 return;
@@ -77,26 +81,32 @@ public class MovementMenuView {
         }
     }
     
-    private void displayRegionVillage() {
-       // display the game menu
-        VillageRegionView villageRegion = new VillageRegionView();
-        villageRegion.displayMenu();
-    }
-    
-    private void displayRegionRoad() {
+    private void displayCastleView() {
        System.out.println ("\n---------------------------------------"
-                   + "\n | Launch RegionRoad menu |"
+                   + "\n | Going to the Castle |"
+                   + "\n-------------------------------------------");
+    }
+    
+    private void displayInnView() {
+       System.out.println ("\n---------------------------------------"
+                   + "\n | Going to the Inn |"
                    + "\n-------------------------------------------");
      
     }
     
-    private void displayRegionForest(){
+    private void displayMarketPlaceView(){
         System.out.println ("\n---------------------------------------"
-                   + "\n | Launch RegionForest menu |"
+                   + "\n | Going to the Marketplace|"
                    + "\n-------------------------------------------");
      
     }
     
+    private void displayTavernView(){
+        System.out.println ("\n---------------------------------------"
+                   + "\n | Going to the Tavern |"
+                   + "\n-------------------------------------------");
+     
+    }
 }
 
     
