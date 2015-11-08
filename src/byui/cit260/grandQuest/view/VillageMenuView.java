@@ -5,38 +5,37 @@
  */
 package byui.cit260.grandQuest.view;
 
-import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.Player;
-import grandquest.GrandQuest;
 import java.util.Scanner;
 
 /**
  *
- * @author devin_000
+ * @author Jassen
  */
-public class MainMenuView {
+public class VillageMenuView {
     
-        private Player currentPlayer;
     
-        private final String MENU = "\n"
+    private Player currentPlayer;
+    
+    private final String VillageMenu = "\n"
                 + "\n--------------------------------------"
-                + "\n| Main Menu                          |"
+                + "\n| Village menu                          |"
                 + "\n--------------------------------------"
-                + "\nN - Start New Game"
-                + "\nG - Start Existing Game"
-                + "\nH - Get help on how to play the game"
-                + "\nS - Save game"
+                + "\nI - Inn"
+                + "\nT - Tavern"
+                + "\nM - Market Place"
                 + "\nE - Exit"
                 + "\n--------------------------------------";
+    
 
-        public void displayMenu(Player player) {
+        public void displayVillageMenu(Player player) {
             
             currentPlayer = player;
             
             char selection = ' ';
             do{
         
-                System.out.println(MENU); // display the main menu
+                System.out.println(VillageMenu); // display the village menu
                 
                 String input = this.getInput(); // get the user's selection
                 selection = input.charAt(0); // get first character of string
@@ -68,17 +67,14 @@ public class MainMenuView {
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'N': // create and start a new game
-                this.startNewGame();
+            case 'I': // create and start a new game
+                this.displayInn();
                 break;
-            case 'G': // get and start an existing game
-                this.startExistingGame();
+            case 'T': // get and start an existing game
+                this.displayTavern();
                 break;
-            case 'H': // display the help menu
-                this.displayHelpMenu();
-                break;
-            case 'S': // save the current game
-                this.saveGame();
+            case 'M': // display the help menu
+                this.displayMarketPlace();
                 break;
             case 'E': // Exit the program
                 return;
@@ -87,30 +83,23 @@ public class MainMenuView {
                 break;
         }
     }
-    
-    private void startNewGame() {
-            // create a new game
-            GameControl.createNewGame(GrandQuest.getPlayer());   
-            // display the game menu
-            GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayIntro();
-            
- }
-    
-    
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function is called ***");
+
+    private void displayInn() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    private void saveGame() {
-        System.out.println("*** saveGame function is called ***");
+
+    private void displayTavern() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    private void displayHelpMenu() {
-            // display help menu
-       HelpMenuView helpMenu = new HelpMenuView();
-       helpMenu.displayMenu();
-       
+
+    private void displayMarketPlace() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-}
+
+    void displayVillageMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
+   
+    }
