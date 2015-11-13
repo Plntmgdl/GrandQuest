@@ -27,6 +27,7 @@ public class VillageMenuView extends View {
                 + "\nM - Market Place"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
+    }
     
 
         public boolean doAction(Object obj) {

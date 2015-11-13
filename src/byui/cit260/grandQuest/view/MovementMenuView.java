@@ -23,6 +23,7 @@ public class MovementMenuView extends View {
                 + "\nF - Go to Forest"
                 + "\nE - Save and End Game"
                 + "\n--------------------------------------");
+    }
 
     
     public boolean doAction(Object obj) {
