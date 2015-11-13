@@ -9,12 +9,17 @@ package byui.cit260.grandQuest.view;
  *
  * @author devin_000
  */
-public class GameMenuView {
+public abstract class GameMenuView extends View{
+
+    public GameMenuView(String promptMessage) {
+        super(promptMessage);
+    }
+
     
-    public GameMenuView () {
+    
+   
       
-  }    
-    public void newGame(){
+  public void newGame(){
 
     //Display the banner screen
     this.displayIntro(); 

@@ -11,51 +11,29 @@ import java.util.Scanner;
  *
  * @author Jassen
  */
-public class EncounterMenuView {
-     
-    private final String Encounter = "\n"
+public class EncounterMenuView extends View {
+    
+    public EncounterMenuView() {
+    super ("\n"
                 + "\n--------------------------------------"
                 + "\n| What will you do?                          |"
                 + "\n--------------------------------------"
                 + "\nR - Run away"
                 + "\nS - Stand your ground"
                 + "\nA - Attack"
-                + "\n--------------------------------------";
+                + "\n--------------------------------------");
+}
+    
+    public boolean doAction(Object obj) {
+        
+        String value = (String)obj;
+        
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        return false;
+    }
 
-        public void displayEncounterMenu() {
-            
-            char selection = ' ';
-            do{
         
-                System.out.println(Encounter); // display the encounter menu
-                
-                String input = this.getInput(); // get the user's selection
-                selection = input.charAt(0); // get first character of string
-                
-                this.doAction(selection); // do action based on selection
-                
-            } while (selection != 'E'); // a selection is not "Exit"
-    }
-        
-         private String getInput() {
-           
-        boolean valid = false; // Indicates if choice has been retreived 
-        String entry = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        
-        while(!valid)  {  //while a valid entry has not been retreived
-            
-            // prompt for menu selection
-            System.out.println("Enter your menu option below:");
-            
-            //Get the selection from the keyboard and trim off the blanks
-            entry = keyboard.nextLine();
-            entry = entry.trim();
-            
-            break; // Out of the (exit) the repetition
-        }
-      return entry; //Return the selection
-    }
 
     private void doAction(char choice) {
         switch (choice) {

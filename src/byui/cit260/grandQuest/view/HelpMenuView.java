@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author Jassen
  */
-    public class HelpMenuView {
+    public class HelpMenuView extends View {
     
-        private final String MENU = "\n"
+    public HelpMenuView() {    
+        super ("\n"
                 + "\n--------------------------------------"
                 + "\n| Help Menu                          |"
                 + "\n--------------------------------------"
@@ -22,42 +23,18 @@ import java.util.Scanner;
                 + "\nC - Calculation directions"
                 + "\nO - Object of game"
                 + "\nR - Return to main menu"
-                + "\n--------------------------------------";
+                + "\n--------------------------------------");
+    }
+    
+    public boolean doAction(Object obj) {
+        
+        String value = (String) obj;
+        value = value.toUpperCase();
+        char choice = value.charAt(0);
+        return false;
+    }
 
-        public void displayMenu() {
-            
-            char selection = ' ';
-            do{
         
-                System.out.println(MENU); // display the main menu
-                
-                String input = this.getInput(); // get the user's selection
-                selection = input.charAt(0); // get first character of string
-                
-                this.doAction(selection); // do action based on selection
-                
-            } while (selection != 'R'); // a selection is not "Exit"
-    }
-        
-         private String getInput() {
-           
-        boolean valid = false; // Indicates if Name has been retreived 
-        String entry = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        
-        while(!valid)  {  //while a valid entry has not been retreived
-            
-            // prompt for menu selection
-            System.out.println("Enter your menu option below:");
-            
-            //Get the name from the keyboard and trim off the blanks
-            entry = keyboard.nextLine();
-            entry = entry.trim();
-            
-            break; // Out of the (exit) the repetition
-        }
-      return entry; //Return the selection
-    }
 
     private void doAction(char choice) {
         switch (choice) {
@@ -113,5 +90,9 @@ import java.util.Scanner;
                    + "\n-------------------------------------------"
                    + "\n You are hired to assist a merchant"
                    + "\n in bringing the Prince his birthday gift.");
+    }
+
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
