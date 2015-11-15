@@ -74,6 +74,3 @@ public class MarketPlaceMenuView extends View {
    
    
     }
-
-    
-}
