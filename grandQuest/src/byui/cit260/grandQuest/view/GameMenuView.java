@@ -20,8 +20,7 @@ public class GameMenuView extends View{
                 + "\n        Tavern, the Inn, and the Market Place. ***");
         
         System.out.println("*\n***                                  *"
-                + "\n       Welcome to the Village."
-                + "\n Where would you like to go first? ***");
+                + "\n       Welcome to the Village.  ***");
         
     }
    @Override
