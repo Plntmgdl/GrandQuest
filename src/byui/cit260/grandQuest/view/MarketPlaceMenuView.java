@@ -56,7 +56,12 @@ public class MarketPlaceMenuView extends View {
     }
 
     private void displayLookAround() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println ("\n---------------------------------------"
+                   + "\n As you look around the market place you see"
+                   + "\n all kinds of shops and merchants, animals"
+                   + "\n of all different kinds.  You smell spices"
+                   + "\n mixed in with the foul smell of animal dung,"
+                   + "\n and nothing seems capture your attention .");
     }
 
     private void displayInn() {
