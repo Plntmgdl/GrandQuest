@@ -11,18 +11,18 @@ import byui.cit260.grandQuest.model.Player;
  *
  * @author devin_000
  */
-public class MarketPlaceView extends View {
+public class MarketPlaceMenuView extends View {
     
     private Player currentPlayer;
     
-    public MarketPlaceView(){
+    public MarketPlaceMenuView(){
     super ("\n"
                 + "\n--------------------------------------"
                 + "\n| Market Place Menu                          |"
                 + "\n--------------------------------------"
-                + "\nI - "
-                + "\nT - "
-                + "\nM - "
+                + "\nI - Look Around"
+                + "\nT - Go to the Inn"
+                + "\nM - Go to the Tavern"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
@@ -39,13 +39,13 @@ public class MarketPlaceView extends View {
     private void doAction(char choice) {
         switch (choice) {
             case 'I': // create and start a new game
-                this.displaySomething();
+                this.displayLookAround();
                 break;
             case 'T': // get and start an existing game
-                this.displaySomething();
+                this.displayInn();
                 break;
             case 'M': // display the help menu
-                this.displaySomething();
+                this.displayTavern();
                 break;
             case 'E': // Exit the program
                 return;
@@ -55,15 +55,15 @@ public class MarketPlaceView extends View {
         }
     }
 
-    private void displaySomething() {
+    private void displayLookAround() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displaySomething() {
+    private void displayInn() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displaySomething() {
+    private void displayTavern() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
