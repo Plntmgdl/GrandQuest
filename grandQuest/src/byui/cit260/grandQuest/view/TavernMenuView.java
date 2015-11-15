@@ -6,25 +6,27 @@
 package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.model.Player;
-import java.util.Scanner;
 
 /**
  *
  * @author Jassen
  */
-public class VillageMenuView extends View {
+public class TavernMenuView extends View {
     
     
     private Player currentPlayer;
     
-        public VillageMenuView() {    
+        public TavernMenuView() {    
             super ("\n"
                 + "\n--------------------------------------"
-                + "\n| Village menu                          |"
+                + "\n| Tavern menu                          |"
                 + "\n--------------------------------------"
-                + "\nI - Inn"
-                + "\nT - Tavern"
-                + "\nM - Market Place"
+                + "\nL - Look around"
+                + "\nB - Talk to barkeeper"
+                + "\nD - Get a drink and meal"
+                + "\nM - Talk to merchant"
+                + "\nI - Go to Inn"
+                + "\nS - Go to MarketPlace"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
         }
@@ -38,13 +40,17 @@ public class VillageMenuView extends View {
         
 
         switch (choice) {
-            case 'I': // go to Inn
-                this.InnMenu();
+            case 'L': 
+                System.out.println("As you enter the common area the smell of"
+                        + "smoked meat and sound of laughter almost brings you to your knees."
+                        + "The memories of home are vivid and clear but the grumbling of your stomach "
+                        + "brings you back to the moment and you find a table to sit in.");
                 break;
-            case 'T': // get and start an existing game
-                this.displayTavernMenu();
+            case 'B': 
+                System.out.println("You walk up to the bar and the barkeeper greets "
+                        + "you with a friendly smile and hello.");
                 break;
-            case 'M': // display the help menu
+            case 'S': 
                 this.displayMarketPlace();
                 break;
             case 'E': // Exit the program
@@ -56,19 +62,7 @@ public class VillageMenuView extends View {
         return false;
     }
 
-    private void InnMenu() {
-        InnMenuView InnMenu = new InnMenuView();
-        InnMenu.display();
-    }
-   private void displayTavernMenu() {
-        TavernMenuView TavernMenu = new TavernMenuView();
-        TavernMenu.display();
-   }
-
     private void displayMarketPlace() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    
-    
-    }
+}
