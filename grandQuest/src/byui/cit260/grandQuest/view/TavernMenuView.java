@@ -25,7 +25,7 @@ public class TavernMenuView extends View {
                 + "\nB - Talk to barkeeper"
                 + "\nD - Get a drink and meal"
                 + "\nM - Talk to merchant"
-                + "\nI - Go to Inn"
+                + "\nI - Go to InnMenu"
                 + "\nS - Go to MarketPlace"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
@@ -53,6 +53,15 @@ public class TavernMenuView extends View {
             case 'S': 
                 this.displayMarketPlace();
                 break;
+            case 'D': 
+                this.displayDrinkAndMeal();
+                break;
+            case 'M': 
+                this.displayMeetMerchant();
+                break;
+            case 'I': 
+                this.displayInnMenu();
+                break;    
             case 'E': // Exit the program
                 return true;
             default:
@@ -64,5 +73,18 @@ public class TavernMenuView extends View {
 
     private void displayMarketPlace() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayDrinkAndMeal() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayMeetMerchant() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayInnMenu() {
+        InnMenuView InnMenu = new InnMenuView();
+        InnMenu.display();
     }
 }
