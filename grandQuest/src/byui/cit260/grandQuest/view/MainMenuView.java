@@ -14,12 +14,12 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class MainMenuView {
+public class MainMenuView extends View {
     
         private Player currentPlayer;
     
-        private final String MENU = "\n"
-                + "\n--------------------------------------"
+        public MainMenuView() {
+              super("\n--------------------------------------"
                 + "\n| Main Menu                          |"
                 + "\n--------------------------------------"
                 + "\nN - Start New Game"
@@ -27,46 +27,16 @@ public class MainMenuView {
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
                 + "\nE - Exit"
-                + "\n--------------------------------------";
-
-        public void displayMenu(Player player) {
-            
-            currentPlayer = player;
-            
-            char selection = ' ';
-            do{
-        
-                System.out.println(MENU); // display the main menu
-                
-                String input = this.getInput(); // get the user's selection
-                selection = input.charAt(0); // get first character of string
-                
-                this.doAction(selection); // do action based on selection
-                
-            } while (selection != 'E'); // a selection is not "Exit"
-    }
-        
-         private String getInput() {
-           
-        boolean valid = false; // Indicates if Name has been retreived 
-        String entry = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        
-        while(!valid)  {  //while a valid entry has not been retreived
-            
-            // prompt for menu selection
-            System.out.println("Enter your menu option below:");
-            
-            //Get the name from the keyboard and trim off the blanks
-            entry = keyboard.nextLine();
-            entry = entry.trim();
-            
-            break; // Out of the (exit) the repetition
+                + "\n--------------------------------------");
         }
-      return entry; //Return the selection
-    }
-
-    private void doAction(char choice) {
+        
+        @Override
+        public boolean doAction(Object obj) {
+           
+            String value = (String) obj;
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+        
         switch (choice) {
             case 'N': // create and start a new game
                 this.startNewGame();
@@ -81,11 +51,13 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             case 'E': // Exit the program
-                return;
+                return true;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
+        
+        return false;
     }
     
     private void startNewGame() {
@@ -111,6 +83,10 @@ public class MainMenuView {
        HelpMenuView helpMenu = new HelpMenuView();
        helpMenu.displayMenu();
        
+    }
+
+    void display(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     
