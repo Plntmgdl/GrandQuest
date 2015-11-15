@@ -9,24 +9,10 @@ package byui.cit260.grandQuest.view;
  *
  * @author devin_000
  */
-public class GameMenuView {
+public class GameMenuView extends View{
     
-    public GameMenuView () {
-      
-  }    
-    public void newGame(){
-
-    //Display the banner screen
-    this.displayIntro(); 
-
-    this.displayVillageMenu();
-    }
-    
-      
-        
-  
-    public void displayIntro() {   
-        System.out.println("\n*** As the morning sun slowly "
+   public GameMenuView() {   
+        super("\n*** As the morning sun slowly "
                 + "\n        crests the mountain tops it illuminates "
                 + "\n       the small valley lying below. You are "
                 + "\n        struck with a sense of… As you come "
@@ -38,13 +24,11 @@ public class GameMenuView {
                 + "\n Where would you like to go first? ***");
         
     }
-    
-    public void displayVillageMenu() {
-         //Display the village menu 
-    VillageMenuView villageMenu = new VillageMenuView();
-    villageMenu.displayVillageMenu();
-
-   
+   @Override
+   public boolean doAction(Object obj) {
+       return false;
        
- }
+       
+   
+   }   
 }

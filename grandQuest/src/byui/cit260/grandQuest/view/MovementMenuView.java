@@ -11,9 +11,10 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class MovementMenuView {
-    
-    private final String MENU = "\n"
+public class MovementMenuView extends View{
+        
+        public MovementMenuView() {
+            super ("\n"
                 + "\n--------------------------------------"
                 + "\n|         Choose a Region           |"
                 + "\n--------------------------------------"
@@ -21,42 +22,17 @@ public class MovementMenuView {
                 + "\nR - Go to Road"
                 + "\nF - Go to Forest"
                 + "\nE - Save and End Game"
-                + "\n--------------------------------------";
-
-        public void displayMenu() {
-            
-            char selection = ' ';
-            do{
-        
-                System.out.println(MENU); // display the main menu
-                
-                String input = this.getInput(); // get the user's selection
-                selection = input.charAt(0); // get first character of string
-                
-                this.doAction(selection); // do action based on selection
-                
-            } while (selection != 'E'); // a selection is not "Save and End Game"
-    }
-        
-         private String getInput() {
-           
-        boolean valid = false; // Indicates if Name has been retreived 
-        String entry = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        
-        while(!valid)  {  //while a valid entry has not been retreived
-            
-            // prompt for menu selection
-            System.out.println("Enter your menu option below:");
-            
-            //Get the name from the keyboard and trim off the blanks
-            entry = keyboard.nextLine();
-            entry = entry.trim();
-            
-            break; // Out of the (exit) the repetition
+                + "\n--------------------------------------");
         }
-      return entry; //Return the selection
-    }
+        
+        public boolean doAction (Object obj) {
+            
+            String value = (String) obj;
+            value = value.toUpperCase();
+            char choice = value.charAt(0);
+            return false;
+        }
+        
 
     private void doAction(char choice) {
         switch (choice) {
@@ -70,7 +46,7 @@ public class MovementMenuView {
                 this.displayRegionForest();
                 break;
             case 'E': // save game and return to main menu
-                return;
+                return ;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;

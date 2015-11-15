@@ -65,7 +65,7 @@ public class MainMenuView extends View {
             GameControl.createNewGame(GrandQuest.getPlayer());   
             // display the game menu
             GameMenuView gameMenu = new GameMenuView();
-            gameMenu.displayIntro();
+            gameMenu.display();
             
  }
     
@@ -81,7 +81,7 @@ public class MainMenuView extends View {
     private void displayHelpMenu() {
             // display help menu
        HelpMenuView helpMenu = new HelpMenuView();
-       helpMenu.displayMenu();
+       helpMenu.display();
        
     }
 
