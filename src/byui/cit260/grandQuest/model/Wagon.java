@@ -19,8 +19,14 @@ public class Wagon implements Serializable {
     private String playerChosenItems;
     private String mathEquationW;
     private String playerSolution;
+    private final int numberBarrelsLoaded;
+    private final int maxWeight;
+    private final int loadedWeight;
 
     public Wagon() {
+        this.numberBarrelsLoaded = 0;
+        this.maxWeight = 1500;
+        this.loadedWeight = 0;
     }
     
     

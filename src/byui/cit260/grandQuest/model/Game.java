@@ -17,7 +17,11 @@ public class Game implements Serializable {
     //class instance variables
     private String gameDescription;
     private String gameType;
-
+    private Player player;
+    private InventoryItem[] inventory;
+    private Wagon wagon;
+    private Map map;
+    
     public Game() {
     }
     

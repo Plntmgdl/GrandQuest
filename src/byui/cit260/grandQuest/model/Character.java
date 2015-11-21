@@ -35,38 +35,4 @@ public enum Character implements Serializable {
     public String getcoordinates() {
         return coordinates;
     }
-    
-    public static InventoryItem[] createInventoryList() {
-        
-        // created array (list) of inventory items
-        InventoryItem[] inventory =
-                new InventoryItem[4];
-        
-        InventoryItem flour = new InventoryItem();
-        flour.setDescription("Flour");
-        flour.setQuantityInStock(0);
-        flour.setRequiredAmount("0");
-        inventory[0] = flour;
-        
-        InventoryItem grain = new InventoryItem();
-        grain.setDescription("Grain");
-        grain.setQuantityInStock(0);
-        grain.setRequiredAmount("0");
-        inventory[0] = grain;
-        
-        InventoryItem silk = new InventoryItem();
-        silk.setDescription("Silk");
-        silk.setQuantityInStock(0);
-        silk.setRequiredAmount("0");
-        inventory[0] = silk;
-        
-        InventoryItem gift = new InventoryItem();
-        gift.setDescription("Gift");
-        gift.setQuantityInStock(0);
-        gift.setRequiredAmount("0");
-        inventory[0] = gift;
-        
-        return inventory;
-    }
-
 }

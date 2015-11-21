@@ -15,9 +15,7 @@ import java.util.Scanner;
  * @author devin_000
  */
 public class MainMenuView extends View {
-    
-          
-    
+     
     public MainMenuView() {
           super("\n"
                 + "\n--------------------------------------"
@@ -34,11 +32,7 @@ public class MainMenuView extends View {
         String value = (String)obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
-   
-         
-          
-   
-     
+  
    
         switch (choice) {
             case 'N': // create and start a new game
@@ -65,6 +59,8 @@ public class MainMenuView extends View {
     private void startNewGame() {
             // create a new game
             GameControl.createNewGame(GrandQuest.getPlayer());   
+            
+            // display the game menu
             GameMenuView gameMenu;
           
  }
