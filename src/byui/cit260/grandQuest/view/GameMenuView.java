@@ -5,6 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
+import grandquest.GrandQuest;
+
 /**
  *
  * @author devin_000
@@ -52,4 +54,65 @@ public abstract class GameMenuView extends View{
    
        
  }
+    
+    public void doAction(char selection) {
+        
+        switch (selection) {
+            case 'V': // Travel to new location
+                this.displayMap();
+                break;
+            case 'I': // View list of items in inventory
+                this.viewInventory();
+                break;
+            case 'C': // View list of actors
+                this.viewCharacters():
+                break;
+            case 'W': // View the wagon's status
+                this.viewWagonStatus();
+                break;
+            // ...
+        }
+    }
+    
+    private void viewInventory() {
+        // get the sorted list of inventory items for the current game
+        InventoryItem[] inventory = GameControl.getSortedInventoryList();
+        
+        System.out.println("\nList of Inventory Items");
+        Sytsem.out.println("Description" + "\t" +
+                           "Required" + "\t" +
+                           "In Stock");
+        
+        // for each inventory item
+        for (InventoryItem inventoryItem : inventory) {
+            // DISPLAY the description, the required amount and amount in stock
+            System.out.println(inventoryItem.getDescription() + "\t    " +
+                               inventoryItem.getRequiredAmount() + "\t   " +
+                               inventoryItem.getQuantityInStock());
+        }
+    }
+    
+    public static InventoryItem[] getSortedInventoryList() {
+        
+        // get inventory list for teh current game
+        InventoryItem[] originalInventoryList =
+                GrandQuest.getCurrentGame().getInventory();
+        
+        // clone (make a copy) originalList
+        InventoryItem[] inventoryList = originalInventoryList.clone();
+        
+        // using a BubbleSort to sort the list of inventoryList by name
+        InventoryItem tempInventoryItem;
+        for (int i = 0; i < inventoryList.length-1; i++) {
+            for (int j = 0; j < inventoryList.length-1-i; j++) {
+                if (inventoryList[j].getDescription().
+                        compareToIgnoreCase(inventoryList[j + 1].getDescription()) > 0) {
+                    tempInventoryItem = inventoryList[j];
+                    inventoryList[j] = inventoryList [j + 1];
+                    inventoryList[j + 1] = tempInventoryItem;
+                }
+            }
+        }
+        return inventoryList;
+    }
 }
