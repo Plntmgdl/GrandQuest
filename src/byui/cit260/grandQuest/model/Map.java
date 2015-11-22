@@ -5,6 +5,7 @@
  */
 package byui.cit260.grandQuest.model;
 
+import byui.cit260.grandQuest.control.GameControl;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,15 +14,63 @@ import java.util.Objects;
  * @author devin_000
  */
 public class Map implements Serializable {
+
+    
     
     //class instance variables
     private String rowCount;
     private String columnCount;
     private String displayMap;
+    private Location[][] locations;
+    private int noOfRows;
+    private int noOfColumns;
 
     public Map() {
     }
     
+    public Map(int noOfRows, int noOfColumns) {
+        
+        if (noOfRows < 1 || noOfColumns < 1) {
+            System.out.println("The number of ros and columns must be > zero");
+            return;
+        }
+        
+        this.noOfRows = noOfRows;
+        this.noOfColumns = noOfColumns;
+        
+        // create 2-D array for Location objects
+        this.locations = new Location[noOfRows][noOfColumns];
+        
+        for (int row = 0; row < noOfRows; row++) {
+            for (int column = 0; column < noOfColumns; column++) {
+                // create and initialize new location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                // assign the location object to the current position in array
+                locations[row][column] = location;
+            }
+        }
+    }
+    private static Map createMap() {
+        // create the map
+        Map map = new Map(20, 20); 
+        // create teh scenes for the game
+        Scene[] scenes = createScenes();
+        // assign scenes to locations
+        GameControl.assignScenesToLocations(map, scenes);
+        return map;
+    }
+
+    private Map(int i, int i0) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 
     public String getRowCount() {
@@ -46,6 +95,14 @@ public class Map implements Serializable {
 
     public void setDisplayMap(String displayMap) {
         this.displayMap = displayMap;
+    }
+
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
     }
 
     @Override

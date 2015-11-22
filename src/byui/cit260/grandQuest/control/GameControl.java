@@ -5,7 +5,9 @@
  */
 package byui.cit260.grandQuest.control;
 
+import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
+import byui.cit260.grandQuest.model.Scene;
 
 /**
  *
@@ -14,11 +16,40 @@ import byui.cit260.grandQuest.model.Player;
 public class GameControl {
     
     public static void createNewGame(Player player) {
-        System.out.println("\n*** createNewGame stub function called ***");
+        
+        Game game = new Game(); // creat new game
+        GrandQuest.setCurrentGame(game); // save in GrandQuest
+        
+        game.setPlayer(player); // save player in game
+        
+        // create the inventory list adn save in the game
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
+        game.setInventory(inventoryList);
+        
+        Wagon wagon = new Wagon(); //create new wagon
+        game.setWagon(wagon); // save wagon in game
+        
+        Map map = MapControl.createMap(); // create and initialize new map
+        game.setMap(map); // save map in game
+        
+        // move actors to the starting position in the map
+        MapControl.moveActorsToStartingLocation(map);
+    }
+    
+    public static void startNewGame(){
+        System.out.println("\n*** startNewGame stub function called ***"); 
+    }
+    
+    public static InventoryItem[] createInventoryList() {
+        System.out.println("*** called createInventoryList() in GameControl ***");
     }
 
     public static void displayVillageMenuView() {
         
+    }
+
+    public static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
    
