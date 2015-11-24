@@ -6,7 +6,6 @@
 package byui.cit260.grandQuest.model;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *

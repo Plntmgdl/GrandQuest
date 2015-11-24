@@ -149,6 +149,16 @@ public class Scene implements Serializable {
     private void setTravelTime(double POSITIVE_INFINITY) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    private static class GrandQuest {
+
+        private static Game getCurrentGame() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public GrandQuest() {
+        }
+    }
     
     
     

@@ -49,6 +49,7 @@ public class GameControl {
     
     public static InventoryItem[] createInventoryList() {
         System.out.println("*** called createInventoryList() in GameControl ***");
+        return null;
     }
 
     public static void displayVillageMenuView() {

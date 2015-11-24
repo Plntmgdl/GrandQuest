@@ -105,28 +105,16 @@ public abstract class GameMenuView extends View{
                                inventoryItem.getQuantityInStock());
         }
     }
-    
-    public static InventoryItem[] getSortedInventoryList() {
-        
-        // get inventory list for teh current game
-        InventoryItem[] originalInventoryList =
-                GrandQuest.getCurrentGame().getInventory();
-        
-        // clone (make a copy) originalList
-        InventoryItem[] inventoryList = originalInventoryList.clone();
-        
-        // using a BubbleSort to sort the list of inventoryList by name
-        InventoryItem tempInventoryItem;
-        for (int i = 0; i < inventoryList.length-1; i++) {
-            for (int j = 0; j < inventoryList.length-1-i; j++) {
-                if (inventoryList[j].getDescription().
-                        compareToIgnoreCase(inventoryList[j + 1].getDescription()) > 0) {
-                    tempInventoryItem = inventoryList[j];
-                    inventoryList[j] = inventoryList [j + 1];
-                    inventoryList[j + 1] = tempInventoryItem;
-                }
-            }
-        }
-        return inventoryList;
+
+    private void viewCharacters() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void viewWagonStatus() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void viewInventory() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
