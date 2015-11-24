@@ -20,9 +20,12 @@ class Scene {
                 
         Scene startingScene = new Scene();
         startingScene.setDescription(
-                    "\nBlah blah blah blah blah blah blah blah blah"
-                    + "blah blah blah blah blah blah blah blah blah"
-                    + "blah blah blah blah blah blah blah blah blah");
+                    "\n*** As the morning sun slowly "
+                    + "\n crests the mountain tops it illuminates "
+                    + "\n the small valley lying below. You are "
+                    + "\n struck with a sense of… As you come "
+                    + "\n closer to the settlement you spy the "
+                    + "\n Tavern, the Inn, and the Market Place. ***");
         startingScene.setMapSymbol(" ST ");
         startingScene.setBlocked(false);
         startingScene.setTravelTime(240);
@@ -30,9 +33,9 @@ class Scene {
         
         Scene villageScene = new Scene();
         villageScene.setDescription(
-                    "\nBlah blah blah blah blah blah blah blah blah"
-                    + "blah blah blah blah blah blah blah blah blah"
-                    + "blah blah blah blah blah blah blah blah blah");
+                    "*\n***                                  *"
+                    + "\n       Welcome to the Village."
+                    + "\n Where would you like to go first? ***");
         villageScene.seetMapSymbol(" VG ");
         villageScene.setBlocked(false);
         villageScene.setTravelTime(240);
@@ -119,6 +122,23 @@ class Scene {
         scenes[SceneType.finish.ordinal()] = finishScene;
         
         return scene;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     private void setDescription(String string) {
