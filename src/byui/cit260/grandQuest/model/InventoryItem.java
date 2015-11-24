@@ -5,15 +5,17 @@
  */
 package byui.cit260.grandQuest.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author devin_000
  */
-class InventoryItem {
+public class InventoryItem implements Serializable{
     
-    int NUMBER_OF_INVENTORY_ITEMS = 4;
+    static int NUMBER_OF_INVENTORY_ITEMS = 4;
     
-    public InventoryItem[] createInventoryList() {
+    public static InventoryItem[] createInventoryList() {
         
         // created array (list) of inventory items
         InventoryItem[] inventory =
@@ -57,7 +59,33 @@ class InventoryItem {
     private void setRequiredAmount(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 37 * hash + this.NUMBER_OF_INVENTORY_ITEMS;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final XInventoryItem other = (XInventoryItem) obj;
+        if (this.NUMBER_OF_INVENTORY_ITEMS != other.NUMBER_OF_INVENTORY_ITEMS) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "InventoryItem{" + "NUMBER_OF_INVENTORY_ITEMS=" + NUMBER_OF_INVENTORY_ITEMS + '}';
+    }
     
     
 }

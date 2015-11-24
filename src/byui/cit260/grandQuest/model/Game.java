@@ -18,7 +18,7 @@ public class Game implements Serializable {
     private String gameDescription;
     private String gameType;
     private Player player;
-    private InventoryItem[] inventory;
+    private XInventoryItem[] inventory;
     private Wagon wagon;
     private Map map;
     
