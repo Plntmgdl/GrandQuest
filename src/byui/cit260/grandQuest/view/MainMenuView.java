@@ -7,7 +7,7 @@ package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.Player;
-import grandquest.GrandQuest;
+
 import java.util.Scanner;
 
 /**
@@ -87,6 +87,16 @@ public class MainMenuView extends View {
 
     void displayMenu(Player player) {
         
+    }
+
+    private static class GrandQuest {
+
+        private static Player getPlayer() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public GrandQuest() {
+        }
     }
 
     

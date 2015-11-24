@@ -6,7 +6,6 @@
 package byui.cit260.grandQuest.control;
 
 import byui.cit260.grandQuest.model.Player;
-import grandquest.GrandQuest;
 
 /**
  *

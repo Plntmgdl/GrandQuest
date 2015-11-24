@@ -5,6 +5,8 @@
  */
 package byui.cit260.grandQuest.control;
 
+import byui.cit260.grandQuest.model.Map;
+
 /**
  *
  * @author devin_000
@@ -22,6 +24,20 @@ public class MapControl {
         assignScenesToLocations(map, scenes);
         
         return map;
+    }
+
+    private static void assignScenesToLocations(Map map, Scene[] scenes) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static Scene[] createScenes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class Scene {
+
+        public Scene() {
+        }
     }
     
 }
