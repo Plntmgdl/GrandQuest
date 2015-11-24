@@ -5,9 +5,11 @@
  */
 package byui.cit260.grandQuest.control;
 
+import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
-import byui.cit260.grandQuest.model.Scene;
+import javafx.scene.Scene;
+import byui.cit260.grandQuest.model.Wagon;
 
 /**
  *
@@ -42,6 +44,7 @@ public class GameControl {
     
     public static InventoryItem[] createInventoryList() {
         System.out.println("*** called createInventoryList() in GameControl ***");
+        return null;
     }
 
     public static void displayVillageMenuView() {

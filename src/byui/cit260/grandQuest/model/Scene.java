@@ -5,7 +5,7 @@
  */
 package byui.cit260.grandQuest.model;
 
-import grandquest.GrandQuest;
+
 
 /**
  *
@@ -13,10 +13,10 @@ import grandquest.GrandQuest;
  */
 class Scene {
     
-    private static Scene[] createScenes() {
+public static Scene[] createScenes() {
         Game game = GrandQuest.getCurrentGame();
         
-        Scene[] scenes = new Scene[SceneType.values().length]
+        Scene[] scenes = new Scene[SceneType.values().length];
                 
         Scene startingScene = new Scene();
         startingScene.setDescription(
@@ -120,26 +120,8 @@ class Scene {
         finishScene.setBlocked(false);
         finishScene.setTravelTime(Double.POSITIVE_INFINITY);
         scenes[SceneType.finish.ordinal()] = finishScene;
-        
-        return scene;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
+        return null;
+   }
 
     private void setDescription(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -163,6 +145,16 @@ class Scene {
 
     private void setTravelTime(double POSITIVE_INFINITY) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private static class GrandQuest {
+
+        private static Game getCurrentGame() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
+
+        public GrandQuest() {
+        }
     }
     
 }

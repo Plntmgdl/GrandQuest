@@ -17,7 +17,7 @@ public class Location implements Serializable {
     private int column;
     private boolean visited;
     private Scene scene;
-    private ArrayLIst<Character> characters;
+    
 
     public Location() {
     }
@@ -54,14 +54,7 @@ public class Location implements Serializable {
         this.scene = scene;
     }
 
-    public <any> getCharacters() {
-        return characters;
-    }
-
-    public void setCharacters(<any> characters) {
-        this.characters = characters;
-    }
-
+    
     @Override
     public int hashCode() {
         int hash = 7;
@@ -92,10 +85,7 @@ public class Location implements Serializable {
         return true;
     }
 
-    void setColumn(int column) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+   
     
     
     

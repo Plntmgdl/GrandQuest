@@ -60,13 +60,10 @@ public class Map implements Serializable {
         // create teh scenes for the game
         Scene[] scenes = createScenes();
         // assign scenes to locations
-        GameControl.assignScenesToLocations(map, scenes);
         return map;
     }
 
-    private Map(int i, int i0) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
     
     private static Scene[] createScenes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
