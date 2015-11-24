@@ -5,9 +5,13 @@
  */
 package byui.cit260.grandQuest.control;
 
+import GrandQuest.GrandQuest;
+import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
 import byui.cit260.grandQuest.model.InventoryItem;
+import byui.cit260.grandQuest.model.Scene;
+import byui.cit260.grandQuest.model.Wagon;
 
 
 /**
@@ -26,7 +30,7 @@ public class GameControl {
         game.setPlayer(player); // save player in game
         
         // create the inventory list adn save in the game
-        InventoryItem[] inventoryList = this.createInventoryList();
+        InventoryItem[] inventoryList = InventoryItem.createInventoryList();
         game.setInventory(inventoryList);
         
         Wagon wagon = new Wagon(); //create new wagon

@@ -5,10 +5,14 @@
  */
 package byui.cit260.grandQuest.control;
 
+import byui.cit260.grandQuest.model.Map;
+import byui.cit260.grandQuest.model.Scene;
+
 /**
  *
  * @author devin_000
  */
+
 public class MapControl {
     
     public static Map createMap() {
@@ -16,10 +20,10 @@ public class MapControl {
         Map map = new Map(20, 20);
         
         // create the list of the different scenes in the game
-        Scene[] scenes = createScenes();
+        Scene[] scenes = Scene.createScenes();
         
         // assign the diffeent scenes to locations in the map
-        assignScenesToLocations(map, scenes);
+        GameControl.assignScenesToLocations(map, scenes);
         
         return map;
     }

@@ -7,7 +7,7 @@ package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.Player;
-import grandquest.GrandQuest;
+import GrandQuest.GrandQuest;
 import java.util.Scanner;
 
 /**

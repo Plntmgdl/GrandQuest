@@ -5,6 +5,7 @@
  */
 package byui.cit260.grandQuest.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -21,7 +22,7 @@ public enum Character implements Serializable {
     
     // class instance variables
     private final String description;
-    private final String coordinates;
+    private final Point coordinates;
     
     Character(String description) {
         this.description = description;
@@ -32,7 +33,7 @@ public enum Character implements Serializable {
         return description;
     }
 
-    public String getcoordinates() {
+    public Point getcoordinates() {
         return coordinates;
     }
 }

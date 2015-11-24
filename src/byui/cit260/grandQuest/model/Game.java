@@ -18,7 +18,7 @@ public class Game implements Serializable {
     private String gameDescription;
     private String gameType;
     private Player player;
-    private XInventoryItem[] inventory;
+    private InventoryItem[] inventory;
     private Wagon wagon;
     private Map map;
     
@@ -42,6 +42,40 @@ public class Game implements Serializable {
     public void setGameType(String gameType) {
         this.gameType = gameType;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public InventoryItem[] getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(InventoryItem[] inventory) {
+        this.inventory = inventory;
+    }
+
+    public Wagon getWagon() {
+        return wagon;
+    }
+
+    public void setWagon(Wagon wagon) {
+        this.wagon = wagon;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+    
+    
 
     @Override
     public int hashCode() {

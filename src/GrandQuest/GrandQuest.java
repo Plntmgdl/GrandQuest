@@ -17,6 +17,7 @@ import byui.cit260.grandQuest.model.Creatures;
 import byui.cit260.grandQuest.model.EncounterResults;
 
 import byui.cit260.grandQuest.model.Encounters;
+import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 import byui.cit260.grandQuest.view.StartProgramView;
@@ -29,6 +30,16 @@ public class GrandQuest {
     /**
      * @param args the command line arguments
      */
+    
+    public static Game game;
+    public static void setCurrentGame(Game myGame) {
+        game = myGame;
+    }
+    
+    public static Game getCurrentGame() {
+        return game;
+    }
+    
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
         startProgramView.startProgram();

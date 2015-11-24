@@ -75,7 +75,7 @@ public class InventoryItem implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final XInventoryItem other = (XInventoryItem) obj;
+        final InventoryItem other = (InventoryItem) obj;
         if (this.NUMBER_OF_INVENTORY_ITEMS != other.NUMBER_OF_INVENTORY_ITEMS) {
             return false;
         }

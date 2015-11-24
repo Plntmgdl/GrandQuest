@@ -6,20 +6,19 @@
 package byui.cit260.grandQuest.model;
 
 import GrandQuest.GrandQuest;
-import java.io.Serializable;
 
 /**
  *
  * @author devin_000
  */
-public class Scene implements Serializable {
-    static int SCENE_TYPE_ITEMS = 10;
-    public static Scene[] createScenes() {
+class SceneX {
+    
+    private static SceneX[] createScenes() {
         Game game = GrandQuest.getCurrentGame();
         
-        Scene[] scenes = new Scene[SCENE_TYPE_ITEMS];
+        SceneX[] scenes = new SceneX[SceneType.values().length];
                 
-        Scene startingScene = new Scene();
+        SceneX startingScene = new SceneX();
         startingScene.setDescription(
                     "\n*** As the morning sun slowly "
                     + "\n crests the mountain tops it illuminates "
@@ -32,7 +31,7 @@ public class Scene implements Serializable {
         startingScene.setTravelTime(240);
         scenes[SceneType.start.ordinal()] = startingScene;
         
-        Scene villageScene = new Scene();
+        SceneX villageScene = new SceneX();
         villageScene.setDescription(
                     "*\n***                                  *"
                     + "\n       Welcome to the Village."
@@ -42,7 +41,7 @@ public class Scene implements Serializable {
         villageScene.setTravelTime(240);
         scenes[SceneType.village.ordinal()] = villageScene;
         
-         Scene marketplaceScene = new Scene();
+         SceneX marketplaceScene = new SceneX();
         marketplaceScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -52,7 +51,7 @@ public class Scene implements Serializable {
         marketplaceScene.setTravelTime(240);
         scenes[SceneType.marketplace.ordinal()] = marketplaceScene;
         
-        Scene tavernScene = new Scene();
+        SceneX tavernScene = new SceneX();
         tavernScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -62,7 +61,7 @@ public class Scene implements Serializable {
         tavernScene.setTravelTime(240);
         scenes[SceneType.finish.ordinal()] = tavernScene;
         
-        Scene innScene = new Scene();
+        SceneX innScene = new SceneX();
         innScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -72,7 +71,7 @@ public class Scene implements Serializable {
         innScene.setTravelTime(240);
         scenes[SceneType.inn.ordinal()] = innScene;
         
-        Scene bathtubScene = new Scene();
+        SceneX bathtubScene = new SceneX();
         bathtubScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -82,7 +81,7 @@ public class Scene implements Serializable {
         bathtubScene.setTravelTime(240);
         scenes[SceneType.bathtub.ordinal()] = bathtubScene;
         
-        Scene roadScene = new Scene();
+        SceneX roadScene = new SceneX();
         roadScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -92,7 +91,7 @@ public class Scene implements Serializable {
         roadScene.setTravelTime(240);
         scenes[SceneType.road.ordinal()] = roadScene;
         
-        Scene bridgeScene = new Scene();
+        SceneX bridgeScene = new SceneX();
         bridgeScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -102,7 +101,7 @@ public class Scene implements Serializable {
         bridgeScene.setTravelTime(240);
         scenes[SceneType.bridge.ordinal()] = bridgeScene;
         
-        Scene forestScene = new Scene();
+        SceneX forestScene = new SceneX();
         forestScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -112,7 +111,7 @@ public class Scene implements Serializable {
         forestScene.setTravelTime(240);
         scenes[SceneType.forest.ordinal()] = forestScene;
         
-        Scene finishScene = new Scene();
+        SceneX finishScene = new SceneX();
         finishScene.setDescription(
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
@@ -149,7 +148,5 @@ public class Scene implements Serializable {
     private void setTravelTime(double POSITIVE_INFINITY) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
     
 }

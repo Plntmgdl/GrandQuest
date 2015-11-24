@@ -16,7 +16,7 @@ public class Location implements Serializable {
     private int row;
     private int column;
     private boolean visited;
-    private Scene scene;
+    private SceneX scene;
     private ArrayLIst<Character> characters;
 
     public Location() {
@@ -46,11 +46,11 @@ public class Location implements Serializable {
         this.visited = visited;
     }
 
-    public Scene getScene() {
+    public SceneX getScene() {
         return scene;
     }
 
-    public void setScene(Scene scene) {
+    public void setScene(SceneX scene) {
         this.scene = scene;
     }
 
