@@ -122,23 +122,7 @@ class Scene {
         scenes[SceneType.finish.ordinal()] = finishScene;
         
         return scene;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+         
     }
 
     private void setDescription(String string) {

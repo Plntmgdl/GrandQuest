@@ -5,7 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
-import grandquest.GrandQuest;
+import GrandQuest.GrandQuest;
+import byui.cit260.grandQuest.control.GameControl;
 
 /**
  *
@@ -65,7 +66,7 @@ public abstract class GameMenuView extends View{
                 this.viewInventory();
                 break;
             case 'C': // View list of actors
-                this.viewCharacters():
+                this.viewCharacters();
                 break;
             case 'W': // View the wagon's status
                 this.viewWagonStatus();
@@ -73,7 +74,20 @@ public abstract class GameMenuView extends View{
             // ...
         }
     }
+    // BroJones Begin
+    private void displayMap() {
     
+    }
+    
+    private void viewCharacters(){
+        
+    }
+    
+    private void viewWagonStatus(){
+        
+    }
+    // BroJones END
+
     private void viewInventory() {
         // get the sorted list of inventory items for the current game
         InventoryItem[] inventory = GameControl.getSortedInventoryList();

@@ -11,11 +11,13 @@ package byui.cit260.grandQuest.model;
  */
 class InventoryItem {
     
-    public static InventoryItem[] createInventoryList() {
+    int NUMBER_OF_INVENTORY_ITEMS = 4;
+    
+    public InventoryItem[] createInventoryList() {
         
         // created array (list) of inventory items
         InventoryItem[] inventory =
-                new InventoryItem[Constants.NUMBER_OF_INVENTORY_ITEMS];
+                new InventoryItem[NUMBER_OF_INVENTORY_ITEMS];
         
         InventoryItem flour = new InventoryItem();
         flour.setDescription("Flour");

@@ -7,13 +7,16 @@ package byui.cit260.grandQuest.control;
 
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
-import byui.cit260.grandQuest.model.Scene;
+import byui.cit260.grandQuest.model.;
+
 
 /**
  *
  * @author devin_000
  */
 public class GameControl {
+    
+    InventoryItem[] inventoryList;
     
     public static void createNewGame(Player player) {
         
