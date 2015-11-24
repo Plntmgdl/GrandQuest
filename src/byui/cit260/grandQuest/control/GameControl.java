@@ -14,6 +14,7 @@ import byui.cit260.grandQuest.model.Scene;
 import byui.cit260.grandQuest.model.Wagon;
 
 
+
 /**
  *
  * @author devin_000
@@ -59,6 +60,11 @@ public class GameControl {
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    public static void getSortedInventoryList () {
+        System.out.println();
+    }
+    
+   
    
     }

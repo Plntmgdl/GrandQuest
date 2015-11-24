@@ -6,6 +6,7 @@
 package byui.cit260.grandQuest.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,8 +17,8 @@ public class Location implements Serializable {
     private int row;
     private int column;
     private boolean visited;
-    private SceneX scene;
-    private ArrayLIst<Character> characters;
+    private Scene scene;
+    private ArrayList<Character> characters;
 
     public Location() {
     }
@@ -46,11 +47,11 @@ public class Location implements Serializable {
         this.visited = visited;
     }
 
-    public SceneX getScene() {
+    public Scene getScene() {
         return scene;
     }
 
-    public void setScene(SceneX scene) {
+    public void setScene(Scene scene) {
         this.scene = scene;
     }
 

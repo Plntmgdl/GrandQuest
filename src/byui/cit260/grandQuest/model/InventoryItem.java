@@ -86,6 +86,18 @@ public class InventoryItem implements Serializable{
     public String toString() {
         return "InventoryItem{" + "NUMBER_OF_INVENTORY_ITEMS=" + NUMBER_OF_INVENTORY_ITEMS + '}';
     }
+
+    public String getDescription() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getRequiredAmount() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public String getQuantityInStock() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

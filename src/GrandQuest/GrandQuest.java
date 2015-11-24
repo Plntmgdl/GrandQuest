@@ -12,11 +12,7 @@ import byui.cit260.grandQuest.model.Road;
 import byui.cit260.grandQuest.model.Forest;
 
 import byui.cit260.grandQuest.model.Bridge;
-import byui.cit260.grandQuest.model.CastlePrince;
-import byui.cit260.grandQuest.model.Creatures;
-import byui.cit260.grandQuest.model.EncounterResults;
 
-import byui.cit260.grandQuest.model.Encounters;
 import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
@@ -95,43 +91,7 @@ public class GrandQuest {
             
             //Jassen
             
-       Encounters random = new Encounters ();
-       
-            random.setRandom("You encounter");
-            random.setEncounterResults("As you are walking towards...");
-            random.setPlayerReaction("What do you do?");
-            random.setMonsterType("You see before you...");
-            random.setMonsterReaction("the creature starts...");
-       
-            String encountersInfo;
-            encountersInfo = random.toString();
-            System.out.println(encountersInfo); 
-            
-            //Jassen
-            
-       Creatures monsters = new Creatures ();
-       
-            monsters.setMonsters("this monster is ugly");
-            monsters.setDragon("You feel fear...");
-            monsters.setRobbers("All dressed in black they come out of the shadows.");
-            monsters.setGiantSpiders("A primitive fear starts to take control...");
-            monsters.setPoisonousMushrooms("You try not to laugh as they...");
-            monsters.setWildBoars("Out of the bushes they come...");
-       
-            String creaturesInfo;
-            creaturesInfo = monsters.toString();
-            System.out.println(creaturesInfo);
-            
-            //Jassen
-       
-        EncounterResults eulogy = new EncounterResults ();
-       
-            eulogy.setEulogy("You have died");
-            eulogy.setNothing("You continue down the path.");
-       
-            String encounterResultsInfo;
-            encounterResultsInfo = eulogy.toString();
-            System.out.println(encounterResultsInfo);
+      
             
             //Jassen
             
@@ -161,15 +121,7 @@ public class GrandQuest {
             
             //Jassen
             
-       CastlePrince princeDescription = new CastlePrince();
-            
-            princeDescription.setPrinceDescription("Dreamy");
-            princeDescription.setPrinceWords("Thank you");
-            String castlePrinceInfo;
-            castlePrinceInfo = princeDescription.toString();
-            System.out.println(castlePrinceInfo);
-            
-            //Jassen done
+       
     }
     
 }

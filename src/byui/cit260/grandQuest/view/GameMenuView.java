@@ -7,6 +7,7 @@ package byui.cit260.grandQuest.view;
 
 import GrandQuest.GrandQuest;
 import byui.cit260.grandQuest.control.GameControl;
+import byui.cit260.grandQuest.model.InventoryItem;
 
 /**
  *
@@ -88,12 +89,12 @@ public abstract class GameMenuView extends View{
     }
     // BroJones END
 
-    private void viewInventory() {
+    public static void viewInventory() {
         // get the sorted list of inventory items for the current game
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
         System.out.println("\nList of Inventory Items");
-        Sytsem.out.println("Description" + "\t" +
+        System.out.println("Description" + "\t" +
                            "Required" + "\t" +
                            "In Stock");
         
@@ -106,15 +107,5 @@ public abstract class GameMenuView extends View{
         }
     }
 
-    private void viewCharacters() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void viewWagonStatus() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void viewInventory() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }
