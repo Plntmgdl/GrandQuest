@@ -5,16 +5,19 @@
  */
 package byui.cit260.grandQuest.control;
 
+import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
+
 /**
  *
  * 
  */
 public class CalculationsControl {
     
-    public double calcVolumeOfTub (double height, double diameter) {
+    public double calcVolumeOfTub (double height, double diameter) throws CalculationsControlException {
         
         if (height < 0) {// confirm height is true
-	    return -1;
+	    throw new CalculationsControlException("Can't calculate"
+                                                   + "because height is less than zero");
         }
        
 	if (diameter < 0 || diameter > 5) {// confirm diameter is in range
