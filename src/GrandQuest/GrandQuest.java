@@ -38,9 +38,17 @@ public class GrandQuest {
     
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
-        startProgramView.startProgram();
+        try {
+            // create StartProgramView and start the program
+            startProgramView.startProgram();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.display();
+        }
+        }
       
-    }
+   
     
     void testClass() {
          Player playerOne = new Player();
@@ -122,6 +130,6 @@ public class GrandQuest {
             //Jassen
             
        
-    }
+}
     
 }
