@@ -10,13 +10,10 @@ import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
 import byui.cit260.grandQuest.model.InventoryItem;
-import byui.cit260.grandQuest.model.Item;
 import byui.cit260.grandQuest.model.Location;
 import byui.cit260.grandQuest.model.Scene;
 import byui.cit260.grandQuest.model.SceneType;
 import byui.cit260.grandQuest.model.Wagon;
-import java.util.LinkedList;
-import java.util.List;
 
 
 
