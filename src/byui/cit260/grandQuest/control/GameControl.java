@@ -15,6 +15,8 @@ import byui.cit260.grandQuest.model.Location;
 import byui.cit260.grandQuest.model.Scene;
 import byui.cit260.grandQuest.model.SceneType;
 import byui.cit260.grandQuest.model.Wagon;
+import java.util.LinkedList;
+import java.util.List;
 
 
 
@@ -61,11 +63,32 @@ public class GameControl {
         locations[2][2].setVisited(false);
         locations[2][3].setScene(scenes[SceneType.inn.ordinal()]);
         locations[2][3].setVisited(false);
+        locations[3][3].setScene(scenes[SceneType.marketplace.ordinal()]);
+        locations[3][3].setVisited(false);
+        locations[3][2].setScene(scenes[SceneType.tavern.ordinal()]);
+        locations[3][2].setVisited(false);
+        locations[4][4].setScene(scenes[SceneType.bridge.ordinal()]);
+        locations[4][4].setVisited(false);
+        locations[5][5].setScene(scenes[SceneType.road.ordinal()]);
+        locations[5][5].setVisited(false);
+        locations[6][6].setScene(scenes[SceneType.forest.ordinal()]);
+        locations[6][6].setVisited(false);
+        locations[7][7].setScene(scenes[SceneType.village.ordinal()]);
+        locations[7][7].setVisited(false);
+        locations[1][1].setScene(scenes[SceneType.start.ordinal()]);
+        locations[1][1].setVisited(false);
+        locations[8][8].setScene(scenes[SceneType.finish.ordinal()]);
+        locations[8][8].setVisited(false);
+        
         
     }
+
+        
+    
     
     public static InventoryItem[] getSortedInventoryList () {
         System.out.println();
+        return null;
     }
     
    
