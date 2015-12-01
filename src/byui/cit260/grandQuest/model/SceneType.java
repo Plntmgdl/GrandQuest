@@ -21,8 +21,10 @@ public enum SceneType {
     forest,
     finish;
 
-public void SceneType(<Scene> sceneType); 
- for (Scene scene : sceneType) {
-System.out.println("");
-}
+// public void SceneType(<Scene> sceneType);
+//public void displayScenes(){
+//    for (Scene scene : sceneType) {
+//        System.out.println("");
+//        }
+//    }
 }

@@ -125,6 +125,10 @@ public class Scene implements Serializable {
         return scenes;
          
     }
+    
+//    private void displayAllScenes(){
+//        for (Scene thisScene: Scenes)
+//    }
 
     private void setDescription(String string) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -150,15 +154,15 @@ public class Scene implements Serializable {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private static class GrandQuest {
-
-        private static Game getCurrentGame() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public GrandQuest() {
-        }
-    }
+//    private static class GrandQuest {
+//
+//        private static Game getCurrentGame() {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        }
+//
+//        public GrandQuest() {
+//        }
+//    }
     
     
     
