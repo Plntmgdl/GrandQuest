@@ -10,7 +10,10 @@ import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Player;
 import byui.cit260.grandQuest.model.InventoryItem;
+import byui.cit260.grandQuest.model.Item;
+import byui.cit260.grandQuest.model.Location;
 import byui.cit260.grandQuest.model.Scene;
+import byui.cit260.grandQuest.model.SceneType;
 import byui.cit260.grandQuest.model.Wagon;
 
 
@@ -44,24 +47,24 @@ public class GameControl {
         MapControl.moveActorsToStartingLocation(map);
     }
     
-    public static void startNewGame(){
-        System.out.println("\n*** startNewGame stub function called ***"); 
-    }
-    
-    public static InventoryItem[] createInventoryList() {
-        System.out.println("*** called createInventoryList() in GameControl ***");
-        return null;
-    }
+//    public static void startNewGame(){
+//        System.out.println("\n*** startNewGame stub function called ***"); 
+//    }
 
-    public static void displayVillageMenuView() {
-        
-    }
+//    public static void displayVillageMenuView() {
+//        
+//    }
 
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Location [][] locations = map.getLocations();
+        locations[2][2].setScene(scenes[SceneType.bathtub.ordinal()]);
+        locations[2][2].setVisited(false);
+        locations[2][3].setScene(scenes[SceneType.inn.ordinal()]);
+        locations[2][3].setVisited(false);
+        
     }
     
-    public static void getSortedInventoryList () {
+    public static InventoryItem[] getSortedInventoryList () {
         System.out.println();
     }
     
