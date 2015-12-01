@@ -66,6 +66,7 @@ public class GameControl {
     
     public static InventoryItem[] getSortedInventoryList () {
         System.out.println();
+        return null;
     }
     
    
