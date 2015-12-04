@@ -35,7 +35,7 @@ public class StartProgramView {
     
     //Display the main menu
     MainMenuView mainMenu = new MainMenuView();
-    mainMenu.displayMenu(player);
+    mainMenu.displayMenu();
         
     }
 
@@ -94,7 +94,7 @@ public class StartProgramView {
          System.out.println("==================================================");
     }
 
-    public void display() {
+    public void displayMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
