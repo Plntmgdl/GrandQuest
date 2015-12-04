@@ -27,7 +27,8 @@ public abstract class View implements ViewInterface {
         this.promptMessage = message;
     }
     
-    public void display() {
+    @Override
+    public void displayMenu() {
         String value = "";
         boolean done = false;
         
@@ -37,6 +38,8 @@ public abstract class View implements ViewInterface {
             done = this.doAction(value);
         } while (!done);
     }
+    
+    @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
@@ -58,9 +61,9 @@ public abstract class View implements ViewInterface {
         return value;
     }
 
-    private boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    private boolean doAction(char value) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
         
     

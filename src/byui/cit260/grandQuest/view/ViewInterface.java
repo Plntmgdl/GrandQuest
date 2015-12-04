@@ -11,7 +11,7 @@ package byui.cit260.grandQuest.view;
  */
 public interface ViewInterface {
     
-    public void display();
+    public void displayMenu();
     public String getInput();
     public boolean doAction(Object obj);
     

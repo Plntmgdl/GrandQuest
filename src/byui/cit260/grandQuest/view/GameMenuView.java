@@ -8,15 +8,24 @@ package byui.cit260.grandQuest.view;
 import GrandQuest.GrandQuest;
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.InventoryItem;
-
+import byui.cit260.grandQuest.view.View;
 /**
  *
  * @author devin_000
  */
-public abstract class GameMenuView extends View{
-
-    public GameMenuView(String promptMessage) {
-        super(promptMessage);
+public class GameMenuView extends View{
+    static GameMenuView gameMenu;
+    public GameMenuView() {
+        super("\n"
+                + "\n--------------------------------------"
+                + "\n| Main Menu                          |"
+                + "\n--------------------------------------"
+                + "\nV - View Map"
+                + "\nI - View Inventory"
+                + "\nC - View Characters"
+                + "\nW - View Wagon Status"
+                + "\nE - Exit"
+                + "\n--------------------------------------");
     }
 
     
@@ -57,24 +66,6 @@ public abstract class GameMenuView extends View{
        
  }
     
-    public void doAction(char selection) {
-        
-        switch (selection) {
-            case 'V': // Travel to new location
-                this.displayMap();
-                break;
-            case 'I': // View list of items in inventory
-                this.viewInventory();
-                break;
-            case 'C': // View list of actors
-                this.viewCharacters();
-                break;
-            case 'W': // View the wagon's status
-                this.viewWagonStatus();
-                break;
-            // ...
-        }
-    }
     // BroJones Begin
     private void displayMap() {
     
@@ -107,5 +98,35 @@ public abstract class GameMenuView extends View{
         }
     }
 
+    @Override
+    public boolean doAction(Object obj) {
+        String value=(String)obj;
+        value=value.toUpperCase();
+        char selection=value.charAt(0);
+        
+        switch (selection) {
+            case 'V': // Travel to new location
+                this.displayMap();
+                break;
+            case 'I': // View list of items in inventory
+                this.viewInventory();
+                break;
+            case 'C': // View list of actors
+                this.viewCharacters();
+                break;
+            case 'W': // View the wagon's status
+                this.viewWagonStatus();
+                break;
+            case 'E': // Exit to previous Menu
+                return true;
+        }
+        return false;
+
    
+    }
+
+    @Override
+    public void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
