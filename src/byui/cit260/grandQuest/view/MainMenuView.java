@@ -9,6 +9,7 @@ import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.Player;
 
 import GrandQuest.GrandQuest;
+import static byui.cit260.grandQuest.view.GameMenuView.gameMenu;
 import java.util.Scanner;
 
 /**
@@ -51,7 +52,8 @@ public abstract class MainMenuView extends View {
             case 'E': // Exit the program
               
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -66,15 +68,30 @@ public abstract class MainMenuView extends View {
  }
     
     
-    private void startExistingGame() {
-        System.out.println("*** startExistingGame function is called ***");
-    }
-    
     private void saveGame() {
-        System.out.println("*** saveGame function is called ***");
+        this.console.println("\n\nEnter the file path for file where the game"
+                                + "is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.saveGame(GrandQuest.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
     
-    private void displayHelpMenu() {
+    private void startExistingGame() {
+        this.console.println("\n\nEnter the file path for file where the game"
+                                + "is to be saved");
+        String filePath = this.getInput();
+        
+        try {
+            GameControl.getSavedGame(GrandQuest.getCurrentGame(), filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+    }
+    {
             // display help menu
        HelpMenuView helpMenu = new HelpMenuView();
        helpMenu.displayMenu();
@@ -100,6 +117,16 @@ public abstract class MainMenuView extends View {
 //        public GrandQuest() {
 //        }
 //    }
+
+    void display(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void displayHelpMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
 
     
 }
