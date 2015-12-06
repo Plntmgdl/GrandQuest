@@ -37,6 +37,8 @@ public abstract class View implements ViewInterface {
             done = this.doAction(value);
         } while (!done);
     }
+    
+    @Override
     public String getInput() {
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
@@ -59,6 +61,9 @@ public abstract class View implements ViewInterface {
     }
 
     
+//    private boolean doAction(char value) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
         
     

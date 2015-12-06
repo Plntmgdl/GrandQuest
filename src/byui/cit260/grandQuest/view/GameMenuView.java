@@ -76,6 +76,7 @@ public abstract class GameMenuView extends View{
         }
         return false;
     }
+    
     // BroJones Begin
     private void displayMap() {
     
@@ -108,5 +109,35 @@ public abstract class GameMenuView extends View{
         }
     }
 
+    @Override
+    public boolean doAction(Object obj) {
+        String value=(String)obj;
+        value=value.toUpperCase();
+        char selection=value.charAt(0);
+        
+        switch (selection) {
+            case 'V': // Travel to new location
+                this.displayMap();
+                break;
+            case 'I': // View list of items in inventory
+                this.viewInventory();
+                break;
+            case 'C': // View list of actors
+                this.viewCharacters();
+                break;
+            case 'W': // View the wagon's status
+                this.viewWagonStatus();
+                break;
+            case 'E': // Exit to previous Menu
+                return true;
+        }
+        return false;
+
    
+    }
+
+    @Override
+    public void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

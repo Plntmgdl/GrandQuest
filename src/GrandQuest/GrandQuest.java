@@ -32,6 +32,25 @@ public class GrandQuest {
         game = myGame;
     }
     
+    public static Player player;
+
+    public static Game getGame() {
+        return game;
+    }
+
+    public static void setGame(Game game) {
+        GrandQuest.game = game;
+    }
+
+    public static Player getPlayer() {
+        return player;
+    }
+
+    public static void setPlayer(Player player) {
+        GrandQuest.player = player;
+    }
+    
+    
     public static Game getCurrentGame() {
         return game;
     }
@@ -44,7 +63,7 @@ public class GrandQuest {
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
-            startProgramView.display();
+            startProgramView.displayMenu();
         }
         }
 
