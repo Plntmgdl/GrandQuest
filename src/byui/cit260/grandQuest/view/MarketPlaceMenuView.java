@@ -11,7 +11,7 @@ import byui.cit260.grandQuest.model.Player;
  *
  * @author devin_000
  */
-public class MarketPlaceMenuView extends View {
+public abstract class MarketPlaceMenuView extends View {
     
     private Player currentPlayer;
     

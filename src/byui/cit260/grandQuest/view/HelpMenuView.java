@@ -92,7 +92,8 @@ import java.util.Scanner;
                    + "\n in bringing the Prince his birthday gift.");
     }
 
-    void displayMenu() {
+    @Override
+    public void displayMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

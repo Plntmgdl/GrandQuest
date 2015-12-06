@@ -8,13 +8,14 @@ package byui.cit260.grandQuest.view;
 import GrandQuest.GrandQuest;
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.InventoryItem;
-
+import byui.cit260.grandQuest.view.View;
 /**
  *
  * @author devin_000
  */
 public abstract class GameMenuView extends View{
 
+    static GameMenuView gameMenu;
     public GameMenuView(String promptMessage) {
         super(promptMessage);
     }
@@ -50,14 +51,13 @@ public abstract class GameMenuView extends View{
     
     public void displayVillageMenu() {
          //Display the village menu 
-    VillageMenuView villageMenu = new VillageMenuView();
+    VillageMenuView villageMenu = new VillageMenuView() {};
     villageMenu.displayVillageMenu();
 
    
        
  }
-    
-    public void doAction(char selection) {
+    public boolean doAction(char selection) {
         
         switch (selection) {
             case 'V': // Travel to new location
@@ -74,6 +74,7 @@ public abstract class GameMenuView extends View{
                 break;
             // ...
         }
+        return false;
     }
     // BroJones Begin
     private void displayMap() {

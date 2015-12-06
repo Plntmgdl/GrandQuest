@@ -27,7 +27,7 @@ public abstract class View implements ViewInterface {
         this.promptMessage = message;
     }
     
-    public void display() {
+    public void displayMenu() {
         String value = "";
         boolean done = false;
         
@@ -58,9 +58,7 @@ public abstract class View implements ViewInterface {
         return value;
     }
 
-    private boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
         
     

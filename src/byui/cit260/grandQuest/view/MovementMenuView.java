@@ -55,8 +55,8 @@ public class MovementMenuView extends View {
     
     private void displayRegionVillage() {
        // display the game menu
-        VillageRegionView villageRegion = new VillageRegionView();
-        villageRegion.displayMenu();
+        VillageMenuView villageMenu = new VillageMenuView() {};
+        villageMenu.displayMenu();
     }
     
     private void displayRegionRoad() {

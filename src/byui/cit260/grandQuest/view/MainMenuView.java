@@ -15,7 +15,7 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class MainMenuView extends View {
+public abstract class MainMenuView extends View {
      
     public MainMenuView() {
           super("\n"
@@ -62,8 +62,7 @@ public class MainMenuView extends View {
             GameControl.createNewGame(GrandQuest.getPlayer());   
             
             // display the game menu
-            GameMenuView gameMenu;
-          
+            // GameMenuView.gameMenu = new GameMenuView() {};         
  }
     
     
@@ -82,23 +81,7 @@ public class MainMenuView extends View {
        
     }
 
-    void display(Player player) {
-        
-    }
-
-    void displayMenu(Player player) {
-        
-    }
-
-    private static class GrandQuest {
-
-        private static Player getPlayer() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
-
-        public GrandQuest() {
-        }
-    }
-
+    
+   
     
 }

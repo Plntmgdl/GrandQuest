@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author Jassen
  */
-public class VillageMenuView extends View {
+public abstract class VillageMenuView extends View {
     
     
     private Player currentPlayer;

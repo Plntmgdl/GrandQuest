@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Jassen
  */
-public class EncounterMenuView extends View {
+public abstract class EncounterMenuView extends View {
     
     public EncounterMenuView() {
     super ("\n"
