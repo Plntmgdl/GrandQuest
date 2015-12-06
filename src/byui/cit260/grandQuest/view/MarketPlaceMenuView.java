@@ -50,13 +50,14 @@ public abstract class MarketPlaceMenuView extends View {
             case 'E': // Exit the program
                 return;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
     }
 
     private void displayLookAround() {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n As you look around the market place you see"
                    + "\n all kinds of shops and merchants, animals"
                    + "\n of all different kinds.  You smell spices"

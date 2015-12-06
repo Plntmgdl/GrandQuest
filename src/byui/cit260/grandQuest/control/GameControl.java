@@ -14,6 +14,12 @@ import byui.cit260.grandQuest.model.Location;
 import byui.cit260.grandQuest.model.Scene;
 import byui.cit260.grandQuest.model.SceneType;
 import byui.cit260.grandQuest.model.Wagon;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 
 /**
@@ -21,6 +27,41 @@ import byui.cit260.grandQuest.model.Wagon;
  * @author devin_000
  */
 public class GameControl {
+    private static String filepath;
+
+    public static void saveGame(Game currentGame, String filePath) 
+            throws GameControlException {
+        
+        try(FileOutputStream fops = new FileOutputStream(filepath)){
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(currentGame);
+        }
+        catch(IOException e) {
+            throw new GameControlException(e.getMessage());
+        
+        }
+    }
+
+    public static void getSavedGame(Game currentGame, String filePath) 
+                        throws GameControlException {
+        Game game = null;
+        
+        try( FileInputStream fips = new FileInputStream(filepath)) {
+            ObjectInputStream output = new ObjectInputStream(fips);
+            
+            game = (Game) output.readObject();
+        }
+        catch(FileNotFoundException fnfe) {
+            throw new GameControlException(fnfe.getMessage());
+        }
+        catch(Exception e){
+            throw new GameControlException(e.getMessage());
+        }
+        GrandQuest.setCurrentGame(game);
+    }
+        
+    
     
     InventoryItem[] inventoryList;
     
@@ -85,6 +126,16 @@ public class GameControl {
     public static InventoryItem[] getSortedInventoryList () {
         System.out.println();
         return null;
+    }
+
+    private static class GameControlException extends Exception {
+
+        public GameControlException() {
+        }
+
+        private GameControlException(String message) {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
     }
     
    

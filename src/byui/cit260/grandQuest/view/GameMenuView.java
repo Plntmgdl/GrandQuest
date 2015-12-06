@@ -36,14 +36,14 @@ public abstract class GameMenuView extends View{
         
   
     public void displayIntro() {   
-        System.out.println("\n*** As the morning sun slowly "
+        this.console.println("\n*** As the morning sun slowly "
                 + "\n        crests the mountain tops it illuminates "
                 + "\n       the small valley lying below. You are "
                 + "\n        struck with a sense of… As you come "
                 + "\n        closer to the settlement you spy the "
                 + "\n        Tavern, the Inn, and the Market Place. ***");
         
-        System.out.println("*\n***                                  *"
+        this.console.println("*\n***                                  *"
                 + "\n       Welcome to the Village."
                 + "\n Where would you like to go first? ***");
         

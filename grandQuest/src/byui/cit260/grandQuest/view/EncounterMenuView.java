@@ -56,7 +56,7 @@ public class EncounterMenuView extends View {
           
     private void displayMonsterReaction() {
        //display monster reaction
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n |    The monster runs away        |");
   
   }

@@ -17,6 +17,12 @@ import byui.cit260.grandQuest.model.Game;
 import byui.cit260.grandQuest.model.MonsterReaction;
 import byui.cit260.grandQuest.model.PlayerReaction;
 import byui.cit260.grandQuest.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Jassen
@@ -55,17 +61,74 @@ public class GrandQuest {
         return game;
     }
     
+    private static PrintWriter outFile = null;
+    private static BufferedReader inFile = null;
+    
+    private static PrintWriter logFile = null;
+
+    public static PrintWriter getLogFile() {
+        return logFile;
+    }
+
+    public static void setLogFile(PrintWriter logFile) {
+        GrandQuest.logFile = logFile;
+    }
+    
+
+    public static PrintWriter getOutfile() {
+        return outFile;
+    }
+
+    public static void setOutfile(PrintWriter outfile) {
+        GrandQuest.outFile = outfile;
+    }
+
+    public static BufferedReader getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(BufferedReader inFile) {
+        GrandQuest.inFile = inFile;
+    }
+    
+    
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
         try {
-            // create StartProgramView and start the program
+            GrandQuest.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+            
+            GrandQuest.outFile = new PrintWriter(System.out, true);
+            
+            String filePath = "log.txt";
+            GrandQuest.logFile = new PrintWriter(filePath);
+// create StartProgramView and start the program
             startProgramView.startProgram();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
             te.printStackTrace();
             startProgramView.displayMenu();
         }
-        }
+        
+        finally {
+            try {
+                if (GrandQuest.inFile != null)
+                    GrandQuest.inFile.close();
+                if (GrandQuest.outFile != null)
+                    GrandQuest.outFile.close();
+                if (GrandQuest.logFile != null)
+                    GrandQuest.logFile.close();
+            } catch (IOException ex) {
+               System.out.println("Error closing files");
+               return;
+          
+            
+        
+                       }}}
+
+    public static PrintWriter getOutFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     
    

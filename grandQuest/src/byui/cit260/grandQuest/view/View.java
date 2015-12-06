@@ -13,20 +13,19 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface {
     
-    Scanner keyboard = new Scanner(System.in);
+    
     protected String displayMessage;
     
     public View(String message) {
         this.displayMessage = message;
     }
     
-    @Override
     public void display() {
         String value = "";
         boolean done = false;
         
         do {
-            System.out.println(this.displayMessage);
+            this.console.println(this.displayMessage);
             value = this.Input();
             done = this.doAction(value);
         }
@@ -41,11 +40,11 @@ public String getInput() {
     
     while (!valid) {
         
-        selection = keyboard.nextLine();
+        selection = this.keyboard.readLine();
         selection = selection.trim();
         
         if (selection.length() < 1) {
-            System.out.println("You must enter a value.");
+            this.console.println("You must enter a value.");
             continue;
         }
         

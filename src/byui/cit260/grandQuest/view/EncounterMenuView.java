@@ -5,7 +5,12 @@
  */
 package byui.cit260.grandQuest.view;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,6 +26,7 @@ public abstract class EncounterMenuView extends View {
                 + "\nR - Run away"
                 + "\nS - Stand your ground"
                 + "\nA - Attack"
+                + "\nP - Print"
                 + "\n--------------------------------------");
 }
     
@@ -46,20 +52,19 @@ public abstract class EncounterMenuView extends View {
             case 'A': // Player attacks and screen goes to monster reaction
                 this.displayMonsterReaction();
                 break;
-            default:
-                System.out.println("\n*** Invalid selection *** Try again");
-                break;
         }
+        }
+                  ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
+
+    private void displayMonsterReaction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+          
     
       
           
-    private void displayMonsterReaction() {
-       //display monster reaction
-        System.out.println ("\n---------------------------------------"
-                   + "\n |    The monster runs away        |");
-  
-  }
+   
 
-    
+   
 }

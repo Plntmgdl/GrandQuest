@@ -34,7 +34,7 @@ public class StartProgramView {
     this.displayWelcomeMessage(player);
     
     //Display the main menu
-    MainMenuView mainMenu = new MainMenuView();
+    MainMenuView mainMenu = new MainMenuView() {};
     mainMenu.display(player);
         
     }
@@ -66,15 +66,14 @@ public class StartProgramView {
            
         boolean valid = false; // Indicates if Name has been retreived 
         String playersName = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
-        
+                
         while(!valid)  {  //while a valid name has not been retreived
             
             // prompt for the player's name
             System.out.println("Enter the player's name below:");
             
             //Get the name from the keyboard and trim off the blanks
-            playersName = keyboard.nextLine();
+            playersName = this.keyboard.readLine();
             playersName = playersName.trim();
             
             //If the name is invalid ( < 2 characters in length)

@@ -37,7 +37,7 @@ public class MovementMenuView extends View{
     private void doAction(char choice) {
         switch (choice) {
             case 'V': // Go to the Village Region
-                this.displayRegionVillage();
+                this.displayMenuVillage();
                 break;
             case 'R': // Go to the Road Region
                 this.displayRegionRoad();
@@ -53,21 +53,21 @@ public class MovementMenuView extends View{
         }
     }
     
-    private void displayRegionVillage() {
+    private void displayMenuVillage() {
        // display the game menu
-        VillageRegionView villageRegion = new VillageRegionView();
+        VillageMenuView villageRegion = new VillageMenuView() {};
         villageRegion.displayMenu();
     }
     
     private void displayRegionRoad() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n | Launch RegionRoad menu |"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayRegionForest(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n | Launch RegionForest menu |"
                    + "\n-------------------------------------------");
      

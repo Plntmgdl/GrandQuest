@@ -59,7 +59,7 @@ import java.util.Scanner;
     }
     
     private void displayJourneyDirections() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n |    Journey Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your path"
@@ -67,7 +67,7 @@ import java.util.Scanner;
     }
     
     private void displayEncounterDirections() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n |    Encounter Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your action"
@@ -76,7 +76,7 @@ import java.util.Scanner;
     }
     
     private void displayCalculationDirections(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n |    Calculation Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Input your numbers"
@@ -85,7 +85,7 @@ import java.util.Scanner;
     }
     
     private void displayObjectOfGame () {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n |    Object Of Game        |"
                    + "\n-------------------------------------------"
                    + "\n You are hired to assist a merchant"

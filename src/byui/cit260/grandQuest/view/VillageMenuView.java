@@ -52,7 +52,8 @@ public abstract class VillageMenuView extends View {
             case 'E': // Exit the program
                 return;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
     }

@@ -48,7 +48,8 @@ public class MovementMenuView extends View {
             case 'E': // save game and return to main menu
                 return;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
                 break;
         }
     }
@@ -60,14 +61,14 @@ public class MovementMenuView extends View {
     }
     
     private void displayRegionRoad() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n | Launch RegionRoad menu |"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayRegionForest(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n | Launch RegionForest menu |"
                    + "\n-------------------------------------------");
      
