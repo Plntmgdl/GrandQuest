@@ -19,7 +19,9 @@ import java.util.logging.Logger;
  */
 public abstract class View implements ViewInterface {
     
+    private Scanner keybrd = new Scanner(System.in);
     private String promptMessage;
+    
     
     protected final BufferedReader keyboard = GrandQuest.getInFile();
     protected final PrintWriter console = GrandQuest.getOutFile();
@@ -36,7 +38,7 @@ public abstract class View implements ViewInterface {
     public void setPromptMessage(String message) {
         this.promptMessage = message;
     }
-    
+    @Override
     public void displayMenu() {
         String value = "";
         boolean done = false;
@@ -57,7 +59,7 @@ public abstract class View implements ViewInterface {
         try {
             
             while (!valid) {
-                value = this.keyboard.readLine();
+                value = keybrd.nextLine();
                 value = value.trim();
                 
                 if (value.length()<1) {
