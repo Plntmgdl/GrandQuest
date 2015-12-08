@@ -5,12 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.PrintWriter;
 
 /**
  *
@@ -52,14 +48,12 @@ public abstract class EncounterMenuView extends View {
             case 'A': // Player attacks and screen goes to monster reaction
                 this.displayMonsterReaction();
                 break;
-        }
-        }
+            case 'P':
+                this.printEncounterMenuView();
                   ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid selection *** Try again");
 
-    private void displayMonsterReaction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
           
     
       
@@ -68,3 +62,28 @@ public abstract class EncounterMenuView extends View {
 
    
 }
+    }
+
+    private void displayMonsterReaction() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void printEncounterMenuView(String outputLocation) {
+        try (PrintWriter out = new PrintWriter(outputLocation)) {
+            out.println("\n\n           Encounter Menu Report           ");
+            out.printf("%n%-20s", "Encounter",);
+            out.printf("%n%-20s", "------------");
+            
+            
+            
+        }catch (IOException ex) {
+            ErrorView.display(this.getClass().getName(),
+                        "I/O Error: "+ex.getMessage());
+        }
+    }
+
+}
+
+    
+
+   

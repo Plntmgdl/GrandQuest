@@ -26,4 +26,10 @@ public class ErrorView {
         
         logFile.println(className + " - " + errorMessage);
     }
+
+    static class display {
+
+        public display() {
+        }
+    }
 }

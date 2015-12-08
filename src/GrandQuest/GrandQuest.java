@@ -106,7 +106,6 @@ public class GrandQuest {
             startProgramView.startProgram();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
-            te.printStackTrace();
             startProgramView.displayMenu();
         }
         

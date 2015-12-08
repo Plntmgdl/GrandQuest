@@ -7,7 +7,6 @@ package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.ProgramControl;
 import byui.cit260.grandQuest.model.Player;
-import java.util.Scanner;
 
 /**
  *
@@ -19,7 +18,11 @@ public class StartProgramView extends View{
         super(promptMessage);
     }
 
-    
+    public  StartProgramView() {
+       
+    }
+
+   
    
   
 

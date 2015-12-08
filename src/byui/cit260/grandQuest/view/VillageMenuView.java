@@ -40,13 +40,13 @@ public abstract class VillageMenuView extends View {
 
     private void doAction(char choice) {
         switch (choice) {
-            case 'I': // create and start a new game
+            case 'I': 
                 this.displayInn();
                 break;
-            case 'T': // get and start an existing game
+            case 'T': 
                 this.displayTavern();
                 break;
-            case 'M': // display the help menu
+            case 'M': 
                 this.displayMarketPlace();
                 break;
             case 'E': // Exit the program
@@ -59,21 +59,34 @@ public abstract class VillageMenuView extends View {
     }
 
     private void displayInn() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println ("\n*** As you walk in you are struck with a feeling of rest and relaxation. "
+                + "\n        You notice a small lounge area that has a couple of... "
+                + "\n       You walk up to the InnKeeper and ask for a room and bath... "
+                + "\n        You slowly walk upstairs and to your room. ***");
+     
     }
 
     private void displayTavern() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         this.console.println ("\n*** As you walk in you are hit with the smells of... "
+                + "\n        You spy many patrons sitting at tables... "
+                + "\n        You walk to a table and order food and drink looking forward... "
+                + "\n        As you finish you start to fel a little sleepy and decide to go to sleep. ***");
+     
     }
 
     private void displayMarketPlace() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println ("\n*** As you round the corner and spy the market you see items from... "
+                + "\n        The first booth you stop at has trinkets from far off lands... "
+                + "\n        You check your pockets and buy a couple of items for you family... "
+                + "\n        You feel a slight tug on your cloak and turn around to see a man... ***");
+     
     }
 
     void displayVillageMenu() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
    
    
     }
