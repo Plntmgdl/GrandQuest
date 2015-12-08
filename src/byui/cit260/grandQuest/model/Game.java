@@ -21,7 +21,15 @@ public class Game implements Serializable {
     private InventoryItem[] inventory;
     private Wagon wagon;
     private Map map;
-    
+    private Scene[] scenes;
+
+    public Scene[] getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene[] scenes) {
+        this.scenes = scenes;
+    }
     public Game() {
     }
     

@@ -95,18 +95,18 @@ public class GrandQuest {
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
         try {
-            GrandQuest.inFile =
-                    new BufferedReader(new InputStreamReader(System.in));
-            
-            GrandQuest.outFile = new PrintWriter(System.out, true);
-            
-            String filePath = "log.txt";
-            GrandQuest.logFile = new PrintWriter(filePath);
+//            GrandQuest.inFile =
+//                    new BufferedReader(new InputStreamReader(System.in));
+//            
+//            GrandQuest.outFile = new PrintWriter(System.out, true);
+//            
+//            String filePath = "log.txt";
+//            GrandQuest.logFile = new PrintWriter(filePath);
 // create StartProgramView and start the program
             startProgramView.startProgram();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
-            startProgramView.displayMenu();
+//            startProgramView.displayMenu();
         }
         
         finally {
@@ -126,7 +126,8 @@ public class GrandQuest {
                        }}}
 
     public static PrintWriter getOutFile() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return null;
+        
     }
 
     

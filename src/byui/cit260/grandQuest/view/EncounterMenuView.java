@@ -48,10 +48,13 @@ public abstract class EncounterMenuView extends View {
             case 'A': // Player attacks and screen goes to monster reaction
                 this.displayMonsterReaction();
                 break;
-            case 'P':
-                this.printEncounterMenuView();
-                  ErrorView.display(this.getClass().getName(),
-                        "\n*** Invalid selection *** Try again");
+            //case 'P':
+              //  this.printEncounterMenuView();
+                  
+                
+                
+                //ErrorView.display(this.getClass().getName(),
+                  //      "\n*** Invalid selection *** Try again");
 
    
           
@@ -65,22 +68,22 @@ public abstract class EncounterMenuView extends View {
     }
 
     private void displayMonsterReaction() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.console.println("Monster says boo");
     }
 
-    private void printEncounterMenuView(String outputLocation) {
-        try (PrintWriter out = new PrintWriter(outputLocation)) {
-            out.println("\n\n           Encounter Menu Report           ");
-            out.printf("%n%-20s", "Encounter",);
-            out.printf("%n%-20s", "------------");
-            
-            
-            
-        }catch (IOException ex) {
-            ErrorView.display(this.getClass().getName(),
-                        "I/O Error: "+ex.getMessage());
-        }
-    }
+//    private void printEncounterMenuView(String outputLocation) {
+//        try (PrintWriter out = new PrintWriter(outputLocation)) {
+//            out.println("\n\n           Encounter Menu Report           ");
+//            out.printf("%n%-20s", "Encounter",);
+//            out.printf("%n%-20s", "------------");
+//            
+//            
+//            
+//        }catch (IOException ex) {
+//            ErrorView.display(this.getClass().getName(),
+//                        "I/O Error: "+ex.getMessage());
+//        }
+//    }
 
 }
 

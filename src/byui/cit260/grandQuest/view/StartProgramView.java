@@ -7,16 +7,16 @@ package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.ProgramControl;
 import byui.cit260.grandQuest.model.Player;
-
+import java.util.Scanner;
 /**
  *
  * @author devin_000
  */
-public class StartProgramView extends View{
+public class StartProgramView { //extends View{
 
-    public StartProgramView(String promptMessage) {
-        super(promptMessage);
-    }
+//    public StartProgramView(String promptMessage) {
+//        super(promptMessage);
+//    }
 
     public  StartProgramView() {
        
@@ -48,14 +48,14 @@ public class StartProgramView extends View{
     }
 
     private void displayBanner() {
-        this.console.println("\n\n**************************************");
+        System.out.println("\n\n**************************************");
         
-        this.console.println("*                                  *"
+        System.out.println("*                                  *"
                         + "\n* This is the Game of Grand Quest   *"
                         + "\n* In This Game You Will Accompany the Merchant to the Castle   *"
                         + "\n* To Bring the Prince His Birthday Present   *");
         
-        this.console.println("*                                  *"
+        System.out.println("*                                  *"
                         + "\n* Your First Stop Will Be the Village   *"
                         + "\n* Where You Will Meet the Merchant in the Marketplace   *"
                         + "\n* There You Will Have To Choose Your Inventory   *"
@@ -63,7 +63,7 @@ public class StartProgramView extends View{
                         + "\n* Then After A Peaceful Bath And Full Night's Rest   *"
                         + "\n* You Will Start Your Journey   *");
         
-        this.console.println("*                                  *"
+        System.out.println("*                                  *"
                         + "\n* Good Luck and Have A Grand Adventure   *"
                         + "\n*                                 *");
         
@@ -74,15 +74,16 @@ public class StartProgramView extends View{
            
         boolean valid = false; // Indicates if Name has been retreived 
         String playersName = null;
+        Scanner keyboard = new Scanner(System.in);
         try {
         
         while(!valid)  {  //while a valid name has not been retreived
             
             // prompt for the player's name
-            this.console.println("Enter the player's name below:");
+            System.out.println("Enter the player's name below:");
             
             //Get the name from the keyboard and trim off the blanks
-            playersName = this.keyboard.readLine();
+            playersName = keyboard.nextLine();
             playersName = playersName.trim();
             
             //If the name is invalid ( < 2 characters in length)
@@ -101,20 +102,29 @@ public class StartProgramView extends View{
     }
 
     private void displayWelcomeMessage(Player player) {
-         this.console.println("\n\n==================================================");
-         this.console.println("\tWelcome adventurer " + player.getName());
-         this.console.println("\tEnjoy your grand quest");
-         this.console.println("==================================================");
+         System.out.println("\n\n==================================================");
+         System.out.println("\tWelcome adventurer " + player.getName());
+         System.out.println("\tEnjoy your grand quest");
+         System.out.println("==================================================");
     }
 
-    public void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public void displayMenu() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//
+//    @Override
+//    public boolean doAction(Object obj) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
-    @Override
-    public boolean doAction(Object obj) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public boolean doAction(Object obj) {
+//        
+//        String value = (String) obj;
+//            this.console.println("start program view do action =" + value);
+//            return true;
+//    }
 
    
 }

@@ -57,7 +57,7 @@ public class Map implements Serializable {
     private static Map createMap() {
         // create the map
         Map map = new Map(10, 10); 
-        // create teh scenes for the game
+        // create the scenes for the game
         //Scene[] scenes = Scene.createScenes();
         // assign scenes to locations
         return map;

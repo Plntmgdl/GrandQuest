@@ -30,6 +30,7 @@ public abstract class MainMenuView extends View {
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
+    @Override
     public boolean doAction(Object obj) {
         String value = (String)obj;
         value = value.toUpperCase();
@@ -50,7 +51,7 @@ public abstract class MainMenuView extends View {
                 this.saveGame();
                 break;
             case 'E': // Exit the program
-              
+                return true;
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid selection *** Try again");
@@ -91,15 +92,6 @@ public abstract class MainMenuView extends View {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
-    {
-            // display help menu
-       HelpMenuView helpMenu = new HelpMenuView();
-       helpMenu.displayMenu();
-       
-    }
-
-    
-   
 //    void display(Player player) {
 //        
 //    }
@@ -118,12 +110,13 @@ public abstract class MainMenuView extends View {
 //        }
 //    }
 
-    void display(Player player) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    void display(Player player) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     private void displayHelpMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.displayMenu();
     }
 
     

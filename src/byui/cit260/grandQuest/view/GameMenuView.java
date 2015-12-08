@@ -13,13 +13,21 @@ import byui.cit260.grandQuest.view.View;
  *
  * @author devin_000
  */
-public abstract class GameMenuView extends View{
+public class GameMenuView extends View{
 
     static GameMenuView gameMenu;
-    public GameMenuView(String promptMessage) {
-        super(promptMessage);
+    public GameMenuView() {
+        super ("\n"
+                + "\n--------------------------------------"
+                + "\n| Game Menu                          |"
+                + "\n--------------------------------------"
+                + "\nV - Display Map"
+                + "\nI - View Inventory"
+                + "\nC - View Characters"
+                + "\nW - View "
+                + "\nM - Return to main menu"
+                + "\n--------------------------------------");
     }
-
     
     
    
@@ -71,6 +79,11 @@ public abstract class GameMenuView extends View{
                 break;
             case 'W': // View the wagon's status
                 this.viewWagonStatus();
+                break;
+            case 'M':
+                return true;
+            default:
+                System.out.println("Invalid selection");
                 break;
             // ...
         }
@@ -136,8 +149,8 @@ public abstract class GameMenuView extends View{
    
     }
 
-    @Override
-    public void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    @Override
+//    public void displayMenu() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 }
