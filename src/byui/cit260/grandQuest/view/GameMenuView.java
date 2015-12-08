@@ -5,10 +5,8 @@
  */
 package byui.cit260.grandQuest.view;
 
-import GrandQuest.GrandQuest;
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.InventoryItem;
-import byui.cit260.grandQuest.view.View;
 /**
  *
  * @author devin_000
@@ -31,7 +29,6 @@ public class GameMenuView extends View{
     
     
    
-      
   public void newGame(){
 
     //Display the banner screen

@@ -25,7 +25,7 @@ public abstract class EncounterMenuView extends View {
                 + "\nP - Print"
                 + "\n--------------------------------------");
 }
-    
+    @Override
     public boolean doAction(Object obj) {
         
         String value = (String)obj;
