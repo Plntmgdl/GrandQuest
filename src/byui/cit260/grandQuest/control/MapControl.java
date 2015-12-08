@@ -20,16 +20,16 @@ public class MapControl {
         Map map = new Map(20, 20);
         
         // create the list of the different scenes in the game
-        Scene[] scenes = Scene.createScenes();
+//        Scene[] scenes = Scene.createScenes();
         
         // assign the diffeent scenes to locations in the map
-        GameControl.assignScenesToLocations(map, scenes);
+//        GameControl.assignScenesToLocations(map, scenes);
         
         return map;
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+//    static void moveActorsToStartingLocation(Map map) {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+//    
 }

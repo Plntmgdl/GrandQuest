@@ -5,7 +5,6 @@
  */
 package byui.cit260.grandQuest.model;
 
-import GrandQuest.GrandQuest;
 import java.io.Serializable;
 
 /**
@@ -14,9 +13,43 @@ import java.io.Serializable;
  */
 public class Scene implements Serializable {
     static int SCENE_TYPE_ITEMS = 10;
+    private String description;
+    private String mapSymbol;
+    private Integer travelTime;
+    private boolean blocked;
+
+    public boolean isBlocked() {
+        return blocked;
+    }
+
+    public void setBlocked(boolean blocked) {
+        this.blocked = blocked;
+    }
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
+    public void setMapSymbol(String mapSymbol) {
+        this.mapSymbol = mapSymbol;
+    }
+
+    public Integer getTravelTime() {
+        return travelTime;
+    }
+
+    public void setTravelTime(Integer travelTime) {
+        this.travelTime = travelTime;
+    }
+    
     public static Scene[] createScenes() {
-        Game game = GrandQuest.getCurrentGame();
-        
         Scene[] scenes = new Scene[SCENE_TYPE_ITEMS];
                 
         Scene startingScene = new Scene();
@@ -37,7 +70,7 @@ public class Scene implements Serializable {
                     "*\n***                                  *"
                     + "\n       Welcome to the Village."
                     + "\n Where would you like to go first? ***");
-        villageScene.seetMapSymbol(" VG ");
+        villageScene.setMapSymbol(" VG ");
         villageScene.setBlocked(false);
         villageScene.setTravelTime(240);
         scenes[SceneType.village.ordinal()] = villageScene;
@@ -47,7 +80,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        marketplaceScene.seetMapSymbol(" MP ");
+        marketplaceScene.setMapSymbol(" MP ");
         marketplaceScene.setBlocked(false);
         marketplaceScene.setTravelTime(240);
         scenes[SceneType.marketplace.ordinal()] = marketplaceScene;
@@ -57,7 +90,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        tavernScene.seetMapSymbol(" FN ");
+        tavernScene.setMapSymbol(" FN ");
         tavernScene.setBlocked(false);
         tavernScene.setTravelTime(240);
         scenes[SceneType.finish.ordinal()] = tavernScene;
@@ -67,7 +100,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        innScene.seetMapSymbol(" IN ");
+        innScene.setMapSymbol(" IN ");
         innScene.setBlocked(false);
         innScene.setTravelTime(240);
         scenes[SceneType.inn.ordinal()] = innScene;
@@ -77,7 +110,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        bathtubScene.seetMapSymbol(" BT ");
+        bathtubScene.setMapSymbol(" BT ");
         bathtubScene.setBlocked(false);
         bathtubScene.setTravelTime(240);
         scenes[SceneType.bathtub.ordinal()] = bathtubScene;
@@ -87,7 +120,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        roadScene.seetMapSymbol(" RD ");
+        roadScene.setMapSymbol(" RD ");
         roadScene.setBlocked(false);
         roadScene.setTravelTime(240);
         scenes[SceneType.road.ordinal()] = roadScene;
@@ -97,7 +130,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        bridgeScene.seetMapSymbol(" BG ");
+        bridgeScene.setMapSymbol(" BG ");
         bridgeScene.setBlocked(false);
         bridgeScene.setTravelTime(240);
         scenes[SceneType.bridge.ordinal()] = bridgeScene;
@@ -107,7 +140,7 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        forestScene.seetMapSymbol(" FT ");
+        forestScene.setMapSymbol(" FT ");
         forestScene.setBlocked(false);
         forestScene.setTravelTime(240);
         scenes[SceneType.forest.ordinal()] = forestScene;
@@ -117,9 +150,9 @@ public class Scene implements Serializable {
                     "\nBlah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah"
                     + "blah blah blah blah blah blah blah blah blah");
-        finishScene.seetMapSymbol(" FN ");
+        finishScene.setMapSymbol(" FN ");
         finishScene.setBlocked(false);
-        finishScene.setTravelTime(Double.POSITIVE_INFINITY);
+        finishScene.setTravelTime(0);
         scenes[SceneType.finish.ordinal()] = finishScene;
         
         return scenes;
@@ -130,29 +163,7 @@ public class Scene implements Serializable {
 //        for (Scene thisScene: Scenes)
 //    }
 
-    private void setDescription(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setMapSymbol(String _st_) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setBlocked(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setTravelTime(int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void seetMapSymbol(String _vg_) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private void setTravelTime(double POSITIVE_INFINITY) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 //    private static class GrandQuest {
 //

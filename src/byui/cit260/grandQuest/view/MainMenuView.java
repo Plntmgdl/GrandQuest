@@ -65,7 +65,8 @@ public abstract class MainMenuView extends View {
             GameControl.createNewGame(GrandQuest.getPlayer());   
             
             // display the game menu
-            // GameMenuView.gameMenu = new GameMenuView() {};         
+            GameMenuView gameMenu = new GameMenuView(); 
+            gameMenu.displayMenu();
  }
     
     

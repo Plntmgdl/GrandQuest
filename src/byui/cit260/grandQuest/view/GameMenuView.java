@@ -57,7 +57,7 @@ public class GameMenuView extends View{
     public void displayVillageMenu() {
          //Display the village menu 
     VillageMenuView villageMenu = new VillageMenuView() {};
-    villageMenu.displayVillageMenu();
+    villageMenu.displayMenu();
 
    
        

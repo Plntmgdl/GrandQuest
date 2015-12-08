@@ -88,7 +88,7 @@ public class GameControl {
         assignScenesToLocations (map,scenes);
         
         // move actors to the starting position in the map
-        MapControl.moveActorsToStartingLocation(map);
+//        MapControl.moveActorsToStartingLocation(map);
     }
     
 //    public static void startNewGame(){

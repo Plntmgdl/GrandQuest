@@ -30,15 +30,13 @@ public abstract class VillageMenuView extends View {
     }
     
 
-        public boolean doAction(Object obj) {
+    @Override
+    public boolean doAction(Object obj) {
         
         String value = (String) obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
-        return false;
-    }
-
-    private void doAction(char choice) {
+       
         switch (choice) {
             case 'I': 
                 this.displayInn();
@@ -50,12 +48,13 @@ public abstract class VillageMenuView extends View {
                 this.displayMarketPlace();
                 break;
             case 'E': // Exit the program
-                return;
+                return true;
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid selection *** Try again");
                 break;
         }
+        return false;
     }
 
     private void displayInn() {
@@ -82,9 +81,9 @@ public abstract class VillageMenuView extends View {
      
     }
 
-    void displayVillageMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    void displayVillageMenu() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
     
    
