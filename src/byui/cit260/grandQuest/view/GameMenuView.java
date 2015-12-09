@@ -29,39 +29,7 @@ public class GameMenuView extends View{
     
     
    
-  public void newGame(){
-
-    //Display the banner screen
-    this.displayIntro(); 
-
-    this.displayVillageMenu();
-    }
-    
-      
-        
-  
-    public void displayIntro() {   
-        this.console.println("\n*** As the morning sun slowly "
-                + "\n        crests the mountain tops it illuminates "
-                + "\n       the small valley lying below. You are "
-                + "\n        struck with a sense of… As you come "
-                + "\n        closer to the settlement you spy the "
-                + "\n        Tavern, the Inn, and the Market Place. ***");
-        
-        this.console.println("*\n***                                  *"
-                + "\n       Welcome to the Village."
-                + "\n Where would you like to go first? ***");
-        
-    }
-    
-    public void displayVillageMenu() {
-         //Display the village menu 
-    VillageMenuView villageMenu = new VillageMenuView() {};
-    villageMenu.displayMenu();
-
-   
-       
- }
+ 
     public boolean doAction(char selection) {
         
         switch (selection) {
@@ -69,7 +37,7 @@ public class GameMenuView extends View{
                 this.displayMap();
                 break;
             case 'I': // View list of items in inventory
-                this.viewInventory();
+                GameMenuView.viewInventory();
                 break;
             case 'C': // View list of actors
                 this.viewCharacters();
