@@ -57,13 +57,13 @@ public class MerchantView extends View {
                    + "\n 'Thank you so much, my good sir. We will leave in the morning"
                    + "\n please retire to the Inn and relax and we will meet here in the morning.");
    
-    this.displayVillageMenu();
+    this.displayInnMenu();
     }
     
-    public void displayVillageMenu() {
+    public void displayInnMenu() {
          //Display the village menu 
-    VillageMenuView villageMenu = new VillageMenuView() ;
-    villageMenu.displayMenu();
+    InnMenuView innMenu = new InnMenuView() ;
+    innMenu.displayMenu();
     }  
     
 
@@ -76,7 +76,12 @@ public class MerchantView extends View {
     
         
       this.displayVillageMenu();
-      
+    }   
+     public void displayVillageMenu() {
+         //Display the village menu 
+    VillageMenuView villageMenu = new VillageMenuView() ;
+    villageMenu.displayMenu();
+    }  
     
-    }
+    
 }

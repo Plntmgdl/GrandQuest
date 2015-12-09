@@ -25,8 +25,8 @@ public abstract class MainMenuView extends View {
                 + "\n--------------------------------------"
                 + "\nN - New Game"
                 + "\nC - Continue Game"
-                + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
+                + "\nH - Help Menu"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
@@ -44,11 +44,11 @@ public abstract class MainMenuView extends View {
             case 'C': // get and start an existing game
                 this.startContinueGame();
                 break;
-            case 'H': // display the help menu
-                this.displayHelpMenu();
-                break;
             case 'S': // save the current game
                 this.saveGame();
+                break;
+            case 'H': // display the help menu
+                this.displayHelpMenu();
                 break;
             case 'E': // Exit the program
                 return true;
