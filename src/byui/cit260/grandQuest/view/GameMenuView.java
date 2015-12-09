@@ -22,7 +22,7 @@ public class GameMenuView extends View{
                 + "\nV - Display Map"
                 + "\nI - View Inventory"
                 + "\nC - View Characters"
-                + "\nW - View "
+                + "\nW - View Wagon Status"
                 + "\nM - Return to main menu"
                 + "\n--------------------------------------");
     }
@@ -30,34 +30,35 @@ public class GameMenuView extends View{
     
    
  
-    public boolean doAction(char selection) {
-        
-        switch (selection) {
-            case 'V': // Travel to new location
-                this.displayMap();
-                break;
-            case 'I': // View list of items in inventory
-                GameMenuView.viewInventory();
-                break;
-            case 'C': // View list of actors
-                this.viewCharacters();
-                break;
-            case 'W': // View the wagon's status
-                this.viewWagonStatus();
-                break;
-            case 'M':
-                return true;
-            default:
-                System.out.println("Invalid selection");
-                break;
-            // ...
-        }
-        return false;
-    }
+//    public boolean doAction(char selection) {
+//        
+//        switch (selection) {
+//            case 'V': // Travel to new location
+//                this.displayMap();
+//                break;
+//            case 'I': // View list of items in inventory
+//                GameMenuView.viewInventory();
+//                break;
+//            case 'C': // View list of actors
+//                this.viewCharacters();
+//                break;
+//            case 'W': // View the wagon's status
+//                this.viewWagonStatus();
+//                break;
+//            case 'M':
+//                return true;
+//            default:
+//                System.out.println("Invalid selection");
+//                break;
+//            // ...
+//        }
+//        return false;
+//    }
     
-    // BroJones Begin
-    private void displayMap() {
-    
+   
+    public void displayMap() {
+        System.out.println("*** displayMap stub function called ***");
+       
     }
     
     private void viewCharacters(){
@@ -67,9 +68,7 @@ public class GameMenuView extends View{
     private void viewWagonStatus(){
         
     }
-    // BroJones END
-
-    public static void viewInventory() {
+ public static void viewInventory() {
         // get the sorted list of inventory items for the current game
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         
