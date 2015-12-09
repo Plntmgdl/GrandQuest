@@ -7,11 +7,7 @@ package byui.cit260.grandQuest.view;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Jassen
- */
-    public class HelpMenuView extends View {
+public class HelpMenuView extends View {
     
     public HelpMenuView() {    
         super ("\n"

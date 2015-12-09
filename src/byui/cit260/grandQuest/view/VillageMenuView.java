@@ -84,8 +84,17 @@ public  class VillageMenuView extends View {
                 + "\n        You feel a slight tug on your cloak and turn around to see a man..."
                 + "\n        Excuse me would you care to help me take something to my Prince?***");
      
+        
+        
+            this.displayMerchantView();
     }
-
+    
+            public void displayMerchantView() {
+         
+            MerchantView merchantView = new MerchantView() ;
+            merchantView.displayMenu();
+    }  
+    
     public void displayGameMenu() {
          //Display the village menu 
     GameMenuView gameMenu = new GameMenuView() ;
