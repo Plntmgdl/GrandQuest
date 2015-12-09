@@ -77,7 +77,8 @@ public  class VillageMenuView extends View {
         System.out.println ("\n*** As you round the corner and spy the market you see items from... "
                 + "\n        The first booth you stop at has trinkets from far off lands... "
                 + "\n        You check your pockets and buy a couple of items for you family... "
-                + "\n        You feel a slight tug on your cloak and turn around to see a man... ***");
+                + "\n        You feel a slight tug on your cloak and turn around to see a man..."
+                + "\n        Excuse me would you care to help me take something to my Prince?***");
      
     }
 }
