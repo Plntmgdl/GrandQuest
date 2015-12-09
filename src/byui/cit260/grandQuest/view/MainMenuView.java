@@ -23,8 +23,8 @@ public abstract class MainMenuView extends View {
                 + "\n--------------------------------------"
                 + "\n| Main Menu                          |"
                 + "\n--------------------------------------"
-                + "\nN - Start New Game"
-                + "\nG - Start Existing Game"
+                + "\nN - New Game"
+                + "\nC - Continue Game"
                 + "\nH - Get help on how to play the game"
                 + "\nS - Save game"
                 + "\nE - Exit"
@@ -41,8 +41,8 @@ public abstract class MainMenuView extends View {
             case 'N': // create and start a new game
                 this.startNewGame();
                 break;
-            case 'G': // get and start an existing game
-                this.startExistingGame();
+            case 'C': // get and start an existing game
+                this.startContinueGame();
                 break;
             case 'H': // display the help menu
                 this.displayHelpMenu();
@@ -82,9 +82,9 @@ public abstract class MainMenuView extends View {
         }
     }
     
-    private void startExistingGame() {
+    private void startContinueGame() {
         this.console.println("\n\nEnter the file path for file where the game"
-                                + "is to be saved");
+                                + "is saved");
         String filePath = this.getInput();
         
         try {

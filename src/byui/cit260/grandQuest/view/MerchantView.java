@@ -25,16 +25,13 @@ public class MerchantView extends View {
     }
     
 
-    @Override
-        public boolean doAction(Object obj) {
+     @Override
+    public boolean doAction(Object obj) {
         
         String value = (String) obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
-        return false;
-    }
-
-    private void doAction(char choice) {
+ 
         switch (choice) {
             case 'Y': 
                 this.displayHelp();
@@ -43,12 +40,13 @@ public class MerchantView extends View {
                 this.displayRefuse();
                 break;
             case 'E': // Exit the program
-                return;
+                return true;
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid selection *** Try again");
                 break;
         }
+        return false;
     }
 
     private void displayHelp() {
