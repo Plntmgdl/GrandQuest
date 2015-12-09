@@ -15,8 +15,6 @@ public class InnMenuView extends View {
     private Player currentPlayer;
     
     public InnMenuView() {
-        
-        
         super ("\n"
                 + "\n--------------------------------------"
                 + "\nB - Take a bath"
