@@ -26,6 +26,7 @@ public  class VillageMenuView extends View {
                 + "\nT - Tavern"
                 + "\nM - Market Place"
                 + "\nE - Exit"
+                + "\nG - Game Menu"
                 + "\n--------------------------------------");
     }
     
@@ -46,6 +47,9 @@ public  class VillageMenuView extends View {
                 break;
             case 'M': 
                 this.displayMarketPlace();
+                break;
+            case 'G':
+                this.displayGameMenu();
                 break;
             case 'E': // Exit the program
                 return true;
@@ -80,5 +84,11 @@ public  class VillageMenuView extends View {
                 + "\n        You feel a slight tug on your cloak and turn around to see a man..."
                 + "\n        Excuse me would you care to help me take something to my Prince?***");
      
+    }
+
+    public void displayGameMenu() {
+         //Display the village menu 
+    GameMenuView gameMenu = new GameMenuView() ;
+    gameMenu.displayMenu();
     }
 }

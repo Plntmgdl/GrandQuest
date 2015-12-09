@@ -41,8 +41,6 @@ public class NewGameView {
          //Display the village menu 
     VillageMenuView villageMenu = new VillageMenuView() ;
     villageMenu.displayMenu();
-
-   
-       
- }  
+    }  
+    
 }
