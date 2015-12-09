@@ -27,13 +27,10 @@ public class HelpMenuView extends View {
         String value = (String) obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
-        return false;
-    }
-
+        
         
 
-    private void doAction(char choice) {
-        switch (choice) {
+   switch (choice) {
             case 'J': // display journey directions
                 this.displayJourneyDirections();
                 break;
@@ -47,11 +44,12 @@ public class HelpMenuView extends View {
                 this.displayObjectOfGame();
                 break;
             case 'R': // return to main menu
-                return;
+                return true;
             default:
                 System.out.println("\n*** Invalid selection *** Try again");
                 break;
-        }
+   }
+    return false;
     }
     
     private void displayJourneyDirections() {
