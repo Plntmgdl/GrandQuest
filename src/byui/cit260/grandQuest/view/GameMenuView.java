@@ -7,6 +7,8 @@ package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.GameControl;
 import byui.cit260.grandQuest.model.InventoryItem;
+import byui.cit260.grandQuest.model.Location;
+import byui.cit260.grandQuest.model.Map;
 /**
  *
  * @author devin_000
@@ -22,7 +24,7 @@ public class GameMenuView extends View{
                 + "\nV - Display Map"
                 + "\nI - View Inventory"
                 + "\nC - View Characters"
-                + "\nW - View "
+                + "\nW - View Wagon Status"
                 + "\nM - Return to main menu"
                 + "\n--------------------------------------");
     }
@@ -57,7 +59,21 @@ public class GameMenuView extends View{
     
     // BroJones Begin
     private void displayMap() {
+        Map map = GrandQuest.GrandQuest.getGame().getMap();
     
+        Location [][] locations = map.getLocations();
+        
+        for(int x = 0; x < map.getRowCount(); x++){
+            for(int y = 0; y < map.getColumnCount(); y++)
+            {
+                if (locations[x][y].getScene().getMapSymbol()=="")
+                    System.out.print("|    ");
+                else 
+                    System.out.print("| "+locations[x][y].getScene().getMapSymbol()+" ");
+            }
+            System.out.println("|");
+        }
+           
     }
     
     private void viewCharacters(){
