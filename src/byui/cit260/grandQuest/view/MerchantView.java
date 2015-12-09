@@ -56,13 +56,27 @@ public class MerchantView extends View {
                    + "\n opens and you gladly say you will help."
                    + "\n 'Thank you so much, my good sir. We will leave in the morning"
                    + "\n please retire to the Inn and relax and we will meet here in the morning.");
+   
+    this.displayVillageMenu();
     }
+    
+    public void displayVillageMenu() {
+         //Display the village menu 
+    VillageMenuView villageMenu = new VillageMenuView() ;
+    villageMenu.displayMenu();
+    }  
+    
 
     private void displayRefuse() {
         System.out.println ("\n--------------------------------------"
                     + "\n You turn to see a pathetic looking man who appears severly distraught."
                     + "\n You would like to help but you really want to get home and"
                     + "\n this Prince is not your Pince. So you politely refuse and"
-                    + "\n leave the man sobbing in the street");
+                    + "\n leave the man sobbing in the street.");
+    
+        
+      this.displayVillageMenu();
+      
+    
     }
 }
