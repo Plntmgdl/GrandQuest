@@ -18,8 +18,8 @@ public class Map implements Serializable {
     
     
     //class instance variables
-    private String rowCount;
-    private String columnCount;
+    private int rowCount;
+    private int columnCount;
     private String displayMap;
     private Location[][] locations;
     private int noOfRows;
@@ -54,7 +54,7 @@ public class Map implements Serializable {
             }
         }
     }
-    private static Map createMap() {
+    public static Map createMap() {
         // create the map
         Map map = new Map(10, 10); 
         // create the scenes for the game
@@ -63,19 +63,19 @@ public class Map implements Serializable {
         return map;
     }  
 
-    public String getRowCount() {
+    public int getRowCount() {
         return rowCount;
     }
 
-    public void setRowCount(String rowCount) {
+    public void setRowCount(int rowCount) {
         this.rowCount = rowCount;
     }
 
-    public String getColumnCount() {
+    public int getColumnCount() {
         return columnCount;
     }
 
-    public void setColumnCount(String columnCount) {
+    public void setColumnCount(int columnCount) {
         this.columnCount = columnCount;
     }
 
