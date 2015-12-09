@@ -95,10 +95,10 @@ public class GrandQuest {
     public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
         try {
-//            GrandQuest.inFile =
-//                    new BufferedReader(new InputStreamReader(System.in));
-//            
-//            GrandQuest.outFile = new PrintWriter(System.out, true);
+            GrandQuest.inFile =
+                    new BufferedReader(new InputStreamReader(System.in));
+            
+            GrandQuest.outFile = new PrintWriter(System.out, true);
 //            
 //            String filePath = "log.txt";
 //            GrandQuest.logFile = new PrintWriter(filePath);

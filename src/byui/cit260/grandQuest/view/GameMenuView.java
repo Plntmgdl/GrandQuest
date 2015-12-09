@@ -83,9 +83,7 @@ public class GameMenuView extends View{
     private void viewWagonStatus(){
         
     }
-    // BroJones END
-
-    public static void viewInventory() {
+ public static void viewInventory() {
         // get the sorted list of inventory items for the current game
         InventoryItem[] inventory = GameControl.getSortedInventoryList();
         

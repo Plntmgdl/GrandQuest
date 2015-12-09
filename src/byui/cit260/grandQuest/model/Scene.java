@@ -5,6 +5,7 @@
  */
 package byui.cit260.grandQuest.model;
 
+import GrandQuest.GrandQuest;
 import java.io.Serializable;
 
 /**
@@ -50,6 +51,7 @@ public class Scene implements Serializable {
     }
     
     public static Scene[] createScenes() {
+        Game game = GrandQuest.getCurrentGame();
         Scene[] scenes = new Scene[SCENE_TYPE_ITEMS];
                 
         Scene startingScene = new Scene();
