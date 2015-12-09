@@ -59,7 +59,7 @@ import java.util.Scanner;
     }
     
     private void displayJourneyDirections() {
-       this.console.println ("\n---------------------------------------"
+       System.out.println ("\n---------------------------------------"
                    + "\n |    Journey Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your path"
@@ -67,7 +67,7 @@ import java.util.Scanner;
     }
     
     private void displayEncounterDirections() {
-       this.console.println ("\n---------------------------------------"
+       System.out.println ("\n---------------------------------------"
                    + "\n |    Encounter Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your action"
@@ -76,7 +76,7 @@ import java.util.Scanner;
     }
     
     private void displayCalculationDirections(){
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n |    Calculation Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Input your numbers"
@@ -85,15 +85,12 @@ import java.util.Scanner;
     }
     
     private void displayObjectOfGame () {
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n |    Object Of Game        |"
                    + "\n-------------------------------------------"
                    + "\n You are hired to assist a merchant"
                    + "\n in bringing the Prince his birthday gift.");
     }
 
-    @Override
-    public void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 }

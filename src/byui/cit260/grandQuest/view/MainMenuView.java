@@ -115,12 +115,11 @@ public abstract class MainMenuView extends View {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 //    }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
+    public void displayHelpMenu() {
+        HelpMenuView helpMenu = new HelpMenuView() ;
         helpMenu.displayMenu();
-    }
-
+    }  
     
 
-    
+        
 }

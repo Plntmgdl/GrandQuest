@@ -47,7 +47,7 @@ public class StartProgramView { //extends View{
         
     }
 
-    private void displayBanner() {
+    public void displayBanner() {
         System.out.println("\n\n**************************************");
         
         System.out.println("*                                  *"
