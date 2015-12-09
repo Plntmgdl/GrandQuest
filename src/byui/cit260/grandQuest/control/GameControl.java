@@ -155,7 +155,7 @@ public class GameControl {
         }
 
         private GameControlException(String message) {
-            throw new UnsupportedOperationException("Game Control Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            throw new UnsupportedOperationException("Game Control Exception Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         }
     }
     

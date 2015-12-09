@@ -29,33 +29,6 @@ public class GameMenuView extends View{
     
     
    
- 
-//    public boolean doAction(char selection) {
-//        
-//        switch (selection) {
-//            case 'V': // Travel to new location
-//                this.displayMap();
-//                break;
-//            case 'I': // View list of items in inventory
-//                GameMenuView.viewInventory();
-//                break;
-//            case 'C': // View list of actors
-//                this.viewCharacters();
-//                break;
-//            case 'W': // View the wagon's status
-//                this.viewWagonStatus();
-//                break;
-//            case 'M':
-//                return true;
-//            default:
-//                System.out.println("Invalid selection");
-//                break;
-//            // ...
-//        }
-//        return false;
-//    }
-    
-   
     public void displayMap() {
         System.out.println("*** displayMap stub function called ***");
        
