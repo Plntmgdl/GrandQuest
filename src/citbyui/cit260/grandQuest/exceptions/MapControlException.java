@@ -5,10 +5,7 @@
  */
 package citbyui.cit260.grandQuest.exceptions;
 
-/**
- *
- * @author Jassen
- */
+
 public class MapControlException extends Exception {
 
     public MapControlException() {
@@ -29,5 +26,8 @@ public class MapControlException extends Exception {
     public MapControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
         super(string, thrwbl, bln, bln1);
     }
+
     
+    
+   
 }

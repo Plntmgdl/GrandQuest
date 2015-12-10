@@ -24,6 +24,8 @@ public class Map implements Serializable {
     private Location[][] locations;
     private int noOfRows;
     private int noOfColumns;
+    public int x;
+    public int y;
 
     public Map() {
     }
