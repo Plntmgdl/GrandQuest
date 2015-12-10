@@ -56,15 +56,15 @@ public class Map implements Serializable {
             }
         }
     }
-    public static Map createMap() {
-        // create the map
-        Map map = new Map(10, 10); 
-        // create the scenes for the game
-        Scene[] scenes = Scene.createScenes();
-        // assign scenes to locations
-        GameControl.assignScenesToLocations(map, scenes);
-        return map;
-    }  
+//    public static Map createMap() {
+//        // create the map
+//        Map map = new Map(10, 10); 
+//        // create the scenes for the game
+//        Scene[] scenes = Scene.createScenes();
+//        // assign scenes to locations
+//        GameControl.assignScenesToLocations(map, scenes);
+//        return map;
+//    }  
 
     public int getRowCount() {
         return rowCount;

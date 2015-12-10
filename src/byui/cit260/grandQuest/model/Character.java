@@ -16,11 +16,11 @@ import java.util.Objects;
 public enum Character implements Serializable {
     
     InnKeeper("He oversees the inn."),
-    Merchant("He oversees the marketplace."),
+    Merchant("He works for the king."),
     BarKeep("He oversees the tavern."),
     Prince("He is the son of the king.");
     
-    // class instance variables
+    
     private final String description;
     private final Point coordinates;
     

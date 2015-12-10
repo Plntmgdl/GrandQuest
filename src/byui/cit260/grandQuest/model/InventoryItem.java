@@ -17,6 +17,7 @@ public class InventoryItem implements Serializable{
     private String description;
     private int quantityInStock;
     private int requiredAmount;
+    
     public static InventoryItem[] createInventoryList() {
         
         // created array (list) of inventory items

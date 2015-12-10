@@ -60,10 +60,15 @@ public class GameControl {
         }
         GrandQuest.setCurrentGame(game);
     }
+
+    private static InventoryItem[] createInventoryList() {
+        System.out.println("*** called createInventoryList() in GameControl ***");
+        return null;
+    }
         
     
     
-    InventoryItem[] inventoryList;
+//    InventoryItem[] inventoryList;
     
     public static void createNewGame(Player player) {
         
@@ -73,13 +78,13 @@ public class GameControl {
         game.setPlayer(player); // save player in game
         
         // create the inventory list adn save in the game
-        InventoryItem[] inventoryList = InventoryItem.createInventoryList();
+        InventoryItem[] inventoryList = GameControl.createInventoryList();
         game.setInventory(inventoryList);
         
         Wagon wagon = new Wagon(); //create new wagon
         game.setWagon(wagon); // save wagon in game
         
-        Map map = Map.createMap(); // create and initialize new map
+        Map map = MapControl.createMap(); // create and initialize new map
         game.setMap(map); // save map in game
          
         Scene[] scenes = Scene.createScenes();
@@ -88,7 +93,7 @@ public class GameControl {
         assignScenesToLocations (map,scenes);
         
         // move actors to the starting position in the map
-//        MapControl.moveActorsToStartingLocation(map);
+        MapControl.moveActorsToStartingLocation(map);
     }
     
 //    public static void startNewGame(){
@@ -101,6 +106,8 @@ public class GameControl {
 
     public static void assignScenesToLocations(Map map, Scene[] scenes) {
         Location [][] locations = map.getLocations();
+        
+        
         locations[2][2].setScene(scenes[SceneType.bathtub.ordinal()]);
         locations[2][2].setVisited(false);
         locations[2][3].setScene(scenes[SceneType.inn.ordinal()]);
