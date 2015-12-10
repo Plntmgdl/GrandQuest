@@ -41,7 +41,7 @@ public class GameMenuView extends View{
                 this.displayMap();
                 break;
             case 'I': // View list of items in inventory
-                this.viewInventory();
+                GameMenuView.viewInventory();
                 break;
             case 'C': // View list of actors
                 this.viewCharacters();
@@ -106,8 +106,5 @@ public class GameMenuView extends View{
     private void viewWagonStatus(){
         
     }
-//    @Override
-//    public void displayMenu() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
+
 }
