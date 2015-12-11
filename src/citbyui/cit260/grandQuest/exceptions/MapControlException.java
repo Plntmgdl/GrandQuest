@@ -15,16 +15,16 @@ public class MapControlException extends Exception {
         super(string);
     }
 
-    public MapControlException(String string, Throwable thrwbl) {
-        super(string, thrwbl);
+    public MapControlException(String string, Throwable cause) {
+        super(string, cause);
     }
 
-    public MapControlException(Throwable thrwbl) {
-        super(thrwbl);
+    public MapControlException(Throwable cause) {
+        super(cause);
     }
 
-    public MapControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
-        super(string, thrwbl, bln, bln1);
+    public MapControlException(String string, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(string, cause, enableSuppression, writableStackTrace);
     }
 
     

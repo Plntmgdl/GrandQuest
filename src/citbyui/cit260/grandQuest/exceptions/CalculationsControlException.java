@@ -14,20 +14,20 @@ public class CalculationsControlException extends Exception {
     public CalculationsControlException() {
     }
 
-    public CalculationsControlException(String string) {
-        super(string);
+    public CalculationsControlException(String message) {
+        super(message);
     }
 
-    public CalculationsControlException(String string, Throwable thrwbl) {
-        super(string, thrwbl);
+    public CalculationsControlException(String string, Throwable cause) {
+        super(string, cause);
     }
 
-    public CalculationsControlException(Throwable thrwbl) {
-        super(thrwbl);
+    public CalculationsControlException(Throwable cause) {
+        super(cause);
     }
 
-    public CalculationsControlException(String string, Throwable thrwbl, boolean bln, boolean bln1) {
-        super(string, thrwbl, bln, bln1);
+    public CalculationsControlException(String string, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
+        super(string, cause, enableSuppression, writableStackTrace);
     }
 
    

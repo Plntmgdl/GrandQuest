@@ -21,10 +21,10 @@ public class GameMenuView extends View{
                 + "\n--------------------------------------"
                 + "\n| Game Menu                          |"
                 + "\n--------------------------------------"
-                + "\nV - Display Map"
-                + "\nI - View Inventory"
-                + "\nC - View Characters"
-                + "\nW - View Wagon Status"
+                + "\nM - Display Map"
+                + "\nI - Inventory"
+                + "\nC - Characters"
+                + "\nW - Wagon Status"
                 + "\nE - Return to previous menu"
                 + "\n--------------------------------------");
     }
@@ -37,7 +37,7 @@ public class GameMenuView extends View{
         char selection=value.charAt(0);
         
         switch (selection) {
-            case 'V': // Travel to new location
+            case 'M': // Travel to new location
                 this.displayMap();
                 break;
             case 'I': // View list of items in inventory

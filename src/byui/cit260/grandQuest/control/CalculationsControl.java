@@ -13,7 +13,8 @@ import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
  */
 public class CalculationsControl {
     
-    public double calcVolumeOfTub (double height, double diameter) throws CalculationsControlException {
+    public double calcVolumeOfTub (double height, double diameter) 
+            throws CalculationsControlException {
         
         if (height < 0) {// confirm height is true
 	    throw new CalculationsControlException("Can't calculate"
@@ -41,7 +42,8 @@ public class CalculationsControl {
     
     
     
-    public double calcStrengthOfRope (double diameter) throws CalculationsControlException {
+    public double calcStrengthOfRope (double diameter) 
+            throws CalculationsControlException {
         
         if (diameter < 0) {
 	    throw new CalculationsControlException("Can't calculate"
@@ -61,7 +63,8 @@ public class CalculationsControl {
 
     }
     
-    public double calcWagonWeight(double wagonWeight,double inventoryWeight) throws CalculationsControlException {		
+    public double calcWagonWeight(double wagonWeight,double inventoryWeight) 
+            throws CalculationsControlException {		
 
 	if (inventoryWeight < 0) {
             throw new CalculationsControlException("Can't calculate"

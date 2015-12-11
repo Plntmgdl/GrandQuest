@@ -14,8 +14,8 @@ import java.io.PrintWriter;
  */
 public class ErrorView {
     
-//    private static final PrintWriter errorFile = GrandQuest.getOutFile();
-//    private static final PrintWriter logFile = GrandQuest.getLogFile();
+    private static final PrintWriter errorFile = GrandQuest.getOutFile();
+    private static final PrintWriter logFile = GrandQuest.getLogFile();
     
     public static void display(String className, String errorMessage) {
         System.out.println(

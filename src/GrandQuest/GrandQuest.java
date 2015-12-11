@@ -29,9 +29,6 @@ import java.util.logging.Logger;
  */
 public class GrandQuest {
 
-    /**
-     * @param args the command line arguments
-     */
     
     public static Game game;
     public static void setCurrentGame(Game myGame) {
@@ -64,7 +61,7 @@ public class GrandQuest {
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
     
-    private static PrintWriter logFile = null;
+private static PrintWriter logFile = null;
 
     public static PrintWriter getLogFile() {
         return logFile;
@@ -92,29 +89,31 @@ public class GrandQuest {
     }
     
     
-    public static void main(String[] args) {
+public static void main(String[] args) {
         StartProgramView startProgramView = new StartProgramView();            
         try {
             GrandQuest.inFile =
                     new BufferedReader(new InputStreamReader(System.in));
             
             GrandQuest.outFile = new PrintWriter(System.out, true);
-//            
-//            String filePath = "log.txt";
-//            GrandQuest.logFile = new PrintWriter(filePath);
-// create StartProgramView and start the program
+            
+            String filePath = "log.txt";
+            GrandQuest.logFile = new PrintWriter(filePath);
+            // create StartProgramView and start the program
             startProgramView.startProgram();
         } catch (Throwable te) {
             System.out.println(te.getMessage());
-//            startProgramView.displayMenu();
+//startProgramView.displayMenu();
         }
         
         finally {
             try {
                 if (GrandQuest.inFile != null)
                     GrandQuest.inFile.close();
+                
                 if (GrandQuest.outFile != null)
                     GrandQuest.outFile.close();
+                
                 if (GrandQuest.logFile != null)
                     GrandQuest.logFile.close();
             } catch (IOException ex) {
