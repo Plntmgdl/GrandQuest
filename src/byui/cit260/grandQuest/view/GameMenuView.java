@@ -70,7 +70,8 @@ public class GameMenuView extends View{
         for(int x = 0; x < map.getRowCount(); x++){
             for(int y = 0; y < map.getColumnCount(); y++)
             {
-                if (locations[x][y].getScene().getMapSymbol()=="")
+                if ((locations[x][y].getScene()== null)||
+                        (locations[x][y].getScene().getMapSymbol()==""))
                     System.out.print("|    ");
                 else 
                     System.out.print("| "+locations[x][y].getScene().getMapSymbol()+" ");

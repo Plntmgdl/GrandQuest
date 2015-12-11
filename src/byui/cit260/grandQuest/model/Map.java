@@ -22,8 +22,6 @@ public class Map implements Serializable {
     private int columnCount;
     private String displayMap;
     private Location[][] locations;
-    private int noOfRows;
-    private int noOfColumns;
     public int x;
     public int y;
 
@@ -37,8 +35,8 @@ public class Map implements Serializable {
             return;
         }
         
-        this.noOfRows = noOfRows;
-        this.noOfColumns = noOfColumns;
+        this.rowCount = noOfRows;
+        this.columnCount = noOfColumns;
         
         // create 2-D array for Location objects
         this.locations = new Location[noOfRows][noOfColumns];
