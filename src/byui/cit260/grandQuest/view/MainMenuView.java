@@ -50,6 +50,9 @@ public abstract class MainMenuView extends View {
             case 'H': // display the help menu
                 this.displayHelpMenu();
                 break;
+            case 'G':
+                this.displayGameMenu();
+                break;
             case 'E': // Exit the program
                 return true;
             default:
@@ -119,6 +122,11 @@ public abstract class MainMenuView extends View {
         HelpMenuView helpMenu = new HelpMenuView() ;
         helpMenu.displayMenu();
     }  
+
+    private void displayGameMenu() {
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }
     
 
         

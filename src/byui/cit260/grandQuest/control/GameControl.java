@@ -77,9 +77,9 @@ public class GameControl {
         
         game.setPlayer(player); // save player in game
         
-        // create the inventory list adn save in the game
-        InventoryItem[] inventoryList = GameControl.createInventoryList();
-        game.setInventory(inventoryList);
+//        // create the inventory list and save in the game
+//        InventoryItem[] inventoryList = GameControl.createInventoryList();
+//        game.setInventory(inventoryList);
         
         Wagon wagon = new Wagon(); //create new wagon
         game.setWagon(wagon); // save wagon in game
@@ -93,7 +93,7 @@ public class GameControl {
         assignScenesToLocations (map,scenes);
         
         // move actors to the starting position in the map
-        MapControl.moveActorsToStartingLocation(map);
+//        MapControl.moveActorsToStartingLocation(map);
     }
     
 //    public static void startNewGame(){
