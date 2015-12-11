@@ -27,6 +27,7 @@ public abstract class MainMenuView extends View {
                 + "\nC - Continue Game"
                 + "\nS - Save game"
                 + "\nH - Help Menu"
+                + "\nG - Game Menu"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
