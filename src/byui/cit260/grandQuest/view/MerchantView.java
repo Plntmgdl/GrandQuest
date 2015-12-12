@@ -57,18 +57,18 @@ public class MerchantView extends View {
                    + "\n 'Thank you so much, my good sir. We will leave in the morning"
                    + "\n please retire to the Inn and relax and we will meet here in the morning. "
                    + "\n You leave and go to the Inn."
-                   + "As you walk in you are struck with a feeling of rest and relaxation. "
+                   + "\n As you walk in you are struck with a feeling of rest and relaxation. "
                    + "\n You notice a small lounge area that has a couple of... "
                    + "\n You walk up to the InnKeeper and ask for a room and bath... "
                    + "\n You slowly walk upstairs and to your room.");
    
-    this.displayInnMenu();
+    this.displayMerchantInnMenu();
     }
     
-    public void displayInnMenu() {
+    public void displayMerchantInnMenu() {
          //Display the village menu 
-    InnMenuView innMenu = new InnMenuView() ;
-    innMenu.displayMenu();
+    MerchantInnMenuView merchantInnMenu = new MerchantInnMenuView() ;
+    merchantInnMenu.displayMenu();
     }  
     
 

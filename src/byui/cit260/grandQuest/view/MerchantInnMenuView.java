@@ -5,16 +5,18 @@
  */
 package byui.cit260.grandQuest.view;
 
+import byui.cit260.grandQuest.control.CalculationsControl;
 import byui.cit260.grandQuest.model.Player;
+import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
 
 /**
  *
  * @author Jassen
  */
-public class InnMenuView extends View {
+class MerchantInnMenuView extends View{
     private Player currentPlayer;
     
-    public InnMenuView() {
+    public MerchantInnMenuView() {
         super ("\n"
                 + "\n--------------------------------------"
                 + "\nB - Take a bath"
@@ -54,9 +56,11 @@ public class InnMenuView extends View {
                    + "\n you wonder how much water it holds, because you are really tired"
                    + "\n and do not want to spend to much time filling it up.");
    
-//    
+        
     }
-
+        
+        
+    
     private void displaySleep() {
         System.out.println ("\n--------------------------------------"
                     + "\n You close your eyes and drift off."
@@ -64,19 +68,20 @@ public class InnMenuView extends View {
                     + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
                     + "\n cock-a-doodle-doo!!!!"
                     + "\n You wake up to the crowing of the rooster "
-                    + "\n excited for a new day");
+                    + "\n excited for the journey ahead");
     
         
-      this.displayVillageMenu();
+      this.displayJourneyMenu();
     }
     
-    public void displayVillageMenu() {
+    public void displayJourneyMenu() {
          //Display the village menu 
-    VillageMenuView villageMenu = new VillageMenuView() ;
-    villageMenu.displayMenu();
+    JourneyMenuView journeyMenu = new JourneyMenuView() ;
+    journeyMenu.displayMenu();
     } 
-    
-    
-}
 
+    
+    
+       
+}
 

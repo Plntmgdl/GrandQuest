@@ -5,6 +5,8 @@
  */
 package byui.cit260.grandQuest.control;
 
+
+
 import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
 
 /**
@@ -12,8 +14,8 @@ import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
  * 
  */
 public class CalculationsControl {
-    
-    public double calcVolumeOfTub (double height, double diameter) 
+
+    public static double calcVolumeOfTub (double height, double diameter) 
             throws CalculationsControlException {
         
         if (height < 0) {// confirm height is true
@@ -83,5 +85,7 @@ public class CalculationsControl {
         double totalWeight = (wagonWeight + inventoryWeight);
         return totalWeight;
     }
+
+   
 
 }

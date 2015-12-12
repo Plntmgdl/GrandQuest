@@ -62,15 +62,26 @@ public  class VillageMenuView extends View {
                 + "\n        You notice a small lounge area that has a couple of... "
                 + "\n       You walk up to the InnKeeper and ask for a room and bath... "
                 + "\n        You slowly walk upstairs and to your room. ***");
-     
+        
+        this.displayInnMenuView();
+    }  
+            
+            private void displayInnMenuView() {
+         
+            InnMenuView innMenu = new InnMenuView() ;
+            innMenu.displayMenu();
+    
+    
     }
 
     private void displayTavern() {
          System.out.println ("\n*** As you walk in you are hit with the smells of... "
                 + "\n        You spy many patrons sitting at tables... "
                 + "\n        You walk to a table and order food and drink looking forward... "
-                + "\n        As you finish you start to fel a little sleepy and decide to go to sleep. ***");
+                + "\n        As you finish you start to fel a little sleepy and decide to go to the Inn"
+                + "\n        to get a room and a bath. ***");
      
+        this.displayInn();
     }
 
     private void displayMarketPlace() {
@@ -79,10 +90,8 @@ public  class VillageMenuView extends View {
                 + "\n        You check your pockets and buy a couple of items for you family... "
                 + "\n        You feel a slight tug on your cloak and turn around to see a man..."
                 + "\n        Excuse me would you care to help me take something to my Prince?***");
-     
-        
-        
-            this.displayMerchantView();
+             
+        this.displayMerchantView();
     }
     
             public void displayMerchantView() {
@@ -90,6 +99,6 @@ public  class VillageMenuView extends View {
             MerchantView merchantView = new MerchantView() ;
             merchantView.displayMenu();
     }  
-    
-    
+
+            
 }

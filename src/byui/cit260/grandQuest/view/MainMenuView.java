@@ -97,27 +97,6 @@ public abstract class MainMenuView extends View {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
     }
-//    void display(Player player) {
-//        
-//    }
-
-//    void displayMenu(Player player) {
-//        
-//    }
-
-//    private static class GrandQuest {
-//
-//        private static Player getPlayer() {
-//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//        }
-//
-//        public GrandQuest() {
-//        }
-//    }
-
-//    void display(Player player) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
 
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView() ;
