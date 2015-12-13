@@ -5,9 +5,9 @@
  */
 package byui.cit260.grandQuest.view;
 
-import byui.cit260.grandQuest.control.CalculationsControl;
+
 import byui.cit260.grandQuest.model.Player;
-import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
+
 
 /**
  *
@@ -52,34 +52,48 @@ class MerchantInnMenuView extends View{
 
     private void displayBath() {
         System.out.println ("\n---------------------------------------"
-                   + "\n As you look at the deep round tub in front of you"
-                   + "\n you wonder how much water it holds, because you are really tired"
-                   + "\n and do not want to spend to much time filling it up.");
-   
+                   + "\n As you look at the deep round tubs in front of you"
+                   + "\n you wonder how much water each one holds, because you are really tired."
+                   + "\n Of course you are also really weary from the day and a soak would feel good."
+                   + "\n So you pick a tub and start filling it up.");
         
+    this.displayCalcVolumeOfTub();
+   
+    }
+      private void displayCalcVolumeOfTub() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   
+  
     }
         
         
     
     private void displaySleep() {
         System.out.println ("\n--------------------------------------"
-                    + "\n You close your eyes and drift off."
-                    + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-                    + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
-                    + "\n cock-a-doodle-doo!!!!"
-                    + "\n You wake up to the crowing of the rooster "
-                    + "\n excited for the journey ahead");
+                + "\n You close your eyes and drift off."
+                + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+                + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+                + "\n cock-a-doodle-doo!!!!"
+                + "\n You wake up to the crowing of the rooster "
+                + "\n excited for the journey ahead"
+                + "\n As you go outside and take a deeo breath of the crisp "
+                + "\n morning air the merchant from the previous day greets you"
+                + "\n 'Good Morrow, I hope you are ready for our journey. "
+                + "\n Please take the wagon to the marketplace and get supplies while"
+                + "\n I settle your bill. Do not worry everything is already taken care of for payment.'");
+                
     
         
-      this.displayJourneyMenu();
+      this.displayMarketView();
     }
     
-    public void displayJourneyMenu() {
-         //Display the village menu 
-    JourneyMenuView journeyMenu = new JourneyMenuView() ;
-    journeyMenu.displayMenu();
+    public void displayMarketView() {
+         
+    MarketView marketView = new MarketView() ;
+    marketView.displayMarket();
     } 
 
+    
     
     
        
