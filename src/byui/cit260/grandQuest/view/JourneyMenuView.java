@@ -56,19 +56,25 @@ public class JourneyMenuView extends View {
     }
 
     private void displayForest() {
-        throw new UnsupportedOperationException("Forest Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n The morning is bright and beautiful as you start down the forest path."
+                + "\n There is no way anything could go wrong on this journey");
     }
 
     private void displayRoad() {
-        throw new UnsupportedOperationException("Road Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("\n As you start down the road a man walks up to you"
+                + "\n and informs you that the road is currently closed and you will"
+                + "\n have to take the forest.");
+        this.displayForest();
     }
 
     private void Village() {
-        throw new UnsupportedOperationException("Village Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-
-    
-    
+        System.out.println("You change your mind and, since you are"
+                + "\n a coward and wimp, you go back to the village.");
+        this.displayVillageMenu();
+    }    
+        public void displayVillageMenu() {
+         //Display the village menu 
+            VillageMenuView villageMenu = new VillageMenuView() ;
+            villageMenu.displayMenu();
+    }  
 }
