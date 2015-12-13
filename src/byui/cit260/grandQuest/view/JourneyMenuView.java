@@ -69,7 +69,7 @@ public class JourneyMenuView extends View {
 
     private void Village() {
         System.out.println("You change your mind and, since you are"
-                + "\n a coward and wimp, you go back to the village.");
+                + "\n a coward and a wimp, you go back to the village.");
         this.displayVillageMenu();
     }    
         public void displayVillageMenu() {
