@@ -13,12 +13,12 @@ class MarketView {
 
     void displayMarket() {
         System.out.println("\n You walk over, hop in the wagon seat, and take the wagon to the market."
-                + "The early morning air starts to fill with the smells of..."
-                + "You approach the shop you were told to go to and..."
-                + "'Good morrow adventurer. How may I help you?'"
-                + "He hands you a list of items and you start to think what you may need."
-                + "You remember the merchant saying that the wgaon can only carry a total of two thousand pounds"
-                + "and that includes the wagon which is five hundred by itself. So start to load the wagon.");
+                + "\n The early morning air starts to fill with the smells of..."
+                + "\n You approach the shop you were told to go to and..."
+                + "\n 'Good morrow adventurer. How may I help you?'"
+                + "\n He hands you a list of items and you start to think what you may need."
+                + "\n You remember the merchant saying that the wgaon can only carry a total of two thousand pounds"
+                + "\n and that includes the wagon which is five hundred by itself. So start to load the wagon.");
    
     this.displayCalcWagonWeight();
     
