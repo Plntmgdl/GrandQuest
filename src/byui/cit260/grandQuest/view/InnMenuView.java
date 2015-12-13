@@ -49,7 +49,7 @@ public class InnMenuView extends View {
     }
 
     private void displayBath() {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n As you look at the deep round tub in front of you"
                    + "\n you wonder how much water it holds, because you are really tired"
                    + "\n and do not want to spend to much time filling it up.");
@@ -58,7 +58,7 @@ public class InnMenuView extends View {
     }
 
     private void displaySleep() {
-        System.out.println ("\n--------------------------------------"
+        this.console.println ("\n--------------------------------------"
                     + "\n You close your eyes and drift off."
                     + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
                     + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"

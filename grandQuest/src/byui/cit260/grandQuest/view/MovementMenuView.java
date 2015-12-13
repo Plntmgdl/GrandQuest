@@ -48,7 +48,7 @@ public class MovementMenuView extends View{
             case 'E': // save game and return to main menu
                 return ;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
     }

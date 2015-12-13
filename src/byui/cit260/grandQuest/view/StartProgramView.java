@@ -12,21 +12,15 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class StartProgramView { //extends View{
+public class StartProgramView { 
+//    private Object keyboard;
+//extends View{
 
-//    public StartProgramView(String promptMessage) {
+    public StartProgramView(){//String promptMessage) {
 //        super(promptMessage);
-//    }
-
-    public  StartProgramView() {
-       
     }
 
-   
-   
-  
-
-  public void startProgram (){
+public void startProgram (){
 
     //Display the banner screen
     this.displayBanner(); 

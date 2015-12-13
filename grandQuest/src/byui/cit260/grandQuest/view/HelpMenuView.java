@@ -51,7 +51,7 @@ import java.util.Scanner;
             case 'R': // return to main menu
                 return;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
     }

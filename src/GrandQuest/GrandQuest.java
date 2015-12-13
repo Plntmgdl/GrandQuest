@@ -90,7 +90,7 @@ private static PrintWriter logFile = null;
     
     
 public static void main(String[] args) {
-        StartProgramView startProgramView = new StartProgramView();            
+        StartProgramView startProgramView = new StartProgramView();  {}          
         try {
             GrandQuest.inFile =
                     new BufferedReader(new InputStreamReader(System.in));

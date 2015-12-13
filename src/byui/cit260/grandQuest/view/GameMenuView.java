@@ -22,6 +22,7 @@ public class GameMenuView extends View{
                 + "\n| Game Menu                          |"
                 + "\n--------------------------------------"
                 + "\nM - Display Map"
+                + "\nP - Print Locations in Map"
                 + "\nI - Inventory"
                 + "\nC - Characters"
                 + "\nW - Wagon Status"
@@ -39,6 +40,9 @@ public class GameMenuView extends View{
         switch (selection) {
             case 'M': // Travel to new location
                 this.displayMap();
+                break;
+            case 'P':
+                this.console.println();
                 break;
             case 'I': // View list of items in inventory
                 GameMenuView.viewInventory();
@@ -63,7 +67,7 @@ public class GameMenuView extends View{
     // BroJones Begin
     private void displayMap() {
         Map map = GrandQuest.GrandQuest.getGame().getMap();
-            System.out.println("\nThe Land");
+            this.console.println("\nThe Land");
             
         Location [][] locations = map.getLocations();
         
@@ -72,11 +76,11 @@ public class GameMenuView extends View{
             {
                 if ((locations[x][y].getScene()== null)||
                         (locations[x][y].getScene().getMapSymbol()==""))
-                    System.out.print("|    ");
+                    this.console.print("|    ");
                 else 
-                    System.out.print("| "+locations[x][y].getScene().getMapSymbol()+" ");
+                    this.console.print("| "+locations[x][y].getScene().getMapSymbol()+" ");
             }
-            System.out.println("|");
+            this.console.println("|");
         }
            
     }

@@ -51,7 +51,7 @@ class MerchantInnMenuView extends View{
     }
 
     private void displayBath() {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n As you look at the deep round tubs in front of you"
                    + "\n you wonder how much water each one holds, because you are really tired."
                    + "\n Of course you are also really weary from the day and a soak would feel good."
@@ -69,7 +69,7 @@ class MerchantInnMenuView extends View{
         
     
     private void displaySleep() {
-        System.out.println ("\n--------------------------------------"
+        this.console.println ("\n--------------------------------------"
                 + "\n You close your eyes and drift off."
                 + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
                 + "\n zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
@@ -89,7 +89,7 @@ class MerchantInnMenuView extends View{
     
     public void displayMarketView() {
          
-    MarketView marketView = new MarketView() ;
+    MarketView marketView = new MarketView() {} ;
     marketView.displayMarket();
     } 
 

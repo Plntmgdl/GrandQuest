@@ -46,14 +46,14 @@ public class HelpMenuView extends View {
             case 'R': // return to main menu
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
    }
     return false;
     }
     
     private void displayJourneyDirections() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n |    Journey Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your path"
@@ -61,7 +61,7 @@ public class HelpMenuView extends View {
     }
     
     private void displayEncounterDirections() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n |    Encounter Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Choose your action"
@@ -70,7 +70,7 @@ public class HelpMenuView extends View {
     }
     
     private void displayCalculationDirections(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n |    Calculation Directions        |"
                    + "\n-------------------------------------------"
                    + "\n Input your numbers"
@@ -79,7 +79,7 @@ public class HelpMenuView extends View {
     }
     
     private void displayObjectOfGame () {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n |    Object Of Game        |"
                    + "\n-------------------------------------------"
                    + "\n You are hired to assist a merchant"

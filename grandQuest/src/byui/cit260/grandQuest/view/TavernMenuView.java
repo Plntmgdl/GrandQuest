@@ -41,13 +41,13 @@ public class TavernMenuView extends View {
 
         switch (choice) {
             case 'L': 
-                System.out.println("As you enter the common area the smell of"
+                this.console.println("As you enter the common area the smell of"
                         + "smoked meat and sound of laughter almost brings you to your knees."
                         + "The memories of home are vivid and clear but the grumbling of your stomach "
                         + "brings you back to the moment and you find a table to sit in.");
                 break;
             case 'B': 
-                System.out.println("You walk up to the bar and the barkeeper greets "
+                this.console.println("You walk up to the bar and the barkeeper greets "
                         + "you with a friendly smile and hello.");
                 break;
             case 'S': 
@@ -65,7 +65,7 @@ public class TavernMenuView extends View {
             case 'E': // Exit the program
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -85,6 +85,6 @@ public class TavernMenuView extends View {
 
     private void displayInnMenu() {
         InnMenuView InnMenu = new InnMenuView();
-        InnMenu.display();
+        InnMenu.displayMenu();
     }
 }

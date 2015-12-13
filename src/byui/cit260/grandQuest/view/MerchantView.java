@@ -50,7 +50,7 @@ public class MerchantView extends View {
     }
 
     private void displayHelp() {
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n As you look at the poor figure in front of you"
                    + "\n you see a desparate man and your generous heart"
                    + "\n opens and you gladly say you will help."
@@ -73,7 +73,7 @@ public class MerchantView extends View {
     
 
     private void displayRefuse() {
-        System.out.println ("\n--------------------------------------"
+        this.console.println ("\n--------------------------------------"
                     + "\n You turn to see a pathetic looking man who appears severly distraught."
                     + "\n You would like to help but you really want to get home and"
                     + "\n this Prince is not your Pince. So you politely refuse and"

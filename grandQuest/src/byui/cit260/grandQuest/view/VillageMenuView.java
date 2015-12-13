@@ -50,7 +50,7 @@ public class VillageMenuView extends View {
             case 'E': // Exit the program
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -58,7 +58,7 @@ public class VillageMenuView extends View {
 
     private void InnMenu() {
         InnMenuView InnMenu = new InnMenuView();
-        InnMenu.display();
+        InnMenu.displayMenu();
     }
    private void displayTavernMenu() {
         TavernMenuView TavernMenu = new TavernMenuView();

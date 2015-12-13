@@ -63,7 +63,7 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-           
+        Scanner keyboard = new Scanner(System.in);   
         boolean valid = false; // Indicates if Name has been retreived 
         String playersName = null;
                 
@@ -73,7 +73,7 @@ public class StartProgramView {
             System.out.println("Enter the player's name below:");
             
             //Get the name from the keyboard and trim off the blanks
-            playersName = this.keyboard.readLine();
+            playersName = keyboard.nextLine();
             playersName = playersName.trim();
             
             //If the name is invalid ( < 2 characters in length)

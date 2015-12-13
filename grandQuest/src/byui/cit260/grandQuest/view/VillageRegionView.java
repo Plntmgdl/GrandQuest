@@ -5,13 +5,16 @@
  */
 package byui.cit260.grandQuest.view;
 
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author devin_000
  */
-public class VillageRegionView {
+public class VillageRegionView extends View{
 
     private final String MENU = "\n"
                 + "\n--------------------------------------"
@@ -24,12 +27,13 @@ public class VillageRegionView {
                 + "\nR - Return to Region Map"
                 + "\n--------------------------------------";
 
+    @Override
         public void displayMenu() {
             
             char selection = ' ';
             do{
         
-                System.out.println(MENU); // display the main menu
+                this.console.println(MENU); // display the main menu
                 
                 String input = this.getInput(); // get the user's selection
                 selection = input.charAt(0); // get first character of string
@@ -39,24 +43,29 @@ public class VillageRegionView {
             } while (selection != 'R'); // a selection is not "Save and End Game"
     }
         
-         private String getInput() {
+    @Override
+         public String getInput() {
            
         boolean valid = false; // Indicates if Name has been retreived 
-        String entry = null;
-        Scanner keyboard = new Scanner(System.in); //Keyboard input stream
+        String selection = null;
+        
         
         while(!valid)  {  //while a valid entry has not been retreived
             
             // prompt for menu selection
-            System.out.println("Enter your menu option below:");
+            this.console.println("Enter your menu option below:");
             
-            //Get the name from the keyboard and trim off the blanks
-            entry = keyboard.nextLine();
-            entry = entry.trim();
+            try {
+                //Get the name from the keyboard and trim off the blanks
+                selection = this.keyboard.readLine();
+            } catch (IOException ex) {
+                Logger.getLogger(VillageRegionView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            selection = selection.trim();
             
             break; // Out of the (exit) the repetition
         }
-      return entry; //Return the selection
+      return selection; //Return the selection
     }
 
     private void doAction(char choice) {
@@ -76,33 +85,33 @@ public class VillageRegionView {
             case 'E': // save game and return to main menu
                 return;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
     }
     
     private void displayCastleView() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n | Going to the Castle |"
                    + "\n-------------------------------------------");
     }
     
     private void displayInnView() {
-       System.out.println ("\n---------------------------------------"
+       this.console.println ("\n---------------------------------------"
                    + "\n | Going to the Inn |"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayMarketPlaceView(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n | Going to the Marketplace|"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayTavernView(){
-        System.out.println ("\n---------------------------------------"
+        this.console.println ("\n---------------------------------------"
                    + "\n | Going to the Tavern |"
                    + "\n-------------------------------------------");
      

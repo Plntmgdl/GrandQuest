@@ -64,7 +64,7 @@ public class InnMenuView extends View{
             case 'E': // Exit the program
                 return true;
             default:
-                System.out.println("\n*** Invalid selection *** Try again");
+                this.console.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;

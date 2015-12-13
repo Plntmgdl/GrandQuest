@@ -107,7 +107,12 @@ public abstract class MainMenuView extends View {
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.displayMenu();
     }
-    
+
+    void display(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
 
         
 }
