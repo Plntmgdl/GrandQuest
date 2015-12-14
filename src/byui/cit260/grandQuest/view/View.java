@@ -44,7 +44,7 @@ public abstract class View implements ViewInterface {
         boolean done = false;
         
         do {
-            this.console.println(this.promptMessage);
+            System.out.println(this.promptMessage);
             value = this.getInput();
             done = this.doAction(value);
         } while (!done);
@@ -63,7 +63,7 @@ public abstract class View implements ViewInterface {
                 value = value.trim();
                 
                 if (value.length()<1) {
-                this.console.println("You must enter a value.");
+                System.out.println("You must enter a value.");
                 continue;
             }
             break;

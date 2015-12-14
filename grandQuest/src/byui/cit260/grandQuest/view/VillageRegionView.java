@@ -33,7 +33,7 @@ public class VillageRegionView extends View{
             char selection = ' ';
             do{
         
-                this.console.println(MENU); // display the main menu
+                System.out.println(MENU); // display the main menu
                 
                 String input = this.getInput(); // get the user's selection
                 selection = input.charAt(0); // get first character of string
@@ -53,7 +53,7 @@ public class VillageRegionView extends View{
         while(!valid)  {  //while a valid entry has not been retreived
             
             // prompt for menu selection
-            this.console.println("Enter your menu option below:");
+           System.out.println("Enter your menu option below:");
             
             try {
                 //Get the name from the keyboard and trim off the blanks
@@ -85,33 +85,33 @@ public class VillageRegionView extends View{
             case 'E': // save game and return to main menu
                 return;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
     }
     
     private void displayCastleView() {
-       this.console.println ("\n---------------------------------------"
+       System.out.println ("\n---------------------------------------"
                    + "\n | Going to the Castle |"
                    + "\n-------------------------------------------");
     }
     
     private void displayInnView() {
-       this.console.println ("\n---------------------------------------"
+       System.out.println ("\n---------------------------------------"
                    + "\n | Going to the Inn |"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayMarketPlaceView(){
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n | Going to the Marketplace|"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayTavernView(){
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n | Going to the Tavern |"
                    + "\n-------------------------------------------");
      

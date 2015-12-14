@@ -56,19 +56,19 @@ public class JourneyMenuView extends View {
     }
 
     private void displayForest() {
-        this.console.println("\n The morning is bright and beautiful as you start down the forest path."
+        System.out.println("\n The morning is bright and beautiful as you start down the forest path."
                 + "\n There is no way anything could go wrong on this journey");
     }
 
     private void displayRoad() {
-        this.console.println("\n As you start down the road a man walks up to you"
+        System.out.println("\n As you start down the road a man walks up to you"
                 + "\n and informs you that the road is currently closed and you will"
                 + "\n have to take the forest.");
         this.displayForest();
     }
 
     private void Village() {
-        this.console.println("You change your mind and, since you are"
+        System.out.println("You change your mind and, since you are"
                 + "\n a coward and a wimp, you go back to the village.");
         this.displayVillageMenu();
     }    

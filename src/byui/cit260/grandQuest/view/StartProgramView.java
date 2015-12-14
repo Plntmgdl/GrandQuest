@@ -13,12 +13,13 @@ import java.util.Scanner;
  * @author devin_000
  */
 public class StartProgramView { 
-//    private Object keyboard;
-//extends View{
 
-    public StartProgramView(){//String promptMessage) {
+public StartProgramView() {
 //        super(promptMessage);
     }
+//    private Object keyboard;
+
+    
 
 public void startProgram (){
 
@@ -116,7 +117,7 @@ public void startProgram (){
 //    public boolean doAction(Object obj) {
 //        
 //        String value = (String) obj;
-//            this.console.println("start program view do action =" + value);
+//            System.out.println("start program view do action =" + value);
 //            return true;
 //    }
 

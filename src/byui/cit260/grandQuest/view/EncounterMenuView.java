@@ -62,7 +62,7 @@ public abstract class EncounterMenuView extends View {
     }
 
     private void displayMonsterReaction() {
-        this.console.println("Monster says boo");
+        System.out.println("Monster says boo");
     }
 
     

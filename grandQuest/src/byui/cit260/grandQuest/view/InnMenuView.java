@@ -39,7 +39,7 @@ public class InnMenuView extends View{
 
         switch (choice) {
             case 'L': 
-                this.console.println("As you look around you notice how quaint"
+                System.out.println("As you look around you notice how quaint"
                         + " and cozy it is. "
                         + "A small little sitting area near the window gives it a "
                         + "peaceful feeling."
@@ -47,16 +47,16 @@ public class InnMenuView extends View{
                         + "Not wanting to disturb you he patiently waits as you wander around.");
                 break;
             case 'T': 
-                this.console.println("As you approach the Innkeeper he asks "
+                System.out.println("As you approach the Innkeeper he asks "
                         + "how he can help you and if you are doing well."
                         + "You...");
                 break;
             case 'R': // display the help menu
-                this.console.println("You kindly request a room and retire up stairs "
+                System.out.println("You kindly request a room and retire up stairs "
                         + "exhausted from your travels.");
                 break;
             case 'B':
-                this.console.println("The tub is about five feet in diameter"
+                System.out.println("The tub is about five feet in diameter"
                         + "which is a surprise and a welcome one at that."
                         + "Your tired muscles start to tremble with excitement"
                         + "at the thought of a nice, warm, soak."
@@ -64,7 +64,7 @@ public class InnMenuView extends View{
             case 'E': // Exit the program
                 return true;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;

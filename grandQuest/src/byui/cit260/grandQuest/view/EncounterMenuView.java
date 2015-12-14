@@ -45,7 +45,7 @@ public class EncounterMenuView extends View {
                 this.displayMonsterReaction();
                 break;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;
@@ -56,7 +56,7 @@ public class EncounterMenuView extends View {
           
     private void displayMonsterReaction() {
        //display monster reaction
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n |    The monster runs away        |");
   
   }

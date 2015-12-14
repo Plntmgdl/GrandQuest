@@ -25,7 +25,7 @@ public abstract class View implements ViewInterface {
         boolean done = false;
         
         do {
-            this.console.println(this.displayMessage);
+            System.out.println(this.displayMessage);
             value = this.Input();
             done = this.doAction(value);
         }
@@ -44,7 +44,7 @@ public String getInput() {
         selection = selection.trim();
         
         if (selection.length() < 1) {
-            this.console.println("You must enter a value.");
+            System.out.println("You must enter a value.");
             continue;
         }
         

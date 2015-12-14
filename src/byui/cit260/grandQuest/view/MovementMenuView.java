@@ -61,14 +61,14 @@ public class MovementMenuView extends View {
     }
     
     private void displayRegionRoad() {
-       this.console.println ("\n---------------------------------------"
+       System.out.println ("\n---------------------------------------"
                    + "\n | Launch RegionRoad menu |"
                    + "\n-------------------------------------------");
      
     }
     
     private void displayRegionForest(){
-        this.console.println ("\n---------------------------------------"
+        System.out.println ("\n---------------------------------------"
                    + "\n | Launch RegionForest menu |"
                    + "\n-------------------------------------------");
      

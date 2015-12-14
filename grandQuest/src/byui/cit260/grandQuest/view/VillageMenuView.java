@@ -50,7 +50,7 @@ public class VillageMenuView extends View {
             case 'E': // Exit the program
                 return true;
             default:
-                this.console.println("\n*** Invalid selection *** Try again");
+                System.out.println("\n*** Invalid selection *** Try again");
                 break;
         }
         return false;

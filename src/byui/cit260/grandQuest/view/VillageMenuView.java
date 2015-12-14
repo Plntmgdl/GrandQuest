@@ -58,7 +58,7 @@ public  class VillageMenuView extends View {
     }
 
     private void displayInn() {
-        this.console.println ("\n*** As you walk in you are struck with a feeling of rest and relaxation. "
+        System.out.println ("\n*** As you walk in you are struck with a feeling of rest and relaxation. "
                 + "\n        You notice a small lounge area that has a couple of... "
                 + "\n       You walk up to the InnKeeper and ask for a room and bath... "
                 + "\n        You slowly walk upstairs and to your room. ***");
@@ -75,7 +75,7 @@ public  class VillageMenuView extends View {
     }
 
     private void displayTavern() {
-         this.console.println ("\n*** As you walk in you are hit with the smells of... "
+         System.out.println ("\n*** As you walk in you are hit with the smells of... "
                 + "\n        You spy many patrons sitting at tables... "
                 + "\n        You walk to a table and order food and drink looking forward... "
                 + "\n        As you finish you start to fel a little sleepy and decide to go to the Inn"
@@ -85,7 +85,7 @@ public  class VillageMenuView extends View {
     }
 
     private void displayMarketPlace() {
-        this.console.println ("\n*** As you round the corner and spy the market you see items from... "
+        System.out.println ("\n*** As you round the corner and spy the market you see items from... "
                 + "\n        The first booth you stop at has trinkets from far off lands... "
                 + "\n        You check your pockets and buy a couple of items for you family... "
                 + "\n        You feel a slight tug on your cloak and turn around to see a man..."
