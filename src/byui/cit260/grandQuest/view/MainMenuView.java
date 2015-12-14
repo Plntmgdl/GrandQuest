@@ -27,7 +27,6 @@ public abstract class MainMenuView extends View {
                 + "\nC - Continue Game"
                 + "\nS - Save game"
                 + "\nH - Help Menu"
-                + "\nG - Game Menu"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
@@ -50,9 +49,6 @@ public abstract class MainMenuView extends View {
                 break;
             case 'H': // display the help menu
                 this.displayHelpMenu();
-                break;
-            case 'G':
-                this.displayGameMenu();
                 break;
             case 'E': // Exit the program
                 return true;
@@ -103,10 +99,7 @@ public abstract class MainMenuView extends View {
         helpMenu.displayMenu();
     }  
 
-    private void displayGameMenu() {
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
-    }
+    
 
     void display(Player player) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

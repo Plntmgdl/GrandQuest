@@ -25,6 +25,7 @@ public  class VillageMenuView extends View {
                 + "\nI - Inn"
                 + "\nT - Tavern"
                 + "\nM - Market Place"
+                + "\nG - Game Menu"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
     }
@@ -47,6 +48,9 @@ public  class VillageMenuView extends View {
             case 'M': 
                 this.displayMarketPlace();
                 break;
+             case 'G':
+                this.displayGameMenu();
+                break;   
             case 'E': // Exit the program
                 return true;
             default:
@@ -78,7 +82,7 @@ public  class VillageMenuView extends View {
          System.out.println ("\n*** As you walk in you are hit with the smells of... "
                 + "\n        You spy many patrons sitting at tables... "
                 + "\n        You walk to a table and order food and drink looking forward... "
-                + "\n        As you finish you start to fel a little sleepy and decide to go to the Inn"
+                + "\n        As you finish you start to feel a little sleepy and decide to go to the Inn"
                 + "\n        to get a room and a bath. ***");
      
         this.displayInn();
@@ -87,7 +91,7 @@ public  class VillageMenuView extends View {
     private void displayMarketPlace() {
         System.out.println ("\n*** As you round the corner and spy the market you see items from... "
                 + "\n        The first booth you stop at has trinkets from far off lands... "
-                + "\n        You check your pockets and buy a couple of items for you family... "
+                + "\n        You check your pockets and buy a couple of items for your family... "
                 + "\n        You feel a slight tug on your cloak and turn around to see a man..."
                 + "\n        Excuse me would you care to help me take something to my Prince?***");
              
@@ -100,5 +104,8 @@ public  class VillageMenuView extends View {
             merchantView.displayMenu();
     }  
 
-            
+     private void displayGameMenu() {
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }       
 }
