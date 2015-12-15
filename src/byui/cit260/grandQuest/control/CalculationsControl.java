@@ -37,6 +37,10 @@ public class CalculationsControl {
  
     }
 
+    public static double CalculateVolumeOfTub() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
    
     
     
