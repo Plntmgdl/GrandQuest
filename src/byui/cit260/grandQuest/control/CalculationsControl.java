@@ -31,7 +31,7 @@ public class CalculationsControl {
         
         double radius = diameter/2;
                 
-        double volume = (Math.PI * Math.pow(radius,2) * height);
+        double volume = Math.round((Math.PI * Math.pow(radius,2) * height)*100)/100;
                 
         return volume;
  

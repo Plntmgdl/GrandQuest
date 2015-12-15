@@ -54,9 +54,15 @@ public class InnMenuView extends View {
                    + "\n you wonder how much water each one holds, because you are really tired."
                    + "\n Of course you are also really weary from the day and a soak would feel good."
                    + "\n So you pick a tub and start filling it up.");
-   
+        this.displayInnBathTubView();
 //    
     }
+    
+    private void displayInnBathTubView() {
+         
+            InnBathTubView innBathTub = new InnBathTubView() ;
+            innBathTub.displayMenu();
+        }
 
     private void displaySleep() {
         System.out.println ("\n--------------------------------------"
