@@ -71,25 +71,29 @@ public class CalculationsControl {
 
     }
     
-    public double calcWagonWeight(double wagonWeight,double inventoryWeight) 
-            throws CalculationsControlException {		
+    public static double calcWagonWeight(double wagonWeight,double poundsOfFlour, double poundsOfGrain, double basketsOfSilk, double gift) {
+//            throws CalculationsControlException {		
 
-	if (inventoryWeight < 0) {
-            throw new CalculationsControlException("Can't calculate"
-                                                   + "because weight is less than zero");
-        }
-	if (inventoryWeight > 1500) {
-            throw new CalculationsControlException("Can't calculate"
-                                                   + "because weight is greater than 1500");
-        }
-        if (wagonWeight < 0){
-           throw new CalculationsControlException("Can't calculate"
-                                                   + "because wagon weight is less than zero");
-        }
-        wagonWeight = 500;
-               
+//	if (inventoryWeight < 0) {
+//            throw new CalculationsControlException("Can't calculate"
+//                                                   + "because weight is less than zero");
+//        }
+//	if (inventoryWeight > 1500) {
+//            throw new CalculationsControlException("Can't calculate"
+//                                                   + "because weight is greater than 1500");
+//        }
+//        if (wagonWeight < 0){
+//           throw new CalculationsControlException("Can't calculate"
+//                                                   + "because wagon weight is less than zero");
+//        }
+        
+        double inventoryWeight = (poundsOfFlour + poundsOfGrain + basketsOfSilk + (gift * 300));         
         double totalWeight = (wagonWeight + inventoryWeight);
         return totalWeight;
+    }
+
+    public double calcWagonWeight(double poundsOfFlour, double poundsOfGrain, double basketsOfSilk, double gift) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
    

@@ -83,17 +83,6 @@ public class BathTubView {
     
     }
     
-    
-    
-//    public void displayMerchantInnMenuView() {
-//        System.out.println("");
-//    
-//    MerchantInnMenuView merchantInnMenuView = new MerchantInnMenuView() ;
-//    merchantInnMenuView.displayMenu();
-//    }      
-    
-    
-
     void displayMenu() {
         double height = this.getHeight();
         double diameter = this.getDiameter();
