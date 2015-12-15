@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 public class BathTubView {
     
-     double getHeight = this.getHeight();
+     
     private double getHeight() {   
     //get the height of the tub from the user
        
@@ -44,7 +44,7 @@ public class BathTubView {
     return height; //Return the height
     }
     
-    double getDiameter = this.getDiameter();
+    
     
     private double getDiameter() {   
     //get the Diameter of the tub from the user
@@ -75,11 +75,9 @@ public class BathTubView {
     }
     
    //call calcVolumeOfTub to perform calculations
-    private double calcTub(double height, double diameter) throws CalculationsControlException{
-        double HeightMeasure = height;
-        double DiameterMeasure = diameter;
+    private double calcTub(double height, double diameter) {
         CalculationsControl calculationsControl = new CalculationsControl();
-        double waterLevel = calculationsControl.calcVolumeOfTub(HeightMeasure, DiameterMeasure);
+        double waterLevel = calculationsControl.calcVolumeOfTub(height, diameter);
         return waterLevel;
     
     
@@ -88,7 +86,7 @@ public class BathTubView {
     
     
 //    public void displayMerchantInnMenuView() {
-//        System.out.println("You enjoy a relaxing hot bath, feel well rested, and are ready for bed.");
+//        System.out.println("");
 //    
 //    MerchantInnMenuView merchantInnMenuView = new MerchantInnMenuView() ;
 //    merchantInnMenuView.displayMenu();
@@ -97,7 +95,11 @@ public class BathTubView {
     
 
     void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        double height = this.getHeight();
+        double diameter = this.getDiameter();
+        double waterLevel = this.calcTub(height, diameter);
+        System.out.println("The water level of your tub is " + waterLevel + ". You enjoy a relaxing hot bath, feel well rested, and are ready for bed." );
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     private double CalculateVolumeOfTub() {

@@ -16,18 +16,18 @@ import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
 public class CalculationsControl {
 
     public static double calcVolumeOfTub (double height, double diameter) 
-            throws CalculationsControlException {
+            {
         
-        if (height < 0) {// confirm height is true
-	    throw new CalculationsControlException("Can't calculate"
-                                                   + "because height is less than zero");
-        }
-       
-	if (diameter < 0 || diameter > 5) {// confirm diameter is in range
-	    throw new CalculationsControlException("Can't calculate"
-                                                   + "because diameter is less than zero"
-                                                   + " or greater than five.");
-        }
+//        if (height < 0) {// confirm height is true
+//	    throw new CalculationsControlException("Can't calculate"
+//                                                   + "because height is less than zero");
+//        }
+//       
+//	if (diameter < 0 || diameter > 5) {// confirm diameter is in range
+//	    throw new CalculationsControlException("Can't calculate"
+//                                                   + "because diameter is less than zero"
+//                                                   + " or greater than five.");
+//        }
         
         double radius = diameter/2;
                 
@@ -37,9 +37,9 @@ public class CalculationsControl {
  
     }
 
-    public static double CalculateVolumeOfTub() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static double CalculateVolumeOfTub() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
    
     
