@@ -66,12 +66,12 @@ public class RewardMenuView extends View {
                 + "\n**************************************************************"
                 + "\n**************************************************************"
                 + "\n**************************************************************");
-    this.displayNewGameView();
+    this.displayStartProgramView();
 }
-    private void displayNewGameView() {     
+    private void displayStartProgramView() {     
         
-        NewGameView newGameView = new NewGameView();
-        newGameView.displayIntro();
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayBanner();
 }
     private void displayLand() {
         System.out.println("You make your request for a parcel of land."
@@ -83,7 +83,7 @@ public class RewardMenuView extends View {
                 + "\n**************************************************************"
                 + "\n**************************************************************"
                 + "\n**************************************************************");
-    this.displayNewGameView();
+    this.displayStartProgramView();
 }
     
     private void displayKnighthood() {
@@ -96,7 +96,7 @@ public class RewardMenuView extends View {
                 + "\n**************************************************************"
                 + "\n**************************************************************"
                 + "\n**************************************************************");
-    this.displayNewGameView();
+    this.displayStartProgramView();
 }
     
     private void displayNothing() {
@@ -109,7 +109,7 @@ public class RewardMenuView extends View {
                 + "\n**************************************************************"
                 + "\n**************************************************************"
                 + "\n**************************************************************");
-    this.displayNewGameView();
+    this.displayStartProgramView();
 }
     
 
