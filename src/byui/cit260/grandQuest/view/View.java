@@ -19,7 +19,7 @@ import java.util.logging.Logger;
  */
 public abstract class View implements ViewInterface {
     
-    private Scanner keybrd = new Scanner(System.in);
+   
     private String promptMessage;
     
     
@@ -59,11 +59,11 @@ public abstract class View implements ViewInterface {
         try {
             
             while (!valid) {
-                value = keybrd.nextLine();
+                value = this.keyboard.readLine();
                 value = value.trim();
                 
                 if (value.length()<1) {
-                this.console.println("You must enter a value.");
+                System.out.println("You must enter a value.");
                 continue;
             }
             break;

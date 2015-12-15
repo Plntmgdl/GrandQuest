@@ -11,17 +11,16 @@ import byui.cit260.grandQuest.model.Player;
  *
  * @author Jassen
  */
-public class JourneyMenuView extends View {
+public class JourneyMenuViewTwo extends View {
     
     private Player currentPlayer;
     
-    public JourneyMenuView(){
+    public JourneyMenuViewTwo(){
     super ("\n"
                
                 + "\n| Journey Menu                         |"
                 + "\n--------------------------------------"
                 + "\nF - Forest"
-                + "\nR - Road"
                 + "\nV - Village"
                 + "\nE - Exit"
                 + "\n--------------------------------------");
@@ -39,9 +38,6 @@ public class JourneyMenuView extends View {
             case 'F': 
                 this.displayForest();
                 break;
-            case 'R': 
-                this.displayRoad();
-                break;
             case 'V': 
                 this.Village();
                 break;
@@ -58,20 +54,23 @@ public class JourneyMenuView extends View {
     private void displayForest() {
         System.out.println("\n The morning is bright and beautiful as you start down the forest path."
                 + "\n There is no way anything could go wrong on this journey."
-                + "\n Suddenly a band of robbers jump in front of you.");
-    
-         this.displayEncounterMenuView();
+                + "\n As you keep traveling down the path the sound of rushing water reaches your ears,"
+                + "\n there must be a river ahead. Sure enough you come across a river and what a surprise"
+                + "\n the bridge is out. Luckily however you have some rope with you, but which size to use."
+                + "\n What size rope are you going to use?");
+        
+//        this.displayStrengthOfRope();
+//       }
+//    
+//    private void displayStrengthOfRope() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+ 
+    this.displayJourneyMenuViewThree();
+    } 
+     private void displayJourneyMenuViewThree() {
+        JourneyMenuViewThree journeyMenuViewThree = new JourneyMenuViewThree();
+        journeyMenuViewThree.displayMenu();
 }
-    private void displayEncounterMenuView() {    
-        EncounterMenuView encounterMenuView = new EncounterMenuView();
-        encounterMenuView.displayMenu();
- }
-    private void displayRoad() {
-        System.out.println("\n As you start down the road a man walks up to you"
-                + "\n and informs you that the road is currently closed and you will"
-                + "\n have to take the forest.");
-        this.displayForest();
-    }
 
     private void Village() {
         System.out.println("You change your mind and, since you are"
@@ -82,5 +81,7 @@ public class JourneyMenuView extends View {
          //Display the village menu 
             VillageMenuView villageMenu = new VillageMenuView() ;
             villageMenu.displayMenu();
-    }  
+   
+
+        }   
 }

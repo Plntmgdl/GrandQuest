@@ -85,6 +85,6 @@ public class TavernMenuView extends View {
 
     private void displayInnMenu() {
         InnMenuView InnMenu = new InnMenuView();
-        InnMenu.display();
+        InnMenu.displayMenu();
     }
 }

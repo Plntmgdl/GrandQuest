@@ -12,7 +12,7 @@ import java.io.PrintWriter;
  *
  * @author Jassen
  */
-public abstract class EncounterMenuView extends View {
+public class EncounterMenuView extends View {
     
     public EncounterMenuView() {
     super ("\n"
@@ -22,70 +22,51 @@ public abstract class EncounterMenuView extends View {
                 + "\nR - Run away"
                 + "\nS - Stand your ground"
                 + "\nA - Attack"
-                + "\nP - Print"
+                + "\nE - Exit"
                 + "\n--------------------------------------");
 }
-    @Override
+     @Override
     public boolean doAction(Object obj) {
         
-        String value = (String)obj;
-        
+        String value = (String) obj;
         value = value.toUpperCase();
         char choice = value.charAt(0);
+       
+        switch (choice) {
+            case 'R': 
+                this.MonsterReaction();
+                break;
+            case 'S': 
+                this.MonsterReaction();
+                break;
+            case 'A': 
+                this.MonsterReaction();
+                break;
+            case 'E': // Exit the program
+                return true;
+            default:
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid selection *** Try again");
+                break;
+        }
         return false;
     }
 
-        
 
-    private void doAction(char choice) {
-        switch (choice) {
-            case 'R': // Player runs away and screen displays previous screen
-                this.displayMonsterReaction();
-                break;
-            case 'S': // player stands ground and screen displays monster reaction
-                this.displayMonsterReaction();
-                break;
-            case 'A': // Player attacks and screen goes to monster reaction
-                this.displayMonsterReaction();
-                break;
-            //case 'P':
-              //  this.printEncounterMenuView();
-                  
-                
-                
-                //ErrorView.display(this.getClass().getName(),
-                  //      "\n*** Invalid selection *** Try again");
+    private void MonsterReaction() {
+        System.out.println("The robbers say boo and leave. So you continue on your way.");
+ 
+    this.displayJourneyMenuViewTwo();
+    } 
+     private void displayJourneyMenuViewTwo() {
+        JourneyMenuViewTwo journeyMenuViewTwo = new JourneyMenuViewTwo();
+        journeyMenuViewTwo.displayMenu();
+     }   
 
-   
-          
     
-      
-          
-   
-
-   
 }
-    }
 
-    private void displayMonsterReaction() {
-        this.console.println("Monster says boo");
-    }
-
-//    private void printEncounterMenuView(String outputLocation) {
-//        try (PrintWriter out = new PrintWriter(outputLocation)) {
-//            out.println("\n\n           Encounter Menu Report           ");
-//            out.printf("%n%-20s", "Encounter",);
-//            out.printf("%n%-20s", "------------");
-//            
-//            
-//            
-//        }catch (IOException ex) {
-//            ErrorView.display(this.getClass().getName(),
-//                        "I/O Error: "+ex.getMessage());
-//        }
-//    }
-
-}
+    
 
     
 

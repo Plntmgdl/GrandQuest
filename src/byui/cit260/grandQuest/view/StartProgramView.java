@@ -12,21 +12,16 @@ import java.util.Scanner;
  *
  * @author devin_000
  */
-public class StartProgramView { //extends View{
+public class StartProgramView { 
 
-//    public StartProgramView(String promptMessage) {
+public StartProgramView() {
 //        super(promptMessage);
-//    }
-
-    public  StartProgramView() {
-       
     }
+//    private Object keyboard;
 
-   
-   
-  
+    
 
-  public void startProgram (){
+public void startProgram (){
 
     //Display the banner screen
     this.displayBanner(); 
@@ -100,7 +95,6 @@ public class StartProgramView { //extends View{
         }
       return playersName; //Return the name
     }
-
     private void displayWelcomeMessage(Player player) {
          System.out.println("\n\n==================================================");
          System.out.println("\tWelcome adventurer " + player.getName());
@@ -122,7 +116,7 @@ public class StartProgramView { //extends View{
 //    public boolean doAction(Object obj) {
 //        
 //        String value = (String) obj;
-//            this.console.println("start program view do action =" + value);
+//            System.out.println("start program view do action =" + value);
 //            return true;
 //    }
 

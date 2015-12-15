@@ -50,9 +50,10 @@ public class InnMenuView extends View {
 
     private void displayBath() {
         System.out.println ("\n---------------------------------------"
-                   + "\n As you look at the deep round tub in front of you"
-                   + "\n you wonder how much water it holds, because you are really tired"
-                   + "\n and do not want to spend to much time filling it up.");
+                   + "\n As you look at the deep round tubs in front of you"
+                   + "\n you wonder how much water each one holds, because you are really tired."
+                   + "\n Of course you are also really weary from the day and a soak would feel good."
+                   + "\n So you pick a tub and start filling it up.");
    
 //    
     }

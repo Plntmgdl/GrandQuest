@@ -19,7 +19,7 @@ public class GameMenuView extends View{
                 + "\n        closer to the settlement you spy the "
                 + "\n        Tavern, the Inn, and the Market Place. ***");
         
-        this.console.println("*\n***                                  *"
+        System.out.println("*\n***                                  *"
                 + "\n       Welcome to the Village.  ***");
         
     }

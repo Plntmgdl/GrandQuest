@@ -18,20 +18,13 @@ public class ErrorView {
     private static final PrintWriter logFile = GrandQuest.getLogFile();
     
     public static void display(String className, String errorMessage) {
-        System.out.println(
+        errorFile.println(
                        "-----------------------------------"
                         + "\n- Error - " + errorMessage
                         + "\n------------------------------");
         
-        System.out.println(className + " - " + errorMessage);
+        logFile.println(className + " - " + errorMessage);
     }
-//        errorFile.println(
-//                       "-----------------------------------"
-//                        + "\n- Error - " + errorMessage
-//                        + "\n------------------------------");
-//        
-//        logFile.println(className + " - " + errorMessage);
-//    }
 
     static class display {
 

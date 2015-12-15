@@ -58,7 +58,7 @@ public class VillageMenuView extends View {
 
     private void InnMenu() {
         InnMenuView InnMenu = new InnMenuView();
-        InnMenu.display();
+        InnMenu.displayMenu();
     }
    private void displayTavernMenu() {
         TavernMenuView TavernMenu = new TavernMenuView();
