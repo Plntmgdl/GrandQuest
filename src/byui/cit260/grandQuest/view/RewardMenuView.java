@@ -63,15 +63,25 @@ public class RewardMenuView extends View {
                 + "\n thrown in chains and put in a dark cell to spend the rest of your days"
                 + "\n That will teach you for being greedy."
                 + "\n THE END***");
-    }
+    
+    this.displayNewGameView();
+}
+    private void displayNewGameView() {     
+        
+        NewGameView newGameView = new NewGameView();
+        newGameView.displayIntro();
+}
     private void displayLand() {
         System.out.println("You make your request for a parcel of land."
                 + "\n The prince gladly gives you a small chunk of land where"
                 + "\n you spend the rest of your days working to pay the"
                 + "\n heavy taxes the Prince places on his subjects."
-                + "\nWhat? You were expecting him to be nice?"
+                + "\n What? You were expecting him to be nice?"
                 + "\n THE END***");
-    }
+        
+    this.displayNewGameView();
+}
+    
     private void displayKnighthood() {
         System.out.println("You request to be made a knight in his court."
                 + "\n He gladly makes you one because a dragon has been terrorizing"
@@ -79,7 +89,9 @@ public class RewardMenuView extends View {
                 + "\n and on your very first encounter the dragon roasts you alive"
                 + "\n and crunches on your bones. MMMMMM You taste just like chicken."
                 + "\n THE END***");
-    }
+    this.displayNewGameView();
+}
+    
     private void displayNothing() {
         System.out.println("You get down on one knee and say it was your pleasure to help"
                 + "\n and you request nothing more than to continue on your journey home."
@@ -87,5 +99,9 @@ public class RewardMenuView extends View {
                 + "\n to help you on your way. You mount up thank the Prince again and go "
                 + "\n home to see the family you have missed ever so much."
                 + "\n THE END***");
-    }
+    this.displayNewGameView();
+}
+    
+
+    
 }
