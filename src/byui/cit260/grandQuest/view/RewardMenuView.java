@@ -62,8 +62,10 @@ public class RewardMenuView extends View {
         System.out.println("\n As you make your request for gold you are"
                 + "\n thrown in chains and put in a dark cell to spend the rest of your days"
                 + "\n That will teach you for being greedy."
-                + "\n THE END***");
-    
+                + "\n THE END***"
+                + "\n**************************************************************"
+                + "\n**************************************************************"
+                + "\n**************************************************************");
     this.displayNewGameView();
 }
     private void displayNewGameView() {     
@@ -77,8 +79,10 @@ public class RewardMenuView extends View {
                 + "\n you spend the rest of your days working to pay the"
                 + "\n heavy taxes the Prince places on his subjects."
                 + "\n What? You were expecting him to be nice?"
-                + "\n THE END***");
-        
+                + "\n THE END***"
+                + "\n**************************************************************"
+                + "\n**************************************************************"
+                + "\n**************************************************************");
     this.displayNewGameView();
 }
     
@@ -88,7 +92,10 @@ public class RewardMenuView extends View {
                 + "\n the villagers. You take it upon yourself to beat this dragon"
                 + "\n and on your very first encounter the dragon roasts you alive"
                 + "\n and crunches on your bones. MMMMMM You taste just like chicken."
-                + "\n THE END***");
+                + "\n THE END***"
+                + "\n**************************************************************"
+                + "\n**************************************************************"
+                + "\n**************************************************************");
     this.displayNewGameView();
 }
     
@@ -98,7 +105,10 @@ public class RewardMenuView extends View {
                 + "\n The Prince amazed at your humility gives you supplies and a horse to"
                 + "\n to help you on your way. You mount up thank the Prince again and go "
                 + "\n home to see the family you have missed ever so much."
-                + "\n THE END***");
+                + "\n THE END***"
+                + "\n**************************************************************"
+                + "\n**************************************************************"
+                + "\n**************************************************************");
     this.displayNewGameView();
 }
     
