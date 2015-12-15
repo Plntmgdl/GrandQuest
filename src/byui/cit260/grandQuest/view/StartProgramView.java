@@ -95,7 +95,6 @@ public void startProgram (){
         }
       return playersName; //Return the name
     }
-
     private void displayWelcomeMessage(Player player) {
          System.out.println("\n\n==================================================");
          System.out.println("\tWelcome adventurer " + player.getName());

@@ -61,13 +61,10 @@ class MerchantInnMenuView extends View{
    
     }
       private void displayCalcVolumeOfTub() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-   
-  
+        throw new UnsupportedOperationException("calcVolumeTub Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-        
-        
-    
+
+   
     private void displaySleep() {
         System.out.println ("\n--------------------------------------"
                 + "\n You close your eyes and drift off."
@@ -89,13 +86,10 @@ class MerchantInnMenuView extends View{
     
     public void displayMarketView() {
          
-    MarketView marketView = new MarketView() {} ;
+    MarketView marketView = new MarketView() ;
     marketView.displayMarket();
     } 
 
-    
-    
-    
-       
+   
 }
 

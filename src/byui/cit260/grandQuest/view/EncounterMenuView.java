@@ -12,7 +12,7 @@ import java.io.PrintWriter;
  *
  * @author Jassen
  */
-public abstract class EncounterMenuView extends View {
+public class EncounterMenuView extends View {
     
     public EncounterMenuView() {
     super ("\n"
@@ -49,24 +49,19 @@ public abstract class EncounterMenuView extends View {
                 break;
 //            ErrorView.display(this.getClass().getName(),
 //                        "\n*** Invalid selection *** Try again");
-//
-//   
-          
-    
-      
-          
-   
 
-   
 }
     }
 
     private void displayMonsterReaction() {
-        System.out.println("Monster says boo");
-    }
-
-    
-
+        System.out.println("The robbers say boo and leave. So you continue on your way.");
+ 
+    this.displayJourneyMenuViewTwo();
+    } 
+     private void displayJourneyMenuViewTwo() {
+        JourneyMenuViewTwo journeyMenuViewTwo = new JourneyMenuViewTwo();
+        journeyMenuViewTwo.displayMenu();
+     }   
 }
 
     
