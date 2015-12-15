@@ -7,6 +7,7 @@ package byui.cit260.grandQuest.view;
 
 
 import byui.cit260.grandQuest.model.Player;
+import java.util.Scanner;
 
 
 /**
@@ -15,6 +16,8 @@ import byui.cit260.grandQuest.model.Player;
  */
 class MerchantInnMenuView extends View{
     private Player currentPlayer;
+    
+    
     
     public MerchantInnMenuView() {
         super ("\n"
@@ -56,15 +59,14 @@ class MerchantInnMenuView extends View{
                    + "\n you wonder how much water each one holds, because you are really tired."
                    + "\n Of course you are also really weary from the day and a soak would feel good."
                    + "\n So you pick a tub and start filling it up.");
-        
-    this.displayCalcVolumeOfTub();
-   
+        this.displayBathTubView();
     }
-      private void displayCalcVolumeOfTub() {
-        throw new UnsupportedOperationException("calcVolumeTub Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-   
+        private void displayBathTubView() {
+         
+            BathTubView bathTub = new BathTubView() ;
+            bathTub.displayMenu();
+        }
+    
     private void displaySleep() {
         System.out.println ("\n--------------------------------------"
                 + "\n You close your eyes and drift off."
@@ -88,8 +90,10 @@ class MerchantInnMenuView extends View{
          
     MarketView marketView = new MarketView() ;
     marketView.displayMarket();
-    } 
+    }      
 
-   
+    void displayMerchantInnMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
