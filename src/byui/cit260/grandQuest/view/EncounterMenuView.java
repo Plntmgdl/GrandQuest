@@ -54,7 +54,8 @@ public class EncounterMenuView extends View {
 
 
     private void MonsterReaction() {
-        System.out.println("The robbers say boo and leave. So you continue on your way.");
+        System.out.println("The robbers say boo and leave. So you continue on your way."
+                + "  Will you continue through the forest or return to the village in fear of more attackers?");
  
     this.displayJourneyMenuViewTwo();
     } 

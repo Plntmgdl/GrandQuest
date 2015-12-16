@@ -20,19 +20,22 @@ class MarketView {
                 + "\n You remember the merchant saying that the wgaon can only carry a total of two thousand pounds"
                 + "\n and that includes the wagon which is five hundred by itself. So start to load the wagon.");
  
-        
-        this.displayJourneyMenuView();
+        this.displayWagonLoadingView();
+        //this.displayJourneyMenuView();
     }  
-     private void displayJourneyMenuView() {
-        JourneyMenuView journeyMenuView = new JourneyMenuView();
-        journeyMenuView.displayMenu();
-     }
-//    this.displayCalcWagonWeight();
-//    
-//    }
-//
-//    private void displayCalcWagonWeight() {
-//        throw new UnsupportedOperationException("calc wagon weight Not supported yet."); 
-//        
-//        
+    
+        private void displayWagonLoadingView() {
+          
+            WagonLoadingView wagonLoading = new WagonLoadingView();
+            wagonLoading.displayMenu();
+        }
+     
+    
+    
+    
+//    private void displayJourneyMenuView() {
+//        JourneyMenuView journeyMenuView = new JourneyMenuView();
+//        journeyMenuView.displayMenu();
+//     }
+
 }  

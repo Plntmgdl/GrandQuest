@@ -16,30 +16,30 @@ import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
 public class CalculationsControl {
 
     public static double calcVolumeOfTub (double height, double diameter) 
-            throws CalculationsControlException {
+            {
         
-        if (height < 0) {// confirm height is true
-	    throw new CalculationsControlException("Can't calculate"
-                                                   + "because height is less than zero");
-        }
-       
-	if (diameter < 0 || diameter > 5) {// confirm diameter is in range
-	    throw new CalculationsControlException("Can't calculate"
-                                                   + "because diameter is less than zero"
-                                                   + " or greater than five.");
-        }
+//        if (height < 0) {// confirm height is true
+//	    throw new CalculationsControlException("Can't calculate"
+//                                                   + "because height is less than zero");
+//        }
+//       
+//	if (diameter < 0 || diameter > 5) {// confirm diameter is in range
+//	    throw new CalculationsControlException("Can't calculate"
+//                                                   + "because diameter is less than zero"
+//                                                   + " or greater than five.");
+//        }
         
         double radius = diameter/2;
                 
-        double volume = (Math.PI * Math.pow(radius,2) * height);
+        double volume = Math.round((Math.PI * Math.pow(radius,2) * height)*100)/100;
                 
         return volume;
  
     }
 
-    public static double CalculateVolumeOfTub() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+//    public static double CalculateVolumeOfTub() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
 
    
     
@@ -71,25 +71,29 @@ public class CalculationsControl {
 
     }
     
-    public double calcWagonWeight(double wagonWeight,double inventoryWeight) 
-            throws CalculationsControlException {		
+    public static double calcWagonWeight(double wagonWeight,double poundsOfFlour, double poundsOfGrain, double basketsOfSilk, double gift) {
+//            throws CalculationsControlException {		
 
-	if (inventoryWeight < 0) {
-            throw new CalculationsControlException("Can't calculate"
-                                                   + "because weight is less than zero");
-        }
-	if (inventoryWeight > 1500) {
-            throw new CalculationsControlException("Can't calculate"
-                                                   + "because weight is greater than 1500");
-        }
-        if (wagonWeight < 0){
-           throw new CalculationsControlException("Can't calculate"
-                                                   + "because wagon weight is less than zero");
-        }
-        wagonWeight = 500;
-               
+//	if (inventoryWeight < 0) {
+//            throw new CalculationsControlException("Can't calculate"
+//                                                   + "because weight is less than zero");
+//        }
+//	if (inventoryWeight > 1500) {
+//            throw new CalculationsControlException("Can't calculate"
+//                                                   + "because weight is greater than 1500");
+//        }
+//        if (wagonWeight < 0){
+//           throw new CalculationsControlException("Can't calculate"
+//                                                   + "because wagon weight is less than zero");
+//        }
+        
+        double inventoryWeight = (poundsOfFlour + poundsOfGrain + basketsOfSilk + (gift * 300));         
         double totalWeight = (wagonWeight + inventoryWeight);
         return totalWeight;
+    }
+
+    public double calcWagonWeight(double poundsOfFlour, double poundsOfGrain, double basketsOfSilk, double gift) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
    

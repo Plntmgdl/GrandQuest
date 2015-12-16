@@ -6,16 +6,14 @@
 package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.control.CalculationsControl;
-import citbyui.cit260.grandQuest.exceptions.CalculationsControlException;
 import java.util.Scanner;
 
 /**
  *
  * @author devin_000
  */
-public class BathTubView {
+public class InnBathTubView {
     
-     
     private double getHeight() {   
     //get the height of the tub from the user
        
@@ -82,7 +80,8 @@ public class BathTubView {
     
     
     }
-    
+   
+
     void displayMenu() {
         double height = this.getHeight();
         double diameter = this.getDiameter();
@@ -94,5 +93,8 @@ public class BathTubView {
     private double CalculateVolumeOfTub() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    
     
 }
+ 
