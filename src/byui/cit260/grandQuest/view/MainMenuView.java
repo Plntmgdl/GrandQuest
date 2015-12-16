@@ -77,6 +77,7 @@ public abstract class MainMenuView extends View {
         
         try {
             GameControl.saveGame(GrandQuest.getCurrentGame(), filePath);
+            System.out.println("Save Successful");
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
