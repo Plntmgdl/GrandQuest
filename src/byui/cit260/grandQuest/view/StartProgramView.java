@@ -102,23 +102,4 @@ public void startProgram (){
          System.out.println("==================================================");
     }
 
-//    @Override
-//    public void displayMenu() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-//
-//    @Override
-//    public boolean doAction(Object obj) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-
-//    @Override
-//    public boolean doAction(Object obj) {
-//        
-//        String value = (String) obj;
-//            System.out.println("start program view do action =" + value);
-//            return true;
-//    }
-
-   
 }

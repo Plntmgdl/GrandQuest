@@ -63,15 +63,15 @@ public class RewardMenuView extends View {
                 + "\n thrown in chains and put in a dark cell to spend the rest of your days"
                 + "\n That will teach you for being greedy."
                 + "\n THE END***"
-                + "\n**************************************************************"
-                + "\n**************************************************************"
-                + "\n**************************************************************");
+                + "\n"
+                + "\n"
+                + "\n");
     this.displayStartProgramView();
 }
     private void displayStartProgramView() {     
         
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayBanner();
+       startProgramView.startProgram();
 }
     private void displayLand() {
         System.out.println("You make your request for a parcel of land."
@@ -80,9 +80,11 @@ public class RewardMenuView extends View {
                 + "\n heavy taxes the Prince places on his subjects."
                 + "\n What? You were expecting him to be nice?"
                 + "\n THE END***"
-                + "\n**************************************************************"
-                + "\n**************************************************************"
-                + "\n**************************************************************");
+                + "\n"
+                + "\n"
+                + "\n");
+        
+        
     this.displayStartProgramView();
 }
     
@@ -93,9 +95,11 @@ public class RewardMenuView extends View {
                 + "\n and on your very first encounter the dragon roasts you alive"
                 + "\n and crunches on your bones. MMMMMM You taste just like chicken."
                 + "\n THE END***"
-                + "\n**************************************************************"
-                + "\n**************************************************************"
-                + "\n**************************************************************");
+                + "\n"
+                + "\n"
+                + "\n");
+        
+        
     this.displayStartProgramView();
 }
     
@@ -103,12 +107,14 @@ public class RewardMenuView extends View {
         System.out.println("You get down on one knee and say it was your pleasure to help"
                 + "\n and you request nothing more than to continue on your journey home."
                 + "\n The Prince amazed at your humility gives you supplies and a horse to"
-                + "\n to help you on your way. You mount up thank the Prince again and go "
+                + "\n help you on your way. You mount up thank the Prince again and go "
                 + "\n home to see the family you have missed ever so much."
                 + "\n THE END***"
-                + "\n**************************************************************"
-                + "\n**************************************************************"
-                + "\n**************************************************************");
+                + "\n"
+                + "\n"
+                + "\n");
+        
+        
     this.displayStartProgramView();
 }
     

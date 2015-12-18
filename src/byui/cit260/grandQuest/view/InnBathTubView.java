@@ -87,12 +87,7 @@ public class InnBathTubView {
         double diameter = this.getDiameter();
         double waterLevel = this.calcTub(height, diameter);
         System.out.println("You fill the tub with " + waterLevel + " cubic feet of hot water. You enjoy a relaxing hot bath, feel well rested, and are ready for bed." );
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    private double CalculateVolumeOfTub() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ }
 
     
     

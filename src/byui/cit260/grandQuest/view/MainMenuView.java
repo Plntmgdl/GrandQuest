@@ -42,7 +42,7 @@ public abstract class MainMenuView extends View {
                 this.startNewGame();
                 break;
             case 'C': // get and start an existing game
-                this.startContinueGame();
+                this.startContinuedGame();
                 break;
             case 'S': // save the current game
                 this.saveGame();
@@ -83,7 +83,7 @@ public abstract class MainMenuView extends View {
         }
     }
     
-    private void startContinueGame() {
+    private void startContinuedGame() {
         System.out.println("\n\nEnter the file path for file where the game"
                                 + "is saved");
         String filePath = this.getInput();
@@ -93,6 +93,8 @@ public abstract class MainMenuView extends View {
         } catch (Exception ex) {
             ErrorView.display("MainMenuView", ex.getMessage());
         }
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.displayMenu();
     }
 
     public void displayHelpMenu() {

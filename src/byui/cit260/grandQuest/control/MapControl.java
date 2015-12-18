@@ -5,8 +5,11 @@
  */
 package byui.cit260.grandQuest.control;
 
+import GrandQuest.GrandQuest;
 import byui.cit260.grandQuest.model.Map;
 import byui.cit260.grandQuest.model.Scene;
+import citbyui.cit260.grandQuest.exceptions.MapControlException;
+import java.awt.Point;
 
 /**
  *
@@ -14,7 +17,7 @@ import byui.cit260.grandQuest.model.Scene;
  */
 
 public class MapControl {
-    
+        
     static Map createMap() {
         // create the map
         Map map = new Map(10, 10);
@@ -28,8 +31,30 @@ public class MapControl {
         return map;
     }
 
-    static void moveActorsToStartingLocation(Map map) {
-        throw new UnsupportedOperationException("moveActorsToStartingLocation Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-}    
-
+    public static void moveActorsToStartingLocation(Character character, Point coordinates) {
+           
+        
+       int newRow = coordinates.x-1;
+       int newColumn = coordinates.y-1;
+       
+//       if (newRow < 0 || newRow >= map.getNoOfRows()||
+//           newColumn < 0 || newColumn >= map.getNoOfColumns()) {
+//        throws MapControlException {
+           
+           }
+       }
+//    }
+//
+//    private static class map {
+//
+//        private static int getNoOfRows() {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        }
+//
+//        private static int getNoOfColumns() {
+//            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//        }
+//
+//        public map() {
+//        }
+//    }

@@ -36,4 +36,5 @@ public enum Character implements Serializable {
     public Point getcoordinates() {
         return coordinates;
     }
+
 }

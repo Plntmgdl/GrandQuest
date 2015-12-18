@@ -6,6 +6,7 @@
 package byui.cit260.grandQuest.view;
 
 import byui.cit260.grandQuest.model.Player;
+import java.util.Scanner;
 
 /**
  *
@@ -59,19 +60,15 @@ public class JourneyMenuViewTwo extends View {
                 + "\n the bridge is out. Luckily however you have some rope with you, but which size to use."
                 + "\n What size rope are you going to use?");
         
-//        this.displayStrengthOfRope();
-//       }
+        this.displayRopeStrengthView();
 //    
-//    private void displayStrengthOfRope() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
- 
-    this.displayJourneyMenuViewThree();
-    } 
-     private void displayJourneyMenuViewThree() {
-        JourneyMenuViewThree journeyMenuViewThree = new JourneyMenuViewThree();
-        journeyMenuViewThree.displayMenu();
-}
-
+    }
+     private void displayRopeStrengthView() {
+                 
+            RopeStrengthView ropeStrengthView = new RopeStrengthView() ;
+            ropeStrengthView.displayMenu();
+        }
+        
     private void Village() {
         System.out.println("You change your mind and, since you are"
                 + "\n a coward and a wimp, you go back to the village.");
@@ -84,4 +81,9 @@ public class JourneyMenuViewTwo extends View {
    
 
         }   
+
+   
+
+    
+    
 }
