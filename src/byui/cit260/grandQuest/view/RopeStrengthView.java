@@ -24,7 +24,7 @@ class RopeStrengthView {
         while (!valid) {    //while an valid number has not been retrieved
             
             System.out.println("\nEnter the diameter of the rope. The ropes you have to choose from"
-                    + "\n are a half inch rope, a two inch rope and a sturdy three inch rope. ");
+                    + "\n are a one inch rope, a two inch rope and a sturdy three inch rope. ");
             
             //Get the number from the keyboard
             diameter = keyboard.nextDouble();
@@ -48,7 +48,7 @@ class RopeStrengthView {
     void displayMenu() {
         double diameter = this.getDiameter();
         double strength = (diameter * diameter)/200;
-        System.out.println("You rope will hold " + strength + " pounds of cargo. "
+        System.out.println("You rope will hold " + strength + " tons of cargo. "
                 + "\n You swim across and tie the rope to the anchor post on the other side."
                 + "\n Then you slowly guide the wagon across until you are safely on the other side." );
  
