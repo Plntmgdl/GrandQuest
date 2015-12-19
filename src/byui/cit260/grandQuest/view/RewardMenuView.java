@@ -55,7 +55,7 @@ public class RewardMenuView extends View {
                         "\n*** Invalid selection *** Try again");
                 break;
         }
-        return false;
+        return true;
     }
 
     private void displayGold() {
